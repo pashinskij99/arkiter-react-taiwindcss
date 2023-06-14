@@ -23,7 +23,7 @@
   @apply flex flex-col items-center p-4 ;
 }
 .stepCircle {
-  @apply flex items-center justify-center relative w-20 h-20 bg-none border-2 border-[#26C6DA] rounded-full shadow-[0px_0px_5px_0px_#49CCF9] ;
+  @apply flex items-center justify-center w-20 h-20 bg-none border-2 border-[#26C6DA] rounded-full shadow-[0px_0px_5px_0px_#49CCF9] relative ;
 
   &::before {
     content: '';
@@ -33,5 +33,5 @@
   }
 }
 .stepNumber {
-  @apply text-[#26C6DA] font-bold text-5xl translate-y-[-5%] ;
+  @apply text-[#26C6DA] font-bold translate-y-[-5%] text-5xl ;
 }

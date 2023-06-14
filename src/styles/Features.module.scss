@@ -24,10 +24,10 @@
 .cartHeader {
   @apply flex gap-5 items-center ;
   h4 {
-    @apply text-[#313131] font-[700] text-[23.1875px] ;
+    @apply text-[#313131] font-[700] text-[23.1875px] relative ;
   }
   p {
-    @apply text-[#3131316B] font-[400] text-[16px] ;
+    @apply text-[#3131316B] font-[400] text-[16px] relative ;
   }
   .progress {
     @apply flex items-baseline gap-3 ;
@@ -52,7 +52,7 @@
     }
 
     span {
-      @apply text-[#5CC2A0] text-[14px] font-medium;
+      @apply text-[#5CC2A0] text-[14px] font-medium ;
     }
   }
 }
@@ -88,13 +88,13 @@
   .circle {
     @apply bg-[#9D9D9D] border-4 border-[#9D9D9D] w-4 h-4 rounded-full ;
     &.border {
-      @apply bg-[#DFD8CD] ;
+      @apply bg-[#DFD8CD] relative ;
     }
     &.borderLight {
-      @apply bg-transparent border-[#DCD6CB] ;
+      @apply border-[#DCD6CB] bg-transparent ;
     }
     &.light {
-      @apply bg-[#DCD6CB] border-[#DCD6CB] ;
+      @apply bg-[#DCD6CB] border-[#DCD6CB] relative ;
     }
   }
 }
@@ -131,7 +131,6 @@
   }
 }
 .rangeInput {
-  // @apply w-full h-full z-0 ;
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
