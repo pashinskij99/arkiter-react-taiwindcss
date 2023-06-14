@@ -1,0 +1,37 @@
+.stepContainer {
+  @apply px-24 grid grid-cols-1 items-center ;
+  column-gap: 20px;
+
+  border-image-source: linear-gradient(270deg, rgba(255, 255, 255, 0) 0.87%, rgba(255, 255, 255, 0.195139) 51.4%, rgba(255, 255, 255, 0) 102.01%);
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.stepWrapper {
+  @apply relative flex items-center justify-center ;
+
+}
+
+.stepLine {
+  @apply flex absolute w-[150%] h-[3px] items-center justify-center md:col-span-1 ;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0.87%, rgba(255, 255, 255, 0.195139) 51.4%, rgba(255, 255, 255, 0) 102.01%);
+}
+
+.stepCircleWrapper {
+  @apply flex flex-col items-center p-4 ;
+}
+.stepCircle {
+  @apply flex items-center justify-center relative w-20 h-20 bg-none border-2 border-[#26C6DA] rounded-full shadow-[0px_0px_5px_0px_#49CCF9] ;
+
+  &::before {
+    content: '';
+    @apply absolute w-full h-full top-0 left-0 rounded-full;
+
+    box-shadow: inset 0px 0px 5px 0px #49CCF9;
+  }
+}
+.stepNumber {
+  @apply text-[#26C6DA] font-bold text-5xl translate-y-[-5%] ;
+}

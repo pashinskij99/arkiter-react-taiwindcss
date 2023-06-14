@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    font-family: "SFProRegular", system-ui, sans-serif;
+    src: url('../public/fonts/SFProDisplayRegular.otf') format(".otf")
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+  * {
+    zoom: 0.97;
+  }
+}
+
+// .container {
+//   max-width: 1200px;
+//   margin: 0px auto;
+//   padding: 0 15px;
+// }
