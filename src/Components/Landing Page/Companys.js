@@ -21,12 +21,12 @@ const company = [
 const ImageGrid = () => {
     return (
         <div className="z-10 pb-8 relative">
-            <div className='container max-h-[930px] flex flex-col items-center justify-end'>
-                <div className='relative z-[1] max-h-[1060px]'>
+            <div className='container max-h-[937px] bg-white flex flex-col items-center justify-end'>
+                <div className='relative z-[1] max-h-[1056.18px]'>
                     <img className='w-full relative h-full object-contain' src={imageSrc} alt=""/>
                 </div>
 
-                <h1 className="text-[23px] text-arkiterTextDark uppercase font-normal mb-8">BUILT by global leaders From</h1>
+                <h1 className="text-[23px] text-arkiterTextDark uppercase font-normal mb-8 relative">BUILT by global leaders From</h1>
                 <ul className={styles.companyList}>
                     {company.map((props) => (
                         <li key={props.key} className='w-full flex items-center justify-center'>

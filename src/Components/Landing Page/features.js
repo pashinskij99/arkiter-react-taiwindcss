@@ -21,9 +21,9 @@ const MyComponent = () => {
         colorSlice: "#34B53A",
         colorCircle: "#E2FBD7",
         fontColor: "#000",
-        fontSize: "1rem",
+        fontSize: "0.9rem",
         fontWeight: 600,
-        size: 65,
+        size: 75,
         stroke: 7,
         strokeBottom: 3,
         speed: 60,
@@ -42,31 +42,32 @@ const MyComponent = () => {
     const circleArray = [
         { id: 0, props: { ...defaultProps}, name: 'Performance' },
         { id: 1, props: { ...defaultProps, colorCircle: '#DAD7FE', fill: "#DAD7FE", colorSlice: '#4339F2' }, name: 'Accuracy' },
-        { id: 2, props: { ...defaultProps }, name: 'Speed' },
-        { id: 3, props: { ...defaultProps }, name: 'Overall' },
+        { id: 2, props: { ...defaultProps, colorCircle: '#FFE5D3', fill: "#FFE5D3", colorSlice: '#FF3A29' }, name: 'Speed' },
+        { id: 3, props: { ...defaultProps, colorCircle: '#CCF8FE', fill: "#CCF8FE", colorSlice: '#02A0FC' }, name: 'Overall' },
     ]
 
     return (
-        <div className="flex flex-col items-center py-14 text-white">
+        <div className="flex flex-col items-center pt-[101px] pb-[70px] text-white">
             <div className="container">
 
-                <div className={clsx('p-14', styles.sectionInner) }>
+                <div className={clsx('pt-[44px] pb-[40px] px-[71px]', styles.sectionInner) }>
 
+                    {/* Section Title */}
                     <div className="w-full my-auto">
-                        <TypographyH2 className='mb-6'>
+                        <TypographyH2 className='mb-[18px]'>
                             Predict real-world <br /> performance with our AI tests
                         </TypographyH2>
-                        <TypographyP className='mb-8'>
+                        <TypographyP className='mb-[36px]'>
                             Unleash the power of our comprehensive system
                             design and architecture assessment. Our cutting-edge.
                         </TypographyP>
                         <ButtonPrimary
-                            classNameButton='!bg-[#ffffff] hover:!bg-transparent hover:!text-[#FFFFFF] !text-arkiterBlueLight-600'>Start
+                            classNameButton='!bg-[#ffffff] hover:!bg-arkiterBlueLight-600 hover:!text-white !text-arkiterBlueLight-600'>Start
                             Here
                         </ButtonPrimary>
                     </div>
 
-                    {/*Cart*/}
+                    {/* Section Cart */}
                     <div className={styles.cartContainer}>
                         <div className={styles.cartWrapper}>
 
@@ -77,8 +78,8 @@ const MyComponent = () => {
                                     <div className={styles.logo}>
                                         <img
                                             src={CartLogo}
-                                            width={65}
-                                            height={65}
+                                            width={75}
+                                            height={75}
                                             alt="cart logo"
                                         />
                                     </div>
@@ -111,10 +112,10 @@ const MyComponent = () => {
 
                 {/* Unlock and Discover section */}
 
-                <div className="flex flex-col xl:grid xl:grid-cols-2 gap-5 w-full ">
+                <div className="flex flex-col xl:grid xl:grid-cols-2 gap-[67px] w-full ">
 
                     {/* Unlock section */}
-                    <div className="bg-[#0A3D62] rounded-lg flex flex-col items-center p-16">
+                    <div className="bg-[#0A3D62] rounded-lg flex flex-col items-center pt-[43px] pb-[61px] px-[63px]">
                         <TypographyH3 className={'mb-14 text-center'}>
                             Unlock powerful <br />
                             insights and analysis
@@ -127,20 +128,20 @@ const MyComponent = () => {
                         {/*<div className='bg-'>*/}
                         {/*    <Graphic />*/}
                         {/*</div>*/}
-                        <img src={ImageTwo} alt="Image 2" className="object-contain w-full rounded-lg" />
+                        <img src={ImageTwo} alt="Image 2" className="object-contain w-full max-h-[543px] rounded-lg" />
                     </div>
 
                     {/* Discover section */}
-                    <div className="bg-[#313131] rounded-lg flex flex-col items-center p-16">
-                        <TypographyH3 className='text-center mb-16'>
-                            Discover your
+                    <div className="bg-[#313131] rounded-lg flex flex-col items-center pt-[40px] px-[67px]">
+                        <TypographyH3 className='text-center mb-[77px]'>
+                            Discover your <br />
                             potential savings
                         </TypographyH3>
-                        <TypographyP className='text-center mb-14 inline-block'>
+                        <TypographyP className='text-center mb-[65px] inline-block'>
                             See how much your business could save with the
                             calculator below or see how we’ve helped others <span className='underline'>here.</span>
                         </TypographyP>
-                        <div className='border border-[#FFFFFF]/[0.33] w-[90%] px-12 py-6 rounded-lg'>
+                        <div className='border border-[#FFFFFF]/[0.33] px-[42px] py-[30px] rounded-lg w-full'>
                             <div className='grid grid-cols-2 gap-6'>
                                 {inputsNumber.map(({ id, type, label }) => (
                                     <div key={id} className="flex flex-col">
@@ -149,7 +150,7 @@ const MyComponent = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div className="flex flex-col mt-6">
+                            <div className="flex flex-col mt-[35px]">
                                 <label className="text-[#FFFFFFBD] leading-4 h-10 flex items-center font-medium text-[20px] mb-3">
                                     Applicants Per Role: <strong className='ml-4 font-medium text-[30px] text-white'>{sliderValue}</strong>
                                 </label>
@@ -165,11 +166,11 @@ const MyComponent = () => {
                                 </div>
                             </div>
                             <div className="grid grid-cols-2 gap-2 items-center justify-between mt-16">
-                                <div className=" border-[#FCFCFC6B] border-2 bg-[#FFFFFF4A] rounded-lg p-4">
-                                    <p className="text-white font-bold text-center text-[32px]">$133,400</p>
+                                <div className=" border-[#FCFCFC6B] border-2 bg-[#FFFFFF4A] rounded-lg py-[24px] px-[45px]">
+                                    <p className="text-white font-bold text-center text-[35.3081px]">$133,400</p>
                                 </div>
-                                <div className=" border-[#FCFCFC6B] border-2 bg-[#FFFFFF4A] rounded-lg p-4">
-                                    <p className="text-white font-bold text-center text-[32px]">667 Hours</p>
+                                <div className=" border-[#FCFCFC6B] border-2 bg-[#FFFFFF4A] rounded-lg py-[24px] px-[45px]">
+                                    <p className="text-white font-bold text-center text-[35.3081px]">667 Hours</p>
                                 </div>
                             </div>
                         </div>

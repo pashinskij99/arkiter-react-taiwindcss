@@ -4,6 +4,7 @@ import Review from '../../Assets/Review.png';
 import Company from '../../Assets/company.png';
 import BackgroundImageMobile from '../../Assets/mobileLines.png';
 import BackgroundImageDesktop from '../../Assets/desktopLines.png';
+import clsx from 'clsx';
 
 const reviews = [
   {
@@ -68,38 +69,49 @@ const ReviewComponent = () => {
 
   return (
     <div
-      className="flex justify-center py-12 bg-[#1D9EEB]"
+      className="flex justify-center py-[115px] bg-[#1D9EEB]"
       style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
-      <div className="container">
-        <div className="overflow-hidden">
-          <div className="flex flex-col md:flex-row">
+      <div className="container max-h-[541px]">
+        <div className="overflow-hidden h-full">
+          <div className="flex flex-col h-full md:flex-row">
             <div className="w-full md:w-1/3 mb-4 md:mb-0 md:mr-10 flex justify-center items-center">
               <img
                 src={currentReview.imageUrl}
                 alt="Review Image"
-                className="object-cover w-3/4 md:w-full md:h-full rounded-lg"
+                className="object-containe md:h-full rounded-[40px]"
               />
             </div>
-            <div className="w-full md:w-2/3 p-4 flex flex-col justify-end">
-              <p className="text-white font-semibold text-5xl mb-4 h-full flex items-center leading-[50px]">{currentReview.review}</p>
-              <p className="text-white text-md mb-4 text-center md:text-start">{currentReview.companyName}</p>
+            <div className="w-full md:w-2/3 flex flex-col justify-end">
+              <p className="text-white font-semibold text-[49.4383px] h-full flex items-center leading-[50px]">{currentReview.review}</p>
+              <p className="text-white text-[32.1783px] mb-[47px] text-center md:text-start flex items-center">
+                <hr className='border-none w-[26.97px] h-[2px] bg-white mr-[11.35px]' />
+                {currentReview.companyName}
+              </p>
               <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between">
-                <img src={currentReview.companyLogo} alt="Company Logo" className="pb-10 w-1/4 mr-2" />
-                <div className="">
+                <img src={currentReview.companyLogo} alt="Company Logo" className="w-1/4 mr-2" />
+                <div className="flex items-center translate-x-[-50%]">
                   <button
                     onClick={goToPreviousReview}
-                    className="px-2 py-2 rounded-full bg-[#1D9EEB] border-white border-2 text-gray-700"
+                    className={clsx("ml-4 w-[76.56px] h-[76.56px] flex items-center justify-center rounded-full bg-white text-gray-700", {
+                      ['!bg-[#1D9EEB] !border-white border-[3.47991px] ']: currentIndex === 0
+                    })}
                     disabled={currentIndex === 0}
                   >
-                    <FiArrowLeft size={20} className="text-white/[0.33]" />
+                    <FiArrowLeft size={30} className={clsx('text-[#1D9EEB]', {
+                      ['!text-white/[0.33]']: currentIndex === 0
+                    })}/>
                   </button>
                   <button
                     onClick={goToNextReview}
-                    className="ml-4 px-2 py-2 rounded-full bg-white text-gray-700"
+                    className={clsx("ml-4 w-[76.56px] h-[76.56px] flex items-center justify-center rounded-full bg-white text-gray-700", {
+                      ['!bg-[#1D9EEB] !border-white border-[3.47991px] ']: currentIndex === reviews.length - 1
+                    })}
                     disabled={currentIndex === reviews.length - 1}
                   >
-                    <FiArrowRight size={20} color="#1D9EEB" />
+                    <FiArrowRight size={30} color="#1D9EEB" className={clsx('text-[#1D9EEB]', {
+                      ['!text-white/[0.33]']: currentIndex === reviews.length - 1
+                    })} />
                   </button>
                 </div>
               </div>

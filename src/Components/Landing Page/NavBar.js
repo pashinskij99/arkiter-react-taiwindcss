@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../../Assets/logoname.png';
 import ButtonPrimary from "../UI/Button";
+import {ReactComponent as LogoIcon} from '../../Assets/icons/logo.svg'
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,11 +10,15 @@ const Navbar = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
+    const navItemsDesktopHomeClassNames = 'text-white text-[10px] md:text-[18px] xl:text-[28px]'
+    const navItemsDesktopClassNames = 'text-white text-[10px] md:text-[18px] xl:text-[28px] hover:text-gray-300'
+
     return (
-        <nav className="bg-[#0A265F] text-white py-4 border-b-[1px] border-[#ffffff26] z-10 relative">
+        <nav className="bg-[#0A265F] text-white py-[21px] border-b-[1px] border-[#ffffff26] z-10 relative">
             <div className="container flex items-center justify-between">
                 <div className="flex items-center">
-                    <img src={logo} alt="Logo" className="h-6 md:h-6 w-auto mr-2" />
+                    <LogoIcon className="h-6 md:h-[35.33px] w-[268px]" />
+                    {/* <img src={logo} alt="Logo" className="h-6 md:h-[35.33px] w-[268px] mr-2" /> */}
                 </div>
 
                 {/* Mobile Menu */}
@@ -81,20 +86,20 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center space-x-1 md:space-x-3 lg:space-x-10 text-arkiterWhite-100">
-                    <a href="#" className="text-white text-[10px] md:text-[18px] xl:text-[28px] hover:bg-">
+                <div className="hidden md:flex items-center space-x-1 md:space-x-3 lg:space-x-14 text-arkiterWhite-100">
+                    <a href="#" className={navItemsDesktopHomeClassNames}>
                         Home
                     </a>
-                    <a href="#" className="text-white text-[10px] md:text-[18px] xl:text-[28px] hover:text-gray-300">
+                    <a href="#" className={navItemsDesktopClassNames}>
                         About
                     </a>
-                    <a href="#" className="text-white text-[10px] md:text-[18px] xl:text-[28px] hover:text-gray-300">
+                    <a href="#" className={navItemsDesktopClassNames}>
                         Why us?
                     </a>
-                    <a href="#" className="text-white text-[10px] md:text-[18px] xl:text-[28px] hover:text-gray-300">
+                    <a href="#" className={navItemsDesktopClassNames}>
                         Pricing
                     </a>
-                    <a href="#" className="text-white text-[10px] md:text-[18px] xl:text-[28px] hover:text-gray-300">
+                    <a href="#" className={navItemsDesktopClassNames}>
                         Blog
                     </a>
                 </div>

@@ -1,7 +1,9 @@
+import ArkiterBlog from "../Components/Landing Page/ArkiterBlog"
 import Banner from "../Components/Landing Page/Banner"
 import ImageGrid from "../Components/Landing Page/Companys"
 import ProductComparison from "../Components/Landing Page/Comparision"
 import FAQ from "../Components/Landing Page/FAQ"
+import Footer from "../Components/Landing Page/Footer"
 import Hero from "../Components/Landing Page/Hero"
 import Navbar from "../Components/Landing Page/NavBar"
 import ReviewComponent from "../Components/Landing Page/Reviews"
@@ -22,8 +24,10 @@ const LandingPage = () => {
             <ReviewComponent/>
             <PricingComparison/>
             <ProductComparison />
+            <ArkiterBlog />
             <FAQ/>
             <ContactForm />
+            <Footer />
         </>
     )
 }

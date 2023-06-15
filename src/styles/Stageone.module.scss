@@ -1,6 +1,8 @@
 .stepContainer {
-  @apply px-24 grid grid-cols-1 items-center ;
+  @apply px-24 grid grid-cols-1 items-center mb-[132px] ;
   column-gap: 20px;
+
+  row-gap: 28px;
 
   border-image-source: linear-gradient(270deg, rgba(255, 255, 255, 0) 0.87%, rgba(255, 255, 255, 0.195139) 51.4%, rgba(255, 255, 255, 0) 102.01%);
 
@@ -11,7 +13,6 @@
 
 .stepWrapper {
   @apply relative flex items-center justify-center ;
-
 }
 
 .stepLine {
@@ -20,10 +21,10 @@
 }
 
 .stepCircleWrapper {
-  @apply flex flex-col items-center p-4 ;
+  @apply flex flex-col items-center ;
 }
 .stepCircle {
-  @apply flex items-center justify-center w-20 h-20 bg-none border-2 border-[#26C6DA] rounded-full shadow-[0px_0px_5px_0px_#49CCF9] relative ;
+  @apply flex items-center justify-center w-[100px] h-[100px] bg-none border-2 border-[#26C6DA] rounded-full shadow-[0px_0px_5px_0px_#49CCF9] relative ;
 
   &::before {
     content: '';

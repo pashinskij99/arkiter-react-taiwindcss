@@ -1,9 +1,9 @@
 // Section - start
 .sectionInner {
-  @apply w-full bg-[#1D9EEB] rounded-lg grid grid-cols-1 mb-12 justify-items-end items-center ;
+  @apply w-full bg-[#1D9EEB] rounded-lg grid grid-cols-1 mb-[52px] justify-items-end ;
 
   @media (min-width: 1280px) {
-    grid-template-columns: 55% 45%;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -13,7 +13,7 @@
   // @apply p-6;
 }
 .cartWrapper {
-  @apply bg-[#F5F1EC] h-[365px] w-[522px] rounded-[16px] relative px-7;
+  @apply bg-[#F5F1EC] h-full w-[522px] rounded-[16px] relative px-[37px];
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,7 +52,7 @@
     }
 
     span {
-      @apply text-[#5CC2A0] text-[14px] font-medium ;
+      @apply text-[#5CC2A0] text-[16px] font-medium ;
     }
   }
 }
@@ -63,7 +63,7 @@
     @apply flex items-center flex-col gap-2 ;
 
     span {
-      @apply text-black text-[10px] font-medium ;
+      @apply text-black text-[11.68724px] font-medium ;
     }
   }
 
@@ -109,8 +109,8 @@
   &::before {
     content: "";
     position: absolute;
-    height: 10px;
-    width: 10px;
+    height: 14px;
+    width: 14px;
     background: #D9D9D9;
     border-radius: 50%;
     left: 0;
@@ -121,8 +121,8 @@
   &::after {
     content: "";
     position: absolute;
-    height: 10px;
-    width: 10px;
+    height: 14px;
+    width: 14px;
     background: #D9D9D9;
     border-radius: 50%;
     right: 0;
@@ -140,13 +140,13 @@
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: 1px solid #000000;
-    height: 40px;
-    width: 40px;
+    height: 49px;
+    width: 49px;
     border-radius: 50%;
     border: 2.72222px solid #979797;
     background: #ffffff;
     cursor: pointer;
-    margin-top: -20px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    margin-top: -25px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
     background-image: url('../Assets/icons/range-input-arrow.svg');
     background-size: 100%;
     background-position: center center;

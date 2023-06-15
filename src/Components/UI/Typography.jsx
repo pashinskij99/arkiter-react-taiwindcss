@@ -2,7 +2,7 @@ import clsx from "clsx"
 
 const TypographyH1 = ({className, children}) => {
   return (
-    <h1 className={clsx('font-medium leading-[80px] text-[74.0354px] -tracking-[-1.59121px]', className)}>{children}</h1>
+    <h1 className={clsx('font-medium leading-[87px] text-[74.0354px] -tracking-[2px]', className)}>{children}</h1>
   )
 }
 

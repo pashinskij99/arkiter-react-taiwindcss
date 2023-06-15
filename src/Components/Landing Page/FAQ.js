@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+import {ReactComponent as PlusIcon} from '../../Assets/icons/plus.svg'
+import {ReactComponent as MinusIcon} from '../../Assets/icons/minus.svg'
+import clsx from 'clsx';
 
 const FaqItem = ({ question, answer }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -9,18 +12,25 @@ const FaqItem = ({ question, answer }) => {
     };
 
     return (
-        <div className="mb-4 border-b-[#0A265F] border-b-2 w-3/4">
+        <div className={clsx("mb-[32px] w-full", {
+            ['border-b-[#0A265F] border-b-2']: !isOpen
+        })}>
             <button
-                className="flex justify-between items-center w-full p-4  text-left focus:outline-none"
+                className="flex justify-between items-center w-full pb-[32px] text-left focus:outline-none"
                 onClick={toggleAccordion}
             >
-                <span className="font-bold text-lg text-[#0A265F]">{question}</span>
-                <div className={`rounded-full w-fit py-2 px-2 border border-[#0A265F] ${isOpen ? 'bg-[#0A265F]' : 'bg-white'} ${isOpen ? 'text-white/[1]' : 'text-[#0A265F]'}`}>
-                    {isOpen ? <AiOutlineMinus/> : <AiOutlinePlus />}
+                <span className="font-[600] text-[39.72px] text-[#0A265F]">{question}</span>
+                <div className={clsx(`rounded-full mr-[60px] flex items-center justify-center w-[55.09px] h-[55.09px] ${isOpen ? 'bg-[#0A265F]' : 'bg-white'} ${isOpen ? 'text-white/[1]' : 'text-[#0A265F]'}`, {
+                    ['border border-[#0A265F]']: !isOpen
+                }) }>
+                    {isOpen
+                        ? <MinusIcon width={'17.89px'} height={'17.89px'} />
+                        : <PlusIcon width={'17.89px'} height={'17.89px'}/>
+                    }
                 </div>
             </button>
             <div>
-                {isOpen && <p className="p-4 text-[#0A265F]">{answer}</p>}
+                {isOpen && <p className="text-[#0A265F] text-[33.1px] leading-[40px]">{answer}</p>}
             </div>
         </div>
     );
@@ -48,12 +58,14 @@ const FAQ = () => {
     ];
 
     return (
-        <div className="py-12 bg-[#FCFCFC]">
-            <h2 className="text-4xl font-semibold mb-10 text-center text-[#0A265F]">FAQs</h2>
-            <div className='flex flex-col justify-center items-center '>
-                {faqData.map((item, index) => (
-                    <FaqItem key={index} question={item.question} answer={item.answer} />
-                ))}
+        <div className="pt-[42px] bg-[#FCFCFC]">
+            <div className="container">
+                <h2 className="text-[74.04px] text-center font-[700] text-[#0A265F]">FAQs</h2>
+                <div className='flex flex-col justify-center items-center mt-[32px]'>
+                    {faqData.map((item, index) => (
+                        <FaqItem key={index} question={item.question} answer={item.answer} />
+                    ))}
+                </div>
             </div>
         </div>
     );

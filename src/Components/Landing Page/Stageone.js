@@ -24,7 +24,7 @@ const data = [
 
 const classNameWrapper = 'relative flex items-center justify-center p-4 h-[200px]'
 const classNameInner = 'flex flex-col items-center absolute w-[409px] top-0'
-const classNameH2 = 'text-4xl text-white font-semibold mt-4 mb-6 text-center'
+const classNameH2 = 'text-[40px] text-white font-semibold mb-[23px] text-center'
 const classNameP = 'text-white text-center text-[20px] leading-6'
 
 const stepContent = [
@@ -50,9 +50,9 @@ const stepContent = [
 
 const Component = () => {
   return (
-    <div className="bg-[#0A265F] py-20">
+    <div className="bg-[#0A265F] pt-[140px] pb-[115px]">
       <div className="container">
-        <TypographyH2 className='text-white text-center mb-16'>
+        <TypographyH2 className='text-white text-center mb-[120px]'>
           Solve The Hiring Process In <span className='text-[#49CCF9]'>3 Steps</span>
         </TypographyH2>
 
@@ -92,11 +92,12 @@ const Component = () => {
           }
 
         </div>
-        <TypographyH2 className='text-center mt-12 mb-16 text-white'>
+
+        <TypographyH2 className='text-center mb-[118px] text-white'>
           Complete <span className='text-[#49CCF9]'>Insight</span> Into Your Candidates
         </TypographyH2>
         <div className="flex justify-center m-auto">
-          <img src={Image} alt="Additional Image" className="mt-8 w-full h-auto" />
+          <img src={Image} alt="Additional Image" className="w-full max-h-[1019px]" />
         </div>
 
       </div>
