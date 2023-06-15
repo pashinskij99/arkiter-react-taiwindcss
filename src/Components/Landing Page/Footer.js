@@ -43,8 +43,6 @@ const Footer = () => {
               <a href="#" className='ml-1 underline'>Arktik</a>
             </p>
           </div>
-
-
         </div>
       </footer>
       <hr className='mt-[48px] h-[1px] border-none mb-[30px] bg-[#FFFFFF14]' />
