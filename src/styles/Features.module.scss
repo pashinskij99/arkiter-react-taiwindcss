@@ -1,8 +1,8 @@
 // Section - start
 .sectionInner {
-  @apply w-full bg-[#1D9EEB] rounded-lg grid grid-cols-1 mb-[5.2rem] justify-items-end ;
+  @apply w-full bg-[#1D9EEB] gap-[5rem] justify-items-end rounded-lg flex flex-col-reverse md:grid grid-cols-1 mb-[5.2rem] ;
 
-  @media (min-width: 1280px) {
+  @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -10,10 +10,14 @@
 
 // cart Container - Start
 .cartContainer {
-  // @apply p-6;
+  @apply h-[190px] md:h-auto w-full flex justify-end;
+
+  text {
+    @apply text-[15.65px] ;
+  }
 }
 .cartWrapper {
-  @apply bg-[#F5F1EC] h-full w-[52.2rem] rounded-[1.6rem] relative px-[3.7rem];
+  @apply bg-[#F5F1EC] h-full w-full xl:w-[52.2rem] rounded-[1.6rem] px-[3.7rem] relative;
   display: flex;
   align-items: center;
   justify-content: center;

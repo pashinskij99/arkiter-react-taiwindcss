@@ -20,7 +20,7 @@ const TypographyH3 = ({className, children}) => {
 
 const TypographyP = ({className, children}) => {
   return (
-    <p className={clsx('font-normal leading-[3rem] text-[2.6rem] -tracking-[-0.02em]', className)}>{children}</p>
+    <p className={clsx('font-normal leading-[3rem] text-[2.9rem] md:text-[2.6rem] -tracking-[-0.02em]', className)}>{children}</p>
   )
 }
 

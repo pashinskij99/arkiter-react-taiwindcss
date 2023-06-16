@@ -19,13 +19,13 @@ const ArkiterBlog = () => {
         <p className="text-white text-center -tracking-[.0059121rem] text-[3.2rem] leading-[1.1] font-[400] mt-[4rem]">Keep up to date with the Arkiter team and our journey to help <br /> change the way developers get hired </p>
 
         <div className='relative'>
-          <div className="grid grid-cols-[1fr_1fr_1fr] gap-[5.536rem] mt-[7.8rem]">
+          <div className="grid grid-cols-[1fr_1fr_1fr] gap-[1.536rem] lg:gap-[5.536rem] mt-[7.8rem]">
             <Item />
             <Item />
             <Item />
           </div>
 
-          <div className='absolute top-0 right-0 flex translate-y-[-230%] translate-x-[-70%]'>
+          <div className='absolute top-0 right-0 flex translate-x-[0%] translate-y-[-150%] lg:translate-y-[-230%] lg:translate-x-[-70%]'>
             <button
               className={clsx("w-[5.358rem] h-[5.358rem] flex items-center justify-center rounded-full bg-transparent text-[#FFFFFF54]", {
                 ['!bg-transparent !border-white border-[.347991rem] ']: currentIndex === 0

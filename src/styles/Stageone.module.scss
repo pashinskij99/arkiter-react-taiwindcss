@@ -1,5 +1,5 @@
 .stepContainer {
-  @apply px-24 grid grid-cols-1 items-center mb-[13.2rem] ;
+  @apply px-24 hidden md:grid grid-cols-1 items-center mb-[13.2rem] ;
   column-gap: 2rem;
 
   row-gap: 2.8rem;

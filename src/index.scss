@@ -26,11 +26,11 @@ html {
 		font-size: 35%;
 	}
 	@include respond(phone) {
-		font-size: 30%;
+		font-size: 29%;
 	}
-  @include respond(small-phone) {
-    font-size: 25%
-  }
+  // @include respond(small-phone) {
+  //   font-size: 25%
+  // }
 
   @media (-webkit-device-pixel-ratio: 1.25) {
 

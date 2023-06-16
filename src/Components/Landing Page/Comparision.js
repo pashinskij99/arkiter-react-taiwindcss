@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../../Assets/logo.png';
-import { MdArrowOutward } from 'react-icons/md';
 import clsx from 'clsx';
 import {ReactComponent as ExitIcon} from '../../Assets/icons/exit.svg'
 import {ReactComponent as CheckIcon} from '../../Assets/icons/check-table.svg'
@@ -64,9 +63,9 @@ const ProductComparison = () => {
                 <th className=" text-[#0A265F] text-[3.44982rem] font-[700] relative">
                   <span className='absolute mx-auto w-full left-0 bottom-[5.016rem] '>Others</span>
                 </th>
-                <th className="w-[52.7rem] rounded-tl-[2.87485rem] rounded-tr-[2.87485rem]  pt-[4.7rem] bg-[#0A265F] justify-center text-white">
-                  <img src={logo} alt="Competitor B Logo" width={'90.251rem'} className="mx-auto" />
-                  <hr className='border-none h-[.1rem] bg-[#FCFCFC] mt-[4.612rem]' />
+                <th className="w-[30.7rem] lg:w-[52.7rem] rounded-tl-[2.87485rem] rounded-tr-[2.87485rem] pt-[2.7rem] lg:pt-[4.7rem] bg-[#0A265F] justify-center text-white">
+                  <img src={logo} alt="Competitor B Logo" width={'90.251rem'} className="mx-auto scale-75 lg:scale-100" />
+                  <hr className='border-none h-[.1rem] bg-[#FCFCFC] mt-[2.612rem] lg:mt-[4.612rem]' />
                 </th>
               </tr>
             </thead>
@@ -83,13 +82,20 @@ const ProductComparison = () => {
                     <div className={clsx(index % 2 === 0 ? 'bg-[#D9D9D9]/[0.44]' : 'bg-white', 'absolute top-0 left-0 w-full h-full z-0 rounded-tr-[1.1rem] rounded-br-[1.1rem]')}></div>
                     {item.Others ? <CheckDarkIcon width={'4.082rem'} className='z-10 relative mx-auto' height={'3.175rem'} /> : <ExitIcon width={'3.175rem'} className='z-10 relative mx-auto' height={'3.175rem'} />}
                   </td>
-                  <td className={`p-2 w-[47.7rem] text-center text-2xl bg-[#0A265F]`}>{item.Arkiter ? <CheckIcon width={'4.082rem'} className='mx-auto' height={'3.175rem'} /> : <span className="text-[#D40D00]"></span>}</td>
+                  <td className={clsx(`p-2 w-[47.7rem] text-center text-2xl bg-[#0A265F]`, {
+                    ['rounded-br-[2.87485rem] lg:rounded-br-[0] rounded-bl-[2.87485rem] lg:rounded-bl-[0]']: item.Others
+                  })}>{
+                    item.Arkiter
+                      ? <CheckIcon width={'4.082rem'} className='mx-auto' height={'3.175rem'} />
+                      : <span className="text-[#D40D00]"></span>
+                    }
+                  </td>
                 </tr>
               ))}
               <tr className="bg-white">
                 <td className="p-2"></td>
                 <td className="p-2"></td>
-                <td className="p-2 py-8 text-center rounded-bl-[2.87485rem] rounded-br-[2.87485rem] bg-[#0A265F] flex justify-center items-center">
+                <td className="hidden lg:flex p-2 py-8 text-center rounded-bl-[2.87485rem] rounded-br-[2.87485rem] bg-[#0A265F] justify-center items-center">
                   <ButtonPrimary classNameButton='!bg-white !text-arkiterBlueLight-700 hover:!text-white hover:!bg-[#49CCF9]'>
                     Sign up
                   </ButtonPrimary>

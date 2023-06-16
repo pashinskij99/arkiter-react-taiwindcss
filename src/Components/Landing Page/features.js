@@ -53,11 +53,11 @@ const MyComponent = () => {
                 <div className={clsx('pt-[4.4rem] pb-[4rem] px-[7.1rem]', styles.sectionInner) }>
 
                     {/* Section Title */}
-                    <div className="w-full my-auto">
-                        <TypographyH2 className='mb-[1.8rem]'>
+                    <div className="grid md:block w-full my-auto">
+                        <TypographyH2 className='text-center md:text-start mb-[13px] md:mb-[1.8rem]'>
                             Predict real-world <br /> performance with our AI tests
                         </TypographyH2>
-                        <TypographyP className='mb-[3.6rem]'>
+                        <TypographyP className='text-center md:text-start mb-[24px] md:mb-[3.6rem]'>
                             Unleash the power of our comprehensive system
                             design and architecture assessment. Our cutting-edge.
                         </TypographyP>
@@ -78,6 +78,7 @@ const MyComponent = () => {
                                     <div className={styles.logo}>
                                         <img
                                             src={CartLogo}
+                                            className='scale-75'
                                             width={75}
                                             height={75}
                                             alt="cart logo"
@@ -112,13 +113,13 @@ const MyComponent = () => {
 
                 {/* Unlock and Discover section */}
 
-                <div className="flex flex-col xl:grid xl:grid-cols-2 gap-[6.7rem] w-full ">
+                <div className="flex flex-col md:grid md:grid-cols-2 gap-[2.5rem] md:gap-[3rem] lg:gap-[4.5rem] xl:gap-[6.7rem] w-full ">
 
                     {/* Unlock section */}
                     <div className="bg-[#0A3D62] rounded-lg flex flex-col items-center pt-[4.3rem] pb-[6.1rem] px-[6.3rem]">
                         <TypographyH3 className={'mb-[5.5rem] text-center'}>
-                            Unlock powerful <br />
-                            insights and analysis
+                            Unlock <br className='md:hidden' /> powerful <br className='hidden md:block' />
+                            insights <br className='md:hidden' /> and analysis
                         </TypographyH3>
                         <TypographyP className='text-center mb-[6.1rem]'>
                             Arkiter allows you in-depth insights into the
@@ -132,7 +133,7 @@ const MyComponent = () => {
                     </div>
 
                     {/* Discover section */}
-                    <div className="bg-[#313131] rounded-lg flex flex-col items-center pt-[4rem] px-[6.7rem]">
+                    <div className="bg-[#313131] rounded-lg flex flex-col items-center pb-[36.53px] md:pb-[0] pt-[4rem] px-[6.7rem]">
                         <TypographyH3 className='text-center mb-[6.9rem]'>
                             Discover your <br />
                             potential savings
@@ -165,7 +166,7 @@ const MyComponent = () => {
                                     />
                                 </div>
                             </div>
-                            <div className="grid grid-cols-2 gap-2 items-center justify-between mt-16">
+                            <div className="grid grid-cols-2 gap-2 items-center justify-between mt-[27.33px] md:mt-16">
                                 <div className=" border-[#FCFCFC6B] border-2 bg-[#FFFFFF4A] rounded-lg py-[2.4rem]">
                                     <p className="text-white font-bold text-center text-[3.73081rem]">$133,400</p>
                                 </div>

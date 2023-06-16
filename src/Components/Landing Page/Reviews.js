@@ -24,6 +24,25 @@ const reviews = [
   // Add more reviews as needed
 ];
 
+const reviewsMobile = [
+  {
+    id: 1,
+    imageUrl: Review,
+    review: '“The biggest and the most awaited change in the boring interview process!”',
+    companyName: 'Alakbar Ayyubov, Data Specialist',
+    companyLogo: Company,
+  },
+  {
+    id: 2,
+    imageUrl: Review,
+    review: '“Hello”',
+    companyName: 'Artik Devlopment',
+    companyLogo: Company,
+  },
+  // Add more reviews as needed
+];
+
+
 const ReviewComponent = () => {
   const [currentReview, setCurrentReview] = useState(reviews[0]);
   const [backgroundImage, setBackgroundImage] = useState('');
@@ -69,27 +88,34 @@ const ReviewComponent = () => {
 
   return (
     <div
-      className="flex justify-center py-[11.5rem] bg-[#1D9EEB]"
+      className="flex justify-center py-[9.5rem] md:py-[11.5rem] bg-[#1D9EEB]"
       style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
-      <div className="container max-h-[54.1rem]">
-        <div className="overflow-hidden h-full">
+      <div className="container md:max-h-[54.1rem]">
+        <div className="md:overflow-hidden h-full">
           <div className="flex flex-col h-full md:flex-row">
-            <div className="w-full md:w-1/3 mb-4 md:mb-0 md:mr-10 flex justify-center items-center">
+            <div className="w-[389.83px] mx-auto md:mx-0 h-[259.63px] md:w-1/3 mb-4 md:mb-0 md:mr-10 flex justify-center items-center">
               <img
                 src={currentReview.imageUrl}
                 alt="Review Image"
-                className="object-containe md:h-full rounded-[4rem]"
+                className="object-contain h-full rounded-[4rem]"
               />
             </div>
             <div className="w-full md:w-2/3 flex flex-col justify-end">
-              <p className="text-white font-semibold text-[4.94383rem] h-full flex items-center leading-[5rem]">{currentReview.review}</p>
-              <p className="text-white text-[3.21783rem] mb-[4.7rem] text-center md:text-start flex items-center">
+
+              <p className="flex md:hidden text-white flex-col justify-center text-[3.21783rem] mb-[4.7rem] text-center md:text-start items-center">
+                {reviewsMobile.companyName}
+              </p>
+
+              <p className="hidden md:flex text-white font-semibold text-[4.94383rem] h-full items-center leading-[5rem]">{currentReview.review}</p>
+              <p className="hidden md:flex text-white text-[3.21783rem] mb-[4.7rem] text-center md:text-start items-center">
                 <hr className='border-none w-[2.697rem] h-[.2rem] bg-white mr-[1.135rem]' />
                 {currentReview.companyName}
               </p>
               <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between">
-                <img src={currentReview.companyLogo} alt="Company Logo" className="w-1/4 mr-2" />
+
+              <img src={currentReview.companyLogo} alt="Company Logo" className="hidden md:block w-1/4 mr-2" />
+
                 <div className="flex items-center translate-x-[-50%]">
                   <button
                     onClick={goToPreviousReview}

@@ -135,11 +135,11 @@ const PricingComponent = () => {
                   })}>
                     {box.popular && <span className='text-[#0A265F] text-[3.2rem] font-bold mb-[4.959rem] inline-block'>Most Popular</span>}
 
-                    <div className='flex flex-row gap-[2.9rem]'>
-                      <div className={clsx(' flex items-center justify-center bg-[#78D9FB] h-[10.205rem] rounded-[1.2rem] w-[10.9rem]', {
+                    <div className='flex items-center lg:items-start flex-row gap-[2.9rem]'>
+                      <div className={clsx('flex items-center justify-center bg-[#78D9FB] rounded-[1.2rem] h-[7.205rem] lg:h-[10.205rem] w-[7.9rem] lg:w-[10.9rem]', {
                         ['!bg-[#55B6F0]']: !box.popular
                       })}>
-                        <img src={box.logo} width={57} height={57} />
+                        <img src={box.logo} className='scale-50 lg:scale-100' width={57} height={57} />
                       </div>
                       {
                         box.popular
@@ -152,25 +152,24 @@ const PricingComponent = () => {
                             <div className='text-white font-semibold border-[.1rem] border-[#D4D4D421] rounded-[.5rem] text-[2.2rem] bg-[#3AB4F0]/[0.25] px-[1.6rem]'>{box.plan}</div>
                           </div>)
                       }
-
                     </div>
                     {
                       box.popular
                         ? (
-                          <div className="text-[8.01259rem] mt-[3.571rem] leading-[11.6rem] text-center font-bold text-[#0A3D62]">
+                          <div className="text-[6.01259rem] lg:text-[8.01259rem] mt-[1.571rem] lg:mt-[3.571rem] leading-[11.6rem] text-center font-bold text-[#0A3D62]">
                             {currencyOptions.find((currency) => currency.value === selectedCurrency)?.symbol}
                             {getPrice(selectedCurrency, box.title)}<span className='text-[4.05129rem] text-[#0A3D62]'>/month</span>
                           </div>
                         )
                         : (
-                          <div className="text-[8.01259rem] mt-[3.571rem] leading-[11.6rem] text-center font-bold text-[#F1F1F1]">
+                          <div className="text-[6.01259rem] lg:text-[8.01259rem] mt-[1.571rem] lg:mt-[3.571rem] leading-[11.6rem] text-center font-bold text-[#F1F1F1]">
                             {currencyOptions.find((currency) => currency.value === selectedCurrency)?.symbol}
                             {getPrice(selectedCurrency, box.title)}<span className='text-[4.05129rem] text-[#F1F1F1]'>/month</span>
                           </div>
                         )
                     }
 
-                    <ButtonPrimary classNameButton={clsx('mt-[4.1rem] !bg-[#0A3D62] hover:!bg-white mx-auto pl-[8rem] !pr-[3.086rem] !w-max', {
+                    <ButtonPrimary classNameButton={clsx('mt-[1.1rem] lg:mt-[4.1rem] !bg-[#0A3D62] hover:!bg-white mx-auto pl-[8rem] !pr-[3.086rem] !w-max', {
                       ['hover:!bg-[#49CCF9] hover:!text-white']: box.popular
                     })}>
                       Buy now

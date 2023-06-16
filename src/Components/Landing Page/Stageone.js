@@ -3,6 +3,7 @@ import Image from '../../Assets/Steps.png';
 import arrowImage from '../../Assets/train.png';
 import styles from '../../styles/Stageone.module.scss'
 import { TypographyH2, TypographyH3 } from '../UI/Typography';
+import clsx from 'clsx';
 
 const data = [
   {
@@ -23,8 +24,8 @@ const data = [
 ];
 
 const classNameWrapper = 'relative flex items-center justify-center p-4 h-[20rem]'
-const classNameInner = 'flex flex-col items-center absolute w-[46.9rem] top-0'
-const classNameH2 = 'text-[4rem] text-white font-semibold mb-[2.3rem] text-center'
+const classNameInner = 'flex flex-col items-center absolute w-full xl:w-[46.9rem] top-0'
+const classNameH2 = 'text-[4rem] whitespace-nowrap text-white font-semibold mb-[2.3rem] text-center'
 const classNameP = 'text-white text-center text-[2rem] leading-[2.5rem]'
 
 const stepContent = [
@@ -93,6 +94,8 @@ const Component = () => {
 
         </div>
 
+        <StepMobile />
+
         <TypographyH2 className='text-center mb-[11.8rem] text-white'>
           Complete <span className='text-[#49CCF9]'>Insight</span> Into Your Candidates
         </TypographyH2>
@@ -105,5 +108,51 @@ const Component = () => {
     </div>
   );
 };
+
+const StepMobile = () => {
+  return (
+    <div className='grid gap-[20px] justify-items-center grid-cols-1 mb-[73px]'>
+       <div className={styles.stepCircleWrapper}>
+          <div className={styles.stepCircle}>
+            <p className={styles.stepNumber}>1</p>
+          </div>
+          <div className={'mt-[5px]'}>
+            <div className='text-center text-white'>
+              <h2 className='text-[24px] font-[600] leading-[1]'>Build your test</h2>
+              <p className='text-[12px] font-[400] mt-[10px] leading-[14.22px]'>Unleash the power of our comprehensive <br /> system design and architecture assessment.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className='h-[100px] w-[0.3rem]' style={{background: 'linear-gradient(133deg, rgba(255, 255, 255, 0) 0.87%, rgba(255, 255, 255, 0.195139) 51.4%, rgba(255, 255, 255, 0) 102.01%)'}} />
+
+        <div className={styles.stepCircleWrapper}>
+          <div className={styles.stepCircle}>
+            <p className={styles.stepNumber}>2</p>
+          </div>
+          <div className={'mt-[5px]'}>
+            <div className='text-center text-white'>
+              <h2 className='text-[24px] font-[600] leading-[1]'>Invite your candidate</h2>
+              <p className='text-[12px] font-[400] mt-[10px] leading-[14.22px]'>Here your candidates undertake your tailored <br /> interview on our fully automated and engaging platform</p>
+            </div>
+          </div>
+        </div>
+
+        <div className='h-[100px] w-[0.3rem]' style={{background: 'linear-gradient(135deg, rgba(255, 255, 255, 0) 0.87%, rgba(255, 255, 255, 0.195139) 51.4%, rgba(255, 255, 255, 0) 102.01%)'}} />
+
+        <div className={styles.stepCircleWrapper}>
+          <div className={styles.stepCircle}>
+            <p className={styles.stepNumber}>3</p>
+          </div>
+          <div className={'mt-[5px]'}>
+            <div className='text-center text-white'>
+              <h2 className='text-[24px] font-[600] leading-[1]'>Hire the best</h2>
+              <p className='text-[12px] font-[400] mt-[10px] leading-[14.22px]'>Build your dream team by hiring the best <br /> candidates with our unbiased, data-driven insights.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  )
+}
 
 export default Component;

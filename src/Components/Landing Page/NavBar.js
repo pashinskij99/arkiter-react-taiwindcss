@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from '../../Assets/logoname.png';
 import ButtonPrimary from "../UI/Button";
 import {ReactComponent as LogoIcon} from '../../Assets/icons/logo.svg'
+import {ReactComponent as LogoMobileIcon} from '../../Assets/icons/logo-mobile.svg'
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,18 +18,18 @@ const Navbar = () => {
         <nav className="bg-[#0A265F] text-white py-[2.1rem] border-b-[.1rem] border-[#ffffff26] z-10 relative">
             <div className="container flex items-center justify-between">
                 <div className="flex items-center">
-                    <LogoIcon className="h-6 md:h-[3.533rem] w-[26.8rem]" />
-                    {/* <img src={logo} alt="Logo" className="h-6 md:h-[35.33px] w-[268px] mr-2" /> */}
+                    <LogoIcon className="hidden md:block md:h-[3.533rem] w-[26.8rem]" />
+                    <LogoMobileIcon className="md:hidden" />
                 </div>
 
                 {/* Mobile Menu */}
                 <div className="md:hidden">
                     <button
-                        className="text-white hover:text-gray-300"
+                        className="text-white w-full flex justify-center hover:text-gray-300"
                         onClick={handleMobileMenuToggle}
                     >
                         <svg
-                            className="w-6 h-6 fill-current"
+                            className="w-28 fill-current"
                             viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"
                             fill={'white'}
@@ -53,31 +54,31 @@ const Navbar = () => {
                         <div className="bg-[#0A265F] py-4 text-center">
                             <a
                                 href="#"
-                                className="block py-2 text-[2.8rem] text-white hover:text-gray-300"
+                                className="block py-4 text-[4.8rem] text-white hover:text-gray-300"
                             >
                                 Home
                             </a>
                             <a
                                 href="#"
-                                className="block py-2 text-[2.8rem] text-white hover:text-gray-300"
+                                className="block py-4 text-[4.8rem] text-white hover:text-gray-300"
                             >
                                 About
                             </a>
                             <a
                                 href="#"
-                                className="block py-2 text-[2.8rem] text-white hover:text-gray-300"
+                                className="block py-4 text-[4.8rem] text-white hover:text-gray-300"
                             >
                                 Why us?
                             </a>
                             <a
                                 href="#"
-                                className="block py-2 text-[2.8rem] text-white hover:text-gray-300"
+                                className="block py-4 text-[4.8rem] text-white hover:text-gray-300"
                             >
                                 Pricing
                             </a>
                             <a
                                 href="#"
-                                className="block py-2 text-[2.8rem] text-white hover:text-gray-300"
+                                className="block py-4 text-[4.8rem] text-white hover:text-gray-300"
                             >
                                 Blog
                             </a>
@@ -86,7 +87,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center space-x-1 md:space-x-3 lg:space-x-14 text-arkiterWhite-100">
+                <div className="hidden md:flex items-center space-x-14 lg:space-x-14 text-arkiterWhite-100">
                     <a href="#" className={navItemsDesktopHomeClassNames}>
                         Home
                     </a>
