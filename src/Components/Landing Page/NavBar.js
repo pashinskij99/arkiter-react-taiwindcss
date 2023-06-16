@@ -10,8 +10,8 @@ const Navbar = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
-    const navItemsDesktopHomeClassNames = 'text-white text-[1rem] md:text-[1.8rem] xl:text-[2.8rem]'
-    const navItemsDesktopClassNames = 'text-white text-[1rem] md:text-[1.8rem] xl:text-[2.8rem] hover:text-gray-300'
+    const navItemsDesktopHomeClassNames = 'text-white text-[2.8rem]'
+    const navItemsDesktopClassNames = 'text-white text-[2.8rem] hover:text-gray-300'
 
     return (
         <nav className="bg-[#0A265F] text-white py-[2.1rem] border-b-[.1rem] border-[#ffffff26] z-10 relative">

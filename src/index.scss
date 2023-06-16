@@ -20,16 +20,16 @@ html {
 		font-size: 43%;
 	}
 	@include respond(tab-land) {
-		font-size: 50%;
+		font-size: 39%;
 	}
 	@include respond(tab-port) {
-		font-size: 45%;
+		font-size: 35%;
 	}
 	@include respond(phone) {
-		font-size: 40%;
+		font-size: 30%;
 	}
   @include respond(small-phone) {
-    font-size: 30%
+    font-size: 25%
   }
 
   @media (-webkit-device-pixel-ratio: 1.25) {

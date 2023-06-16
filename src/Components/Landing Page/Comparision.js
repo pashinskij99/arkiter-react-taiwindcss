@@ -89,7 +89,7 @@ const ProductComparison = () => {
               <tr className="bg-white">
                 <td className="p-2"></td>
                 <td className="p-2"></td>
-                <td className="p-2 py-8 text-center bg-[#0A265F] rounded-bl-lg rounded-br-lg flex justify-center items-center">
+                <td className="p-2 py-8 text-center rounded-bl-[2.87485rem] rounded-br-[2.87485rem] bg-[#0A265F] flex justify-center items-center">
                   <ButtonPrimary classNameButton='!bg-white !text-arkiterBlueLight-700 hover:!text-white hover:!bg-[#49CCF9]'>
                     Sign up
                   </ButtonPrimary>
