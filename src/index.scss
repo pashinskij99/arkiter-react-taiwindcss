@@ -17,7 +17,7 @@ html {
   //   font-size: 100%
   // }
   @include respond(screen) {
-		font-size: 45%;
+		font-size: 43%;
 	}
 	@include respond(tab-land) {
 		font-size: 50%;
@@ -58,12 +58,12 @@ body {
 //   }
 // }
 
-.container {
-  max-width: 1200px;
-  margin: 0px auto;
-  padding: 0 15px;
+// .container {
+//   max-width: 1200px;
+//   margin: 0px auto;
+//   padding: 0 15px;
 
-  @media (-webkit-device-pixel-ratio: 1.25) {
-    @apply max-w-[1200px] ;
-  }
-}
+//   @media (-webkit-device-pixel-ratio: 1.25) {
+//     @apply max-w-[1200px] ;
+//   }
+// }
