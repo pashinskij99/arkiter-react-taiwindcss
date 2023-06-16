@@ -16,15 +16,15 @@
 }
 
 .codeWrapper {
-  @apply w-72 h-72 rounded-3xl py-2 overflow-hidden absolute z-[2] translate-x-[-50%] translate-y-[-2%];
+  @apply w-[30.1rem] h-[28.674rem] rounded-3xl py-[.683rem] overflow-hidden absolute z-[2] translate-x-[-50%] translate-y-[-2%];
 
   background: linear-gradient(126.43deg, #4E4E4E 0%, rgba(78, 78, 78, 0.99) 100%);
   box-shadow: 0 0 0 .22187rem rgba(0, 0, 0, 0.05), 0 0 0 .110935rem rgba(255, 255, 255, 0.1), inset 0rem 0.0554676rem 0 rgba(255, 255, 255, 0.5);
 }
 .codeHeader {
-  @apply px-3 h-8 border-b-[.2rem] border-[#ffffff15] gap-3 text-arkiterWhite-100 text-[1.28225rem] font-medium grid ;
+  @apply pl-[2.051rem] pr-[1rem] h-[2.775rem] gap-[2.051rem] border-b-[.2rem] border-[#ffffff15] text-arkiterWhite-100 text-[1.28225rem] font-medium grid ;
 
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
 }
 .tab1 {
   @apply flex items-center w-max relative;
@@ -32,7 +32,7 @@
   &::before {
     content: "";
 
-    @apply absolute bottom-[-1.0rem] left-0 w-full h-2 opacity-10 ;
+    @apply absolute bottom-[-0.7rem] left-0 w-full h-2 opacity-10 ;
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(0, 0, 0, 0) 100%);
   }
 }
@@ -47,7 +47,7 @@
 }
 .codeBody {
 
-  @apply p-3 font-normal text-[1.6rem] flex leading-5;
+  @apply py-[2.372rem] px-[2.1rem] font-normal text-[1.6rem] flex leading-[1.85rem];
 
 }
 .codeTitle {

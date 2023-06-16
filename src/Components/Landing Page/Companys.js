@@ -5,6 +5,8 @@ import JP from '../../Assets/JP.png';
 import Imperial from '../../Assets/Imperial.png';
 import SlidingToggle from '../toggle';
 import imageSrc from '../../Assets/home.png';
+import dashboardSrc from '../../Assets/section2dashboard.png';
+import cartSrc from '../../Assets/section2cart.png';
 import styles from '../../styles/Companys.module.scss'
 import {ReactComponent as GoldmanIcon} from "../../Assets/icons/goldmansachs.svg";
 import {ReactComponent as IBMIcon} from "../../Assets/icons/ibm.svg";
@@ -21,16 +23,18 @@ const company = [
 const ImageGrid = () => {
     return (
         <div className="z-10 pb-8 relative">
-            <div className='container max-h-[93.7rem] bg-white flex flex-col items-center justify-end'>
-                <div className='relative z-[1] max-h-[105.618rem]'>
-                    <img className='w-full relative h-full object-contain' src={imageSrc} alt=""/>
+            <div className='container bg-white flex flex-col items-center justify-end'>
+                <div className='relative z-[1]'>
+                    <img className='z-[1] relative translate-y-[-5%]' src={dashboardSrc} height={'855.18rem'} width={'1299rem'} alt="dashboard" />
+                    <img className='absolute top-0 right-0 z-[0] translate-y-[-45%]' src={cartSrc} width={'477rem'} height={'496rem'} alt="cart" />
+                    {/* <img className='w-full relative h-full object-contain' src={imageSrc} alt=""/> */}
                 </div>
 
-                <h1 className="text-[2.3rem] text-arkiterTextDark uppercase font-normal mb-8 relative">BUILT by global leaders From</h1>
+                <h1 className="text-[2.3rem] text-arkiterTextDark uppercase font-normal mb-[3.462rem] relative">BUILT by global leaders From</h1>
                 <ul className={styles.companyList}>
                     {company.map((props) => (
                         <li key={props.key} className='w-full flex items-center justify-center'>
-                            <img {...props} className="w-auto h-8 md:h-10 lg:h-16 mx-2 mb-2"/>
+                            <img {...props} className="w-auto h-12 md:h-20 lg:h-24 mx-2 mb-2"/>
                         </li>
                     ))}
                 </ul>
