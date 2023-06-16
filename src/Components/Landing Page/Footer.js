@@ -9,7 +9,10 @@ const Footer = () => {
       <footer className="">
         <div className="container">
           <LogoIcon className="h-6 md:h-[3.533rem] w-[26.8rem]" />
-          <div className='grid grid-cols-3 max-w-[70rem] gap-y-20  ml-auto'>
+          <div
+            style={{gridTemplateColumns: '1fr 1.3fr 1fr'}}
+            className='grid max-w-[80rem] gap-y-20 ml-auto'
+          >
             <ul className='flex flex-col'>
               <li className='text-[3.541rem] font-bold'>Demo</li>
               <li className='text-[2.724rem] mt-[1.5rem]'>Demo</li>
@@ -54,9 +57,9 @@ const Footer = () => {
         </div>
 
         <div className='flex items-center gap-[10rem]'>
-          <Inst />
-          <Twitter />
-          <Linkedin />
+          <Inst width={'4.032rem'} height={'4.032rem'} />
+          <Twitter width={'3.037rem'} height={'2.672rem'} />
+          <Linkedin width={'3.405rem'} height={'3.405rem'} />
         </div>
 
       </div>
