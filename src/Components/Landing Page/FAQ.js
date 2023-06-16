@@ -12,25 +12,25 @@ const FaqItem = ({ question, answer }) => {
     };
 
     return (
-        <div className={clsx("mb-[32px] w-full", {
+        <div className={clsx("mb-[3.2rem] w-full", {
             ['border-b-[#0A265F] border-b-2']: !isOpen
         })}>
             <button
-                className="flex justify-between items-center w-full pb-[32px] text-left focus:outline-none"
+                className="flex justify-between items-center w-full pb-[3.2rem] text-left focus:outline-none"
                 onClick={toggleAccordion}
             >
-                <span className="font-[600] text-[39.72px] text-[#0A265F]">{question}</span>
-                <div className={clsx(`rounded-full mr-[60px] flex items-center justify-center w-[55.09px] h-[55.09px] ${isOpen ? 'bg-[#0A265F]' : 'bg-white'} ${isOpen ? 'text-white/[1]' : 'text-[#0A265F]'}`, {
+                <span className="font-[600] text-[3.972rem] text-[#0A265F]">{question}</span>
+                <div className={clsx(`rounded-full mr-[6rem] flex items-center justify-center w-[5.509rem] h-[5.509rem] ${isOpen ? 'bg-[#0A265F]' : 'bg-white'} ${isOpen ? 'text-white/[1]' : 'text-[#0A265F]'}`, {
                     ['border border-[#0A265F]']: !isOpen
                 }) }>
                     {isOpen
-                        ? <MinusIcon width={'17.89px'} height={'17.89px'} />
-                        : <PlusIcon width={'17.89px'} height={'17.89px'}/>
+                        ? <MinusIcon width={'1.789rem'} height={'1.789rem'} />
+                        : <PlusIcon width={'1.789rem'} height={'1.789rem'}/>
                     }
                 </div>
             </button>
             <div>
-                {isOpen && <p className="text-[#0A265F] text-[33.1px] leading-[40px]">{answer}</p>}
+                {isOpen && <p className="text-[#0A265F] text-[3.31rem] leading-[4rem]">{answer}</p>}
             </div>
         </div>
     );
@@ -58,10 +58,10 @@ const FAQ = () => {
     ];
 
     return (
-        <div className="pt-[42px] bg-[#FCFCFC]">
+        <div className="pt-[4.2rem] bg-[#FCFCFC]">
             <div className="container">
-                <h2 className="text-[74.04px] text-center font-[700] text-[#0A265F]">FAQs</h2>
-                <div className='flex flex-col justify-center items-center mt-[32px]'>
+                <h2 className="text-[7.404rem] text-center font-[700] text-[#0A265F]">FAQs</h2>
+                <div className='flex flex-col justify-center items-center mt-[3.2rem]'>
                     {faqData.map((item, index) => (
                         <FaqItem key={index} question={item.question} answer={item.answer} />
                     ))}

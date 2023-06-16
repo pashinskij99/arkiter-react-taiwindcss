@@ -10,14 +10,14 @@ const Navbar = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
-    const navItemsDesktopHomeClassNames = 'text-white text-[10px] md:text-[18px] xl:text-[28px]'
-    const navItemsDesktopClassNames = 'text-white text-[10px] md:text-[18px] xl:text-[28px] hover:text-gray-300'
+    const navItemsDesktopHomeClassNames = 'text-white text-[1rem] md:text-[1.8rem] xl:text-[2.8rem]'
+    const navItemsDesktopClassNames = 'text-white text-[1rem] md:text-[1.8rem] xl:text-[2.8rem] hover:text-gray-300'
 
     return (
-        <nav className="bg-[#0A265F] text-white py-[21px] border-b-[1px] border-[#ffffff26] z-10 relative">
+        <nav className="bg-[#0A265F] text-white py-[2.1rem] border-b-[.1rem] border-[#ffffff26] z-10 relative">
             <div className="container flex items-center justify-between">
                 <div className="flex items-center">
-                    <LogoIcon className="h-6 md:h-[35.33px] w-[268px]" />
+                    <LogoIcon className="h-6 md:h-[3.533rem] w-[26.8rem]" />
                     {/* <img src={logo} alt="Logo" className="h-6 md:h-[35.33px] w-[268px] mr-2" /> */}
                 </div>
 
@@ -53,31 +53,31 @@ const Navbar = () => {
                         <div className="bg-[#0A265F] py-4 text-center">
                             <a
                                 href="#"
-                                className="block py-2 text-[28px] text-white hover:text-gray-300"
+                                className="block py-2 text-[2.8rem] text-white hover:text-gray-300"
                             >
                                 Home
                             </a>
                             <a
                                 href="#"
-                                className="block py-2 text-[28px] text-white hover:text-gray-300"
+                                className="block py-2 text-[2.8rem] text-white hover:text-gray-300"
                             >
                                 About
                             </a>
                             <a
                                 href="#"
-                                className="block py-2 text-[28px] text-white hover:text-gray-300"
+                                className="block py-2 text-[2.8rem] text-white hover:text-gray-300"
                             >
                                 Why us?
                             </a>
                             <a
                                 href="#"
-                                className="block py-2 text-[28px] text-white hover:text-gray-300"
+                                className="block py-2 text-[2.8rem] text-white hover:text-gray-300"
                             >
                                 Pricing
                             </a>
                             <a
                                 href="#"
-                                className="block py-2 text-[28px] text-white hover:text-gray-300"
+                                className="block py-2 text-[2.8rem] text-white hover:text-gray-300"
                             >
                                 Blog
                             </a>

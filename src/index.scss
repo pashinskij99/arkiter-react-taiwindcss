@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import './styles/mixin/index.scss';
 
 @layer base {
   html {
@@ -10,25 +10,60 @@
   }
 }
 
+html {
+  font-size: 62.5%;
+
+  // @include respond(big-screen) {
+  //   font-size: 100%
+  // }
+  @include respond(screen) {
+		font-size: 45%;
+	}
+	@include respond(tab-land) {
+		font-size: 50%;
+	}
+	@include respond(tab-port) {
+		font-size: 45%;
+	}
+	@include respond(phone) {
+		font-size: 40%;
+	}
+  @include respond(small-phone) {
+    font-size: 30%
+  }
+
+  @media (-webkit-device-pixel-ratio: 1.25) {
+
+  }
+
+  @media (-webkit-device-pixel-ratio: 1) {
+
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
-@media (-webkit-device-pixel-ratio: 1) {
-  * {
-    zoom: 0.955;
-  }
-}
-
-@media (-webkit-device-pixel-ratio: 1.25) {
-  * {
-    zoom: 0.94;
-  }
-}
-
-// .container {
-//   max-width: 1200px;
-//   margin: 0px auto;
-//   padding: 0 15px;
+// @media (-webkit-device-pixel-ratio: 1) {
+//   * {
+//     // zoom: 0.955;
+//   }
 // }
+
+// @media (-webkit-device-pixel-ratio: 1.25) {
+//   * {
+//     // zoom: 0.94;
+//   }
+// }
+
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0 15px;
+
+  @media (-webkit-device-pixel-ratio: 1.25) {
+    @apply max-w-[1200px] ;
+  }
+}

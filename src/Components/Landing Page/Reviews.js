@@ -69,23 +69,23 @@ const ReviewComponent = () => {
 
   return (
     <div
-      className="flex justify-center py-[115px] bg-[#1D9EEB]"
+      className="flex justify-center py-[11.5rem] bg-[#1D9EEB]"
       style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
-      <div className="container max-h-[541px]">
+      <div className="container max-h-[54.1rem]">
         <div className="overflow-hidden h-full">
           <div className="flex flex-col h-full md:flex-row">
             <div className="w-full md:w-1/3 mb-4 md:mb-0 md:mr-10 flex justify-center items-center">
               <img
                 src={currentReview.imageUrl}
                 alt="Review Image"
-                className="object-containe md:h-full rounded-[40px]"
+                className="object-containe md:h-full rounded-[4rem]"
               />
             </div>
             <div className="w-full md:w-2/3 flex flex-col justify-end">
-              <p className="text-white font-semibold text-[49.4383px] h-full flex items-center leading-[50px]">{currentReview.review}</p>
-              <p className="text-white text-[32.1783px] mb-[47px] text-center md:text-start flex items-center">
-                <hr className='border-none w-[26.97px] h-[2px] bg-white mr-[11.35px]' />
+              <p className="text-white font-semibold text-[4.94383rem] h-full flex items-center leading-[5rem]">{currentReview.review}</p>
+              <p className="text-white text-[3.21783rem] mb-[4.7rem] text-center md:text-start flex items-center">
+                <hr className='border-none w-[2.697rem] h-[.2rem] bg-white mr-[1.135rem]' />
                 {currentReview.companyName}
               </p>
               <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between">
@@ -93,8 +93,8 @@ const ReviewComponent = () => {
                 <div className="flex items-center translate-x-[-50%]">
                   <button
                     onClick={goToPreviousReview}
-                    className={clsx("ml-4 w-[76.56px] h-[76.56px] flex items-center justify-center rounded-full bg-white text-gray-700", {
-                      ['!bg-[#1D9EEB] !border-white border-[3.47991px] ']: currentIndex === 0
+                    className={clsx("ml-4 w-[7.656rem] h-[7.656rem] flex items-center justify-center rounded-full bg-white text-gray-700", {
+                      ['!bg-[#1D9EEB] !border-white border-[.347991rem] ']: currentIndex === 0
                     })}
                     disabled={currentIndex === 0}
                   >
@@ -104,8 +104,8 @@ const ReviewComponent = () => {
                   </button>
                   <button
                     onClick={goToNextReview}
-                    className={clsx("ml-4 w-[76.56px] h-[76.56px] flex items-center justify-center rounded-full bg-white text-gray-700", {
-                      ['!bg-[#1D9EEB] !border-white border-[3.47991px] ']: currentIndex === reviews.length - 1
+                    className={clsx("ml-4 w-[7.656rem] h-[7.656rem] flex items-center justify-center rounded-full bg-white text-gray-700", {
+                      ['!bg-[#1D9EEB] !border-white border-[.347991rem] ']: currentIndex === reviews.length - 1
                     })}
                     disabled={currentIndex === reviews.length - 1}
                   >

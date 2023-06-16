@@ -47,17 +47,17 @@ const MyComponent = () => {
     ]
 
     return (
-        <div className="flex flex-col items-center pt-[101px] pb-[70px] text-white">
+        <div className="flex flex-col items-center pt-[10.1rem] pb-[7.0rem] text-white">
             <div className="container">
 
-                <div className={clsx('pt-[44px] pb-[40px] px-[71px]', styles.sectionInner) }>
+                <div className={clsx('pt-[4.4rem] pb-[4rem] px-[7.1rem]', styles.sectionInner) }>
 
                     {/* Section Title */}
                     <div className="w-full my-auto">
-                        <TypographyH2 className='mb-[18px]'>
+                        <TypographyH2 className='mb-[1.8rem]'>
                             Predict real-world <br /> performance with our AI tests
                         </TypographyH2>
-                        <TypographyP className='mb-[36px]'>
+                        <TypographyP className='mb-[3.6rem]'>
                             Unleash the power of our comprehensive system
                             design and architecture assessment. Our cutting-edge.
                         </TypographyP>
@@ -84,7 +84,7 @@ const MyComponent = () => {
                                         />
                                     </div>
 
-                                    <div className='w-[260px]'>
+                                    <div className='w-[26rem]'>
                                         <h4>Katherine Donalds</h4>
                                         <p>Full-Stack Developer</p>
                                         <div className={styles.progress}>
@@ -112,10 +112,10 @@ const MyComponent = () => {
 
                 {/* Unlock and Discover section */}
 
-                <div className="flex flex-col xl:grid xl:grid-cols-2 gap-[67px] w-full ">
+                <div className="flex flex-col xl:grid xl:grid-cols-2 gap-[6.7rem] w-full ">
 
                     {/* Unlock section */}
-                    <div className="bg-[#0A3D62] rounded-lg flex flex-col items-center pt-[43px] pb-[61px] px-[63px]">
+                    <div className="bg-[#0A3D62] rounded-lg flex flex-col items-center pt-[4.3rem] pb-[6.1rem] px-[6.3rem]">
                         <TypographyH3 className={'mb-14 text-center'}>
                             Unlock powerful <br />
                             insights and analysis
@@ -128,31 +128,31 @@ const MyComponent = () => {
                         {/*<div className='bg-'>*/}
                         {/*    <Graphic />*/}
                         {/*</div>*/}
-                        <img src={ImageTwo} alt="Image 2" className="object-contain w-full max-h-[543px] rounded-lg" />
+                        <img src={ImageTwo} alt="Image 2" className="object-contain w-full max-h-[54.3rem] rounded-lg" />
                     </div>
 
                     {/* Discover section */}
-                    <div className="bg-[#313131] rounded-lg flex flex-col items-center pt-[40px] px-[67px]">
-                        <TypographyH3 className='text-center mb-[77px]'>
+                    <div className="bg-[#313131] rounded-lg flex flex-col items-center pt-[4rem] px-[6.7rem]">
+                        <TypographyH3 className='text-center mb-[7.7rem]'>
                             Discover your <br />
                             potential savings
                         </TypographyH3>
-                        <TypographyP className='text-center mb-[65px] inline-block'>
+                        <TypographyP className='text-center mb-[6.5rem] inline-block'>
                             See how much your business could save with the
                             calculator below or see how we’ve helped others <span className='underline'>here.</span>
                         </TypographyP>
-                        <div className='border border-[#FFFFFF]/[0.33] px-[42px] py-[30px] rounded-lg w-full'>
+                        <div className='border border-[#FFFFFF]/[0.33] px-[4.2rem] py-[3rem] rounded-lg w-full'>
                             <div className='grid grid-cols-2 gap-6'>
                                 {inputsNumber.map(({ id, type, label }) => (
                                     <div key={id} className="flex flex-col">
-                                        <label className="text-[#FFFFFFBD] leading-5 h-10 flex items-center font-medium text-[20px]">{label}</label>
-                                        <input type={type} className="w-full border-b-2 border-[#FFFFFF75] px-2 py-2 bg-transparent focus-within:outline-none font-medium text-[30px]" />
+                                        <label className="text-[#FFFFFFBD] leading-5 h-10 flex items-center font-medium text-[2rem]">{label}</label>
+                                        <input type={type} className="w-full border-b-2 border-[#FFFFFF75] px-2 py-2 bg-transparent focus-within:outline-none font-medium text-[3rem]" />
                                     </div>
                                 ))}
                             </div>
-                            <div className="flex flex-col mt-[35px]">
-                                <label className="text-[#FFFFFFBD] leading-4 h-10 flex items-center font-medium text-[20px] mb-3">
-                                    Applicants Per Role: <strong className='ml-4 font-medium text-[30px] text-white'>{sliderValue}</strong>
+                            <div className="flex flex-col mt-[3.5rem]">
+                                <label className="text-[#FFFFFFBD] leading-4 h-10 flex items-center font-medium text-[2rem] mb-3">
+                                    Applicants Per Role: <strong className='ml-4 font-medium text-[3rem] text-white'>{sliderValue}</strong>
                                 </label>
                                 <div className={styles.rangeInputWrapper}>
                                     <input
@@ -166,11 +166,11 @@ const MyComponent = () => {
                                 </div>
                             </div>
                             <div className="grid grid-cols-2 gap-2 items-center justify-between mt-16">
-                                <div className=" border-[#FCFCFC6B] border-2 bg-[#FFFFFF4A] rounded-lg py-[24px] px-[45px]">
-                                    <p className="text-white font-bold text-center text-[35.3081px]">$133,400</p>
+                                <div className=" border-[#FCFCFC6B] border-2 bg-[#FFFFFF4A] rounded-lg py-[2.4rem]">
+                                    <p className="text-white font-bold text-center text-[3.53081rem]">$133,400</p>
                                 </div>
-                                <div className=" border-[#FCFCFC6B] border-2 bg-[#FFFFFF4A] rounded-lg py-[24px] px-[45px]">
-                                    <p className="text-white font-bold text-center text-[35.3081px]">667 Hours</p>
+                                <div className=" border-[#FCFCFC6B] border-2 bg-[#FFFFFF4A] rounded-lg py-[2.4rem]">
+                                    <p className="text-white font-bold text-center text-[3.53081rem]">667 Hours</p>
                                 </div>
                             </div>
                         </div>

@@ -11,7 +11,7 @@ const Banner = () => {
             <div className={styles.sectionContainer}>
 
                 {/* Section Title */}
-                <div className="max-w-[807px] text-white mr-auto">
+                <div className="max-w-[80.7rem] text-white mr-auto">
                     <TypographyH2 className='mb-10'>
                         Experience the next level of technology hiring
                     </TypographyH2>
