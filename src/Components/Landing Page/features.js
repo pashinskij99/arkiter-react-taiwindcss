@@ -21,9 +21,9 @@ const MyComponent = () => {
         colorSlice: "#34B53A",
         colorCircle: "#E2FBD7",
         fontColor: "#000",
-        fontSize: "0.9rem",
+        fontSize: "2rem",
         fontWeight: 600,
-        size: 75,
+        size: '7.5rem',
         stroke: 7,
         strokeBottom: 3,
         speed: 60,
@@ -116,11 +116,11 @@ const MyComponent = () => {
 
                     {/* Unlock section */}
                     <div className="bg-[#0A3D62] rounded-lg flex flex-col items-center pt-[4.3rem] pb-[6.1rem] px-[6.3rem]">
-                        <TypographyH3 className={'mb-14 text-center'}>
+                        <TypographyH3 className={'mb-[5.5rem] text-center'}>
                             Unlock powerful <br />
                             insights and analysis
                         </TypographyH3>
-                        <TypographyP className='text-center mb-14'>
+                        <TypographyP className='text-center mb-[6.1rem]'>
                             Arkiter allows you in-depth insights into the
                             skills of your potential candidates, making sure you hire the right people.
                         </TypographyP>
@@ -133,7 +133,7 @@ const MyComponent = () => {
 
                     {/* Discover section */}
                     <div className="bg-[#313131] rounded-lg flex flex-col items-center pt-[4rem] px-[6.7rem]">
-                        <TypographyH3 className='text-center mb-[7.7rem]'>
+                        <TypographyH3 className='text-center mb-[6.9rem]'>
                             Discover your <br />
                             potential savings
                         </TypographyH3>
@@ -145,13 +145,13 @@ const MyComponent = () => {
                             <div className='grid grid-cols-2 gap-6'>
                                 {inputsNumber.map(({ id, type, label }) => (
                                     <div key={id} className="flex flex-col">
-                                        <label className="text-[#FFFFFFBD] leading-5 h-10 flex items-center font-medium text-[2rem]">{label}</label>
+                                        <label className="text-[#FFFFFFBD] leading-[2rem] h-10 flex items-center font-medium text-[2rem]">{label}</label>
                                         <input type={type} className="w-full border-b-2 border-[#FFFFFF75] px-2 py-2 bg-transparent focus-within:outline-none font-medium text-[3rem]" />
                                     </div>
                                 ))}
                             </div>
                             <div className="flex flex-col mt-[3.5rem]">
-                                <label className="text-[#FFFFFFBD] leading-4 h-10 flex items-center font-medium text-[2rem] mb-3">
+                                <label className="text-[#FFFFFFBD] leading-4 h-10 flex items-center font-medium text-[2rem] mb-[3.9rem]">
                                     Applicants Per Role: <strong className='ml-4 font-medium text-[3rem] text-white'>{sliderValue}</strong>
                                 </label>
                                 <div className={styles.rangeInputWrapper}>
@@ -167,10 +167,10 @@ const MyComponent = () => {
                             </div>
                             <div className="grid grid-cols-2 gap-2 items-center justify-between mt-16">
                                 <div className=" border-[#FCFCFC6B] border-2 bg-[#FFFFFF4A] rounded-lg py-[2.4rem]">
-                                    <p className="text-white font-bold text-center text-[3.53081rem]">$133,400</p>
+                                    <p className="text-white font-bold text-center text-[3.73081rem]">$133,400</p>
                                 </div>
                                 <div className=" border-[#FCFCFC6B] border-2 bg-[#FFFFFF4A] rounded-lg py-[2.4rem]">
-                                    <p className="text-white font-bold text-center text-[3.53081rem]">667 Hours</p>
+                                    <p className="text-white font-bold text-center text-[3.73081rem]">667 Hours</p>
                                 </div>
                             </div>
                         </div>

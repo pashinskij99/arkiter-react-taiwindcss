@@ -65,7 +65,7 @@ const ProductComparison = () => {
                   <span className='absolute mx-auto w-full left-0 bottom-[5.016rem] '>Others</span>
                 </th>
                 <th className="w-[52.7rem] rounded-tl-[2.87485rem] rounded-tr-[2.87485rem]  pt-[4.7rem] bg-[#0A265F] justify-center text-white">
-                  <img src={logo} alt="Competitor B Logo" width={'14.5rem'} height={'10.765rem'} className="mx-auto" />
+                  <img src={logo} alt="Competitor B Logo" width={'90.251rem'} className="mx-auto" />
                   <hr className='border-none h-[.1rem] bg-[#FCFCFC] mt-[4.612rem]' />
                 </th>
               </tr>

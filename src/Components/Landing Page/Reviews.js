@@ -93,7 +93,7 @@ const ReviewComponent = () => {
                 <div className="flex items-center translate-x-[-50%]">
                   <button
                     onClick={goToPreviousReview}
-                    className={clsx("ml-4 w-[7.656rem] h-[7.656rem] flex items-center justify-center rounded-full bg-white text-gray-700", {
+                    className={clsx("w-[7.656rem] h-[7.656rem] flex items-center justify-center rounded-full bg-white text-gray-700", {
                       ['!bg-[#1D9EEB] !border-white border-[.347991rem] ']: currentIndex === 0
                     })}
                     disabled={currentIndex === 0}
@@ -104,7 +104,7 @@ const ReviewComponent = () => {
                   </button>
                   <button
                     onClick={goToNextReview}
-                    className={clsx("ml-4 w-[7.656rem] h-[7.656rem] flex items-center justify-center rounded-full bg-white text-gray-700", {
+                    className={clsx("ml-[2.262rem] w-[7.656rem] h-[7.656rem] flex items-center justify-center rounded-full bg-white text-gray-700", {
                       ['!bg-[#1D9EEB] !border-white border-[.347991rem] ']: currentIndex === reviews.length - 1
                     })}
                     disabled={currentIndex === reviews.length - 1}

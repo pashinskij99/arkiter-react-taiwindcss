@@ -23,9 +23,9 @@ const data = [
 ];
 
 const classNameWrapper = 'relative flex items-center justify-center p-4 h-[20rem]'
-const classNameInner = 'flex flex-col items-center absolute w-[40.9rem] top-0'
+const classNameInner = 'flex flex-col items-center absolute w-[46.9rem] top-0'
 const classNameH2 = 'text-[4rem] text-white font-semibold mb-[2.3rem] text-center'
-const classNameP = 'text-white text-center text-[2rem] leading-6'
+const classNameP = 'text-white text-center text-[2rem] leading-[2.5rem]'
 
 const stepContent = [
   {
@@ -62,7 +62,7 @@ const Component = () => {
               {index !== 0 && (
                 <div className={styles.stepWrapper}>
                   <div className={styles.stepLine}>
-                    <img src={arrowImage} alt="Arrow Image" className="w-24 h-auto" />
+                    <img src={arrowImage} alt="Arrow Image" className="w-[13.446rem] h-auto" />
                   </div>
                 </div>
               )}
@@ -97,7 +97,7 @@ const Component = () => {
           Complete <span className='text-[#49CCF9]'>Insight</span> Into Your Candidates
         </TypographyH2>
         <div className="flex justify-center m-auto">
-          <img src={Image} alt="Additional Image" className="w-full max-h-[101.9rem]" />
+          <img src={Image} alt="Additional Image" className="w-full" />
         </div>
 
       </div>
