@@ -1,5 +1,5 @@
 .stepContainer {
-  @apply px-24 hidden md:grid grid-cols-1 items-center mb-[13.2rem] ;
+  @apply px-24  md:grid grid-cols-1 items-center mb-[13.2rem] hidden;
   column-gap: 2rem;
 
   row-gap: 2.8rem;
@@ -34,5 +34,5 @@
   }
 }
 .stepNumber {
-  @apply text-[#26C6DA] font-bold translate-y-[-5%] text-[5.04418rem] ;
+  @apply text-[#26C6DA]  translate-y-[-5%] text-[5.04418rem] font-bold;
 }

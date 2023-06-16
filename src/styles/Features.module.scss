@@ -1,6 +1,6 @@
 // Section - start
 .sectionInner {
-  @apply w-full bg-[#1D9EEB] gap-[5rem] justify-items-end rounded-lg flex flex-col-reverse md:grid grid-cols-1 mb-[5.2rem] ;
+  @apply bg-[#1D9EEB] gap-[5rem] justify-items-end rounded-lg flex flex-col-reverse md:grid grid-cols-1 mb-[5.2rem] w-full;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -13,7 +13,7 @@
   @apply h-[190px] md:h-auto w-full flex justify-end;
 
   text {
-    @apply text-[15.65px] ;
+    @apply text-[15.65px] static;
   }
 }
 .cartWrapper {

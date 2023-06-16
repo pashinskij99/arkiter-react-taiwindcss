@@ -16,7 +16,7 @@
 }
 
 .codeWrapper {
-  @apply relative w-[233.04px] h-[222.09px] md:w-[30.1rem] md:translate-x-[-10%] lg:translate-x-[-50%] md:h-[28.674rem] rounded-3xl py-[.683rem] overflow-hidden md:absolute z-[2] md:translate-y-[-2%];
+  @apply  w-[233.04px] h-[222.09px] md:w-[30.1rem] md:translate-x-[-10%] lg:translate-x-[-50%] md:h-[28.674rem] rounded-3xl py-[.683rem] overflow-hidden md:absolute z-[2] md:translate-y-[-2%] relative;
 
   background: linear-gradient(126.43deg, #4E4E4E 0%, rgba(78, 78, 78, 0.99) 100%);
   box-shadow: 0 0 0 .22187rem rgba(0, 0, 0, 0.05), 0 0 0 .110935rem rgba(255, 255, 255, 0.1), inset 0rem 0.0554676rem 0 rgba(255, 255, 255, 0.5);
@@ -47,7 +47,7 @@
 }
 .codeBody {
 
-  @apply py-[2.372rem] px-[2.1rem] font-normal text-[2.6rem] md:text-[1.6rem] flex leading-[3.4rem] md:leading-[1.85rem];
+  @apply py-[2.372rem] px-[2.1rem]  text-[2.6rem] md:text-[1.6rem] flex leading-[3.4rem] md:leading-[1.85rem] font-normal;
 
 }
 .codeTitle {
