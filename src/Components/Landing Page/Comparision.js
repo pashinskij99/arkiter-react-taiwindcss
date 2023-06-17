@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import {ReactComponent as ExitIcon} from '../../Assets/icons/exit.svg'
 import {ReactComponent as CheckIcon} from '../../Assets/icons/check-table.svg'
 import {ReactComponent as CheckDarkIcon} from '../../Assets/icons/check-table-darker.svg'
+import {ReactComponent as TableIcon} from '../../Assets/table.svg'
 import ButtonPrimary from '../UI/Button';
 
 const ProductComparison = () => {
@@ -56,7 +57,7 @@ const ProductComparison = () => {
       <div className="container">
         <h2 className="text-[6.6rem] leading-[1] text-[#0A265F] text-center font-bold pb-12">Why Choose Arkiter?</h2>
         <div className="overflow-x-auto mt-[4.5rem]">
-          <table className="w-full table-fixed">
+          <table className="w-full table-fixed hidden md:table">
             <thead>
               <tr className=''>
                 <th className="w-min"></th>
@@ -106,6 +107,12 @@ const ProductComparison = () => {
               </tr>
             </tbody>
           </table>
+
+          <TableIcon className='w-full h-full md:hidden' />
+
+          <ButtonPrimary classNameButton={'md:hidden !bg-[#0A3D62] w-[192.33px] hover:!bg-[#1D9EEB] hover:!text-white mx-auto mt-[23.33px]'}>
+            Buy Now
+          </ButtonPrimary>
         </div>
       </div>
 

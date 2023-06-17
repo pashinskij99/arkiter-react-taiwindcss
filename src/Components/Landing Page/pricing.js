@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import User from '../../Assets/User.png'
 import Organisation from '../../Assets/organization.png'
 import Rocket from '../../Assets/rocket.png'
-import {ReactComponent as LightningIcon} from '../../Assets/icons/lightning.svg'
-import {ReactComponent as CheckIcon} from '../../Assets/icons/check.svg'
+import { ReactComponent as LightningIcon } from '../../Assets/icons/lightning.svg'
+import { ReactComponent as CheckIcon } from '../../Assets/icons/check.svg'
 
 import { ReactComponent as BasketIcon } from '../../Assets/icons/basket.svg'
 import ButtonPrimary from '../UI/Button'
@@ -78,13 +78,13 @@ const PricingComponent = () => {
 
   return (
     <section>
-      <div className="bg-[#0A265F] pt-[8.2rem]">
+      <div className="bg-[#0A265F] pt-[8.2rem] pb-[8.2rem] md:pb-0">
         <div className='container items-center flex flex-col'>
 
-          <h2 className="text-[10.9565rem] leading-[11.7rem] text-center font-semibold mb-8 text-white -tracking-[.373913rem]">
+          <h2 className="text-[30.82px] md:text-[10.9565rem] leading-[31px] md:leading-[11.7rem] text-center font-semibold mb-6 md:mb-8 text-white -tracking-[.373913rem]">
             <span>Choose the plan</span>
             <br />
-            <span className='flex items-center -tracking-[.273913rem]'>that works <BasketIcon className='mx-[3.4rem] translate-y-[.8rem]' /> for you.</span>
+            <span className='flex items-center leading-[1] -tracking-[.273913rem]'>that works <BasketIcon className='w-[25px] md:w-auto h-[30px] mx-[3.4rem] translate-y-[.8rem]' /> for you.</span>
           </h2>
 
           <p className="text-[2.78261rem] mb-[6.265rem] -tracking-[-0.0178261rem] text-center text-white">You are one step away from a hassle-free hiring cycle.</p>
@@ -127,10 +127,10 @@ const PricingComponent = () => {
           <div className="w-full z-10">
             <div
               className="grid gap-[2.1rem] items-end md:grid-cols-3 "
-              >
+            >
               {pricingBoxes.map((box, index) => (
                 <div key={index} className="rounded-2xl">
-                  <div className={clsx('bg-[#1D9EEB] pt-[3.368rem] pb-[1.985rem] px-[4.8rem] rounded-t-[2.8rem] text-center', {
+                  <div className={clsx('bg-[#1D9EEB] z-[1] relative pt-[3.368rem] pb-[1.985rem] px-[4.8rem] rounded-t-[2.8rem] text-center', {
                     ['!pt-[1.885rem] bg-[#FCFCFC]']: box.popular
                   })}>
                     {box.popular && <span className='text-[#0A265F] text-[3.2rem] font-bold mb-[4.959rem] inline-block'>Most Popular</span>}
@@ -145,24 +145,24 @@ const PricingComponent = () => {
                         box.popular
                           ? (<div className='flex flex-col'>
                             <div className='text-[#0A265F] text-start font-bold text-[5.05714rem]'>{box.title}</div>
-                            <div className='text-[#0A265F] font-semibold border-[.1rem] border-[#D4D4D421] rounded-[.5rem] text-[2.2rem] bg-[#78D9FBBA] px-[1.6rem]'>{box.plan}</div>
+                            <div className='text-[#0A265F] font-semibold border-[.1rem] border-[#D4D4D421] rounded-[.5rem] text-[12.89px] md:text-[2.2rem] bg-[#78D9FBBA] px-[1.6rem]'>{box.plan}</div>
                           </div>)
                           : (<div className='flex flex-col'>
                             <div className='text-white text-start font-bold text-[5.05714rem]'>{box.title}</div>
-                            <div className='text-white font-semibold border-[.1rem] border-[#D4D4D421] rounded-[.5rem] text-[2.2rem] bg-[#3AB4F0]/[0.25] px-[1.6rem]'>{box.plan}</div>
+                            <div className='text-white font-semibold border-[.1rem] border-[#D4D4D421] rounded-[.5rem] text-[12.89px] md:text-[2.2rem] bg-[#3AB4F0]/[0.25] px-[1.6rem]'>{box.plan}</div>
                           </div>)
                       }
                     </div>
                     {
                       box.popular
                         ? (
-                          <div className="text-[6.01259rem] lg:text-[8.01259rem] mt-[1.571rem] lg:mt-[3.571rem] leading-[11.6rem] text-center font-bold text-[#0A3D62]">
+                          <div className="text-[47px] md:text-[6.01259rem] lg:text-[8.01259rem] mt-[1.571rem] lg:mt-[3.571rem] leading-[11.6rem] text-center font-bold text-[#0A3D62]">
                             {currencyOptions.find((currency) => currency.value === selectedCurrency)?.symbol}
-                            {getPrice(selectedCurrency, box.title)}<span className='text-[4.05129rem] text-[#0A3D62]'>/month</span>
+                            {getPrice(selectedCurrency, box.title)}<span className='text-[23px] md:text-[4.05129rem] text-[#0A3D62]'>/month</span>
                           </div>
                         )
                         : (
-                          <div className="text-[6.01259rem] lg:text-[8.01259rem] mt-[1.571rem] lg:mt-[3.571rem] leading-[11.6rem] text-center font-bold text-[#F1F1F1]">
+                          <div className="text-[47px] md:text-[6.01259rem] lg:text-[8.01259rem] mt-[1.571rem] lg:mt-[3.571rem] leading-[11.6rem] text-center font-bold text-[#F1F1F1]">
                             {currencyOptions.find((currency) => currency.value === selectedCurrency)?.symbol}
                             {getPrice(selectedCurrency, box.title)}<span className='text-[4.05129rem] text-[#F1F1F1]'>/month</span>
                           </div>
@@ -170,10 +170,28 @@ const PricingComponent = () => {
                     }
 
                     <ButtonPrimary classNameButton={clsx('mt-[1.1rem] lg:mt-[4.1rem] !bg-[#0A3D62] hover:!bg-white mx-auto pl-[8rem] !pr-[3.086rem] !w-max', {
-                      ['hover:!bg-[#1D9EEB] hover:!text-white']: box.popular
+                      ['hover:!bg-arkiterBlueLight-200 hover:!text-white']: box.popular
                     })}>
                       Buy now
                     </ButtonPrimary>
+                  </div>
+
+                  <div className='block md:hidden bg-white px-[4.8rem] pb-[4.9rem] rounded-b-[2.8rem]' style={{ boxShadow: '0 1.1rem 2rem rgba(0, 0, 0, 0.25)' }}>
+                    <p className='text-[#0A265FA1] font-semibold text-[2.6rem] mb-[1.827rem] pt-[3.7rem]'>Key Features</p>
+                    <div className='rounded-md bg-white'>
+                      <ul className="text-[#0E0B3D]">
+                        {box.features.map((feature, index) => (
+                          <li className='text-[3.3rem] mb-[2rem] flex items-center' key={index}>
+                            {
+                              index !== 1
+                                ? <CheckIcon className='mr-[2.058rem]' width={'1.773rem'} height={'1.33rem'} />
+                                : <LightningIcon className='mr-[1.965rem]' width={'2.09rem'} height={'2.874rem'} />
+                            }
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -182,30 +200,32 @@ const PricingComponent = () => {
         </div>
       </div>
 
-      <div className="bg-[#FFFFFF]">
+
+      {/* desctop bottom section */}
+      <div className="hidden md:block bg-[#FFFFFF]">
         <div className='container items-center flex flex-col'>
           <div className="w-full">
             <div
               className="grid md:grid-cols-3 gap-[2.1rem] "
-              >
+            >
               {pricingBoxes.map((box, index) => (
-                <div className='bg-white px-[4.8rem] pb-[4.9rem] rounded-b-[2.8rem]' style={{ boxShadow: '0 1.1rem 2rem rgba(0, 0, 0, 0.25)'}}>
-                <p className='text-[#0A265FA1] font-semibold text-[2.6rem] mb-[1.827rem] pt-[3.7rem]'>Key Features</p>
-                <div className='rounded-md bg-white'>
-                  <ul className="text-[#0E0B3D]">
-                    {box.features.map((feature, index) => (
-                      <li className='text-[3.3rem] mb-[2rem] flex items-center' key={index}>
-                        {
-                          index !== 1
-                            ? <CheckIcon className='mr-[2.058rem]' width={'1.773rem'} height={'1.33rem'} />
-                            : <LightningIcon className='mr-[1.965rem]' width={'2.09rem'} height={'2.874rem'} />
-                        }
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                <div className='bg-white px-[4.8rem] pb-[4.9rem] rounded-b-[2.8rem]' style={{ boxShadow: '0 1.1rem 2rem rgba(0, 0, 0, 0.25)' }}>
+                  <p className='text-[#0A265FA1] font-semibold text-[2.6rem] mb-[1.827rem] pt-[3.7rem]'>Key Features</p>
+                  <div className='rounded-md bg-white'>
+                    <ul className="text-[#0E0B3D]">
+                      {box.features.map((feature, index) => (
+                        <li className='text-[3.3rem] mb-[2rem] flex items-center' key={index}>
+                          {
+                            index !== 1
+                              ? <CheckIcon className='mr-[2.058rem]' width={'1.773rem'} height={'1.33rem'} />
+                              : <LightningIcon className='mr-[1.965rem]' width={'2.09rem'} height={'2.874rem'} />
+                          }
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
               ))}
             </div>
           </div>

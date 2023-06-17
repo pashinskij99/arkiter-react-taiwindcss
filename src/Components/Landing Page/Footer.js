@@ -8,10 +8,9 @@ const Footer = () => {
     <div className='bg-[#0A3D62] pt-[7.5rem] pb-[3.256rem] text-white'>
       <footer className="">
         <div className="container">
-          <LogoIcon className="h-6 md:h-[3.533rem] w-[26.8rem]" />
+          <LogoIcon className="h-16 md:h-[3.533rem] w-[26.8rem]" />
           <div
-            style={{gridTemplateColumns: '1fr 1.3fr 1fr'}}
-            className='grid max-w-[80rem] gap-y-20 ml-auto'
+            className='grid grid-cols-[0.5fr_0.5fr_0.3fr] md:grid-cols-[1fr_1.3fr_1fr] max-w-[100%] md:max-w-[80rem] gap-y-20 ml-auto mt-20 md:mt-auto'
           >
             <ul className='flex flex-col'>
               <li className='text-[3.541rem] font-bold'>Demo</li>
@@ -49,7 +48,7 @@ const Footer = () => {
         </div>
       </footer>
       <hr className='mt-[4.8rem] h-[.1rem] border-none mb-[3rem] bg-[#FFFFFF14]' />
-      <div className='container flex justify-between items-center'>
+      <div className='container gap-[15px] md:gap-0 flex flex-col-reverse mt-16 md:flex-row justify-between items-center'>
         <div className='flex items-center text-[#FFFFFFA6] text-[3rem]'>
           <p className='mr-[4.7rem]'>2023 Arkiter LTD. All Rights Reserved </p>
           <p className='mr-[6.4rem]'>Privacy Policy</p>

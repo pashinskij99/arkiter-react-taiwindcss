@@ -4,6 +4,7 @@ import Review from '../../Assets/Review.png';
 import Company from '../../Assets/company.png';
 import BackgroundImageMobile from '../../Assets/mobileLines.png';
 import BackgroundImageDesktop from '../../Assets/desktopLines.png';
+import {ReactComponent as SliderLogo} from '../../Assets/icons/sliderLogo.svg'
 import clsx from 'clsx';
 
 const reviews = [
@@ -29,14 +30,16 @@ const reviewsMobile = [
     id: 1,
     imageUrl: Review,
     review: '“The biggest and the most awaited change in the boring interview process!”',
-    companyName: 'Alakbar Ayyubov, Data Specialist',
+    companyName: 'Alakbar Ayyubov',
+    companyProfession: 'Data Specialist',
     companyLogo: Company,
   },
   {
     id: 2,
     imageUrl: Review,
     review: '“Hello”',
-    companyName: 'Artik Devlopment',
+    companyName: 'Artik',
+    companyProfession: 'Devlopment',
     companyLogo: Company,
   },
   // Add more reviews as needed
@@ -45,7 +48,10 @@ const reviewsMobile = [
 
 const ReviewComponent = () => {
   const [currentReview, setCurrentReview] = useState(reviews[0]);
+  const [currentReviewMobile, setCurrentReviewMobile] = useState(reviewsMobile[0]);
   const [backgroundImage, setBackgroundImage] = useState('');
+
+  console.log(currentReviewMobile);
 
   useEffect(() => {
     const handleResize = () => {
@@ -76,6 +82,7 @@ const ReviewComponent = () => {
     const previousIndex = currentIndex - 1;
     if (previousIndex >= 0) {
       setCurrentReview(reviews[previousIndex]);
+      setCurrentReviewMobile(reviewsMobile[previousIndex])
     }
   };
 
@@ -83,6 +90,7 @@ const ReviewComponent = () => {
     const nextIndex = currentIndex + 1;
     if (nextIndex < reviews.length) {
       setCurrentReview(reviews[nextIndex]);
+      setCurrentReviewMobile(reviewsMobile[nextIndex]);
     }
   };
 
@@ -94,7 +102,7 @@ const ReviewComponent = () => {
       <div className="container md:max-h-[54.1rem]">
         <div className="md:overflow-hidden h-full">
           <div className="flex flex-col h-full md:flex-row">
-            <div className="w-[389.83px] mx-auto md:mx-0 h-[259.63px] md:w-1/3 mb-4 md:mb-0 md:mr-10 flex justify-center items-center">
+            <div className="max-w-[389.83px] mx-auto md:mx-0 h-[259.63px] md:w-1/3 mb-[12.23px] md:mb-0 md:mr-10 flex justify-center items-center">
               <img
                 src={currentReview.imageUrl}
                 alt="Review Image"
@@ -103,9 +111,17 @@ const ReviewComponent = () => {
             </div>
             <div className="w-full md:w-2/3 flex flex-col justify-end">
 
-              <p className="flex md:hidden text-white flex-col justify-center text-[3.21783rem] mb-[4.7rem] text-center md:text-start items-center">
-                {reviewsMobile.companyName}
+              <p className="flex md:hidden text-white flex-col mb-[12px] justify-center text-[3.21783rem] text-center md:text-start items-center">
+                {currentReviewMobile.companyName}
+
+                <span className='text-[#FFFFFFB5]'>
+                  {currentReviewMobile.companyProfession}
+                </span>
               </p>
+
+              <SliderLogo className='md:hidden mx-auto mb-[16.65px]' />
+
+              <p className="flex text-center mb-[20px] md:hidden text-white font-semibold text-[4.94383rem] h-full items-center leading-[5rem]">{currentReviewMobile.review}</p>
 
               <p className="hidden md:flex text-white font-semibold text-[4.94383rem] h-full items-center leading-[5rem]">{currentReview.review}</p>
               <p className="hidden md:flex text-white text-[3.21783rem] mb-[4.7rem] text-center md:text-start items-center">
@@ -116,7 +132,32 @@ const ReviewComponent = () => {
 
               <img src={currentReview.companyLogo} alt="Company Logo" className="hidden md:block w-1/4 mr-2" />
 
-                <div className="flex items-center translate-x-[-50%]">
+                <div className="flex md:hidden items-center translate-x-[0%] md:translate-x-[-50%]">
+                  <button
+                    onClick={goToPreviousReview}
+                    className={clsx("w-[7.656rem] h-[7.656rem] flex items-center justify-center rounded-full bg-white text-gray-700", {
+                      ['!bg-[#1D9EEB] !border-white border-[.347991rem] ']: currentIndex === 0
+                    })}
+                    disabled={currentIndex === 0}
+                  >
+                    <FiArrowLeft size={15} className={clsx('text-[#1D9EEB]', {
+                      ['!text-white/[0.33]']: currentIndex === 0
+                    })}/>
+                  </button>
+                  <button
+                    onClick={goToNextReview}
+                    className={clsx("ml-[2.262rem] w-[7.656rem] h-[7.656rem] flex items-center justify-center rounded-full bg-white text-gray-700", {
+                      ['!bg-[#1D9EEB] !border-white border-[.347991rem] ']: currentIndex === reviews.length - 1
+                    })}
+                    disabled={currentIndex === reviews.length - 1}
+                  >
+                    <FiArrowRight size={15} color="#1D9EEB" className={clsx('text-[#1D9EEB]', {
+                      ['!text-white/[0.33]']: currentIndex === reviews.length - 1
+                    })} />
+                  </button>
+                </div>
+
+                <div className="hidden md:flex items-center translate-x-[0%] md:translate-x-[-50%]">
                   <button
                     onClick={goToPreviousReview}
                     className={clsx("w-[7.656rem] h-[7.656rem] flex items-center justify-center rounded-full bg-white text-gray-700", {
