@@ -27,7 +27,7 @@ const Banner = () => {
 
                 {/*  Section Code  */}
                 <div className={styles.codeSectionWrapper}>
-                    <div className='relative md:hidden'>
+                    <div className='relative'>
                         <div className={styles.codeWrapper}>
                             <div className={styles.codeHeader}>
                                 <div className={styles.tab1}>Question #1</div>
@@ -52,7 +52,7 @@ const Banner = () => {
                     </div>
 
 
-                    <ButtonPrimary classNameButton={'mt-[56.91px]'}>
+                    <ButtonPrimary classNameButton={'block md:hidden mt-[56.91px]'}>
                         Start Here
                     </ButtonPrimary>
                 </div>

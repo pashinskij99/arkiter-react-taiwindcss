@@ -111,7 +111,7 @@ const Component = () => {
 
 const StepMobile = () => {
   return (
-    <div className='grid gap-[20px] justify-items-center grid-cols-1 mb-[73px]'>
+    <div className='grid md:hidden gap-[20px] justify-items-center grid-cols-1 mb-[73px]'>
        <div className={styles.stepCircleWrapper}>
           <div className={styles.stepCircle}>
             <p className={styles.stepNumber}>1</p>

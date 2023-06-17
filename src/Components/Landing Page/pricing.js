@@ -170,7 +170,7 @@ const PricingComponent = () => {
                     }
 
                     <ButtonPrimary classNameButton={clsx('mt-[1.1rem] lg:mt-[4.1rem] !bg-[#0A3D62] hover:!bg-white mx-auto pl-[8rem] !pr-[3.086rem] !w-max', {
-                      ['hover:!bg-[#49CCF9] hover:!text-white']: box.popular
+                      ['hover:!bg-[#1D9EEB] hover:!text-white']: box.popular
                     })}>
                       Buy now
                     </ButtonPrimary>
