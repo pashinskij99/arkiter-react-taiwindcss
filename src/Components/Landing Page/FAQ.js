@@ -19,8 +19,8 @@ const FaqItem = ({ question, answer }) => {
                 className="flex justify-between items-center w-full pb-[3.2rem] text-left focus:outline-none"
                 onClick={toggleAccordion}
             >
-                <span className="font-[600] text-[3.972rem] text-[#0A265F]">{question}</span>
-                <div className={clsx(`rounded-full mr-[6rem] flex items-center justify-center w-[5.509rem] h-[5.509rem] ${isOpen ? 'bg-[#0A265F]' : 'bg-white'} ${isOpen ? 'text-white/[1]' : 'text-[#0A265F]'}`, {
+                <span className="font-[600] text-[13.56px] md:text-[3.972rem] text-[#0A265F]">{question}</span>
+                <div className={clsx(`rounded-full mr-[3rem] md:mr-[6rem] flex items-center justify-center w-[5.509rem] h-[5.509rem] ${isOpen ? 'bg-[#0A265F]' : 'bg-white'} ${isOpen ? 'text-white/[1]' : 'text-[#0A265F]'}`, {
                     ['border border-[#0A265F]']: !isOpen
                 }) }>
                     {isOpen
@@ -30,7 +30,7 @@ const FaqItem = ({ question, answer }) => {
                 </div>
             </button>
             <div>
-                {isOpen && <p className="text-[#0A265F] text-[3.31rem] leading-[4rem]">{answer}</p>}
+                {isOpen && <p className="text-[#0A265F] text-[11.3px] md:text-[3.31rem] leading-[4rem]">{answer}</p>}
             </div>
         </div>
     );

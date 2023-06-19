@@ -51,8 +51,6 @@ const ReviewComponent = () => {
   const [currentReviewMobile, setCurrentReviewMobile] = useState(reviewsMobile[0]);
   const [backgroundImage, setBackgroundImage] = useState('');
 
-  console.log(currentReviewMobile);
-
   useEffect(() => {
     const handleResize = () => {
       const { innerWidth } = window;

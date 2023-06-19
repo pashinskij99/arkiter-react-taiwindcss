@@ -3,7 +3,6 @@ import ImageTwo from '../../Assets/Insight.png';
 import ButtonPrimary from "../UI/Button";
 import styles from '../../styles/Features.module.scss'
 import CartLogo from '../../Assets/cartLogo.png'
-import 'react-circular-progressbar/dist/styles.css';
 import { CircularProgressBar } from "@tomickigrzegorz/react-circular-progress-bar";
 import clsx from "clsx";
 import { ReactComponent as Graphic } from "../../Assets/graphic_unlock_powerful.svg";

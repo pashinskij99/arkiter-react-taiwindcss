@@ -84,7 +84,7 @@ const PricingComponent = () => {
           <h2 className="text-[30.82px] md:text-[10.9565rem] leading-[31px] md:leading-[11.7rem] text-center font-semibold mb-6 md:mb-8 text-white -tracking-[.373913rem]">
             <span>Choose the plan</span>
             <br />
-            <span className='flex items-center leading-[1] -tracking-[.273913rem]'>that works <BasketIcon className='w-[25px] md:w-auto h-[30px] mx-[3.4rem] translate-y-[.8rem]' /> for you.</span>
+            <span className='flex items-center leading-[1] -tracking-[.273913rem]'>that works <BasketIcon className='w-[25px] md:w-auto h-[30px] mx-[1.4rem] md:mx-[3.4rem] translate-y-[.8rem]' /> for you.</span>
           </h2>
 
           <p className="text-[2.78261rem] mb-[6.265rem] -tracking-[-0.0178261rem] text-center text-white">You are one step away from a hassle-free hiring cycle.</p>
@@ -169,8 +169,9 @@ const PricingComponent = () => {
                         )
                     }
 
-                    <ButtonPrimary classNameButton={clsx('mt-[1.1rem] lg:mt-[4.1rem] !bg-[#0A3D62] hover:!bg-white mx-auto pl-[8rem] !pr-[3.086rem] !w-max', {
-                      ['hover:!bg-arkiterBlueLight-200 hover:!text-white']: box.popular
+                    <ButtonPrimary classNameButton={clsx('mt-[1.1rem] lg:mt-[4.1rem] !bg-[#0A3D62] mx-auto pl-[8rem] !pr-[3.086rem] !w-max', {
+                      ['hover:!bg-[#78D9FBBA]']: box.popular,
+                      ['hover:!bg-white']: !box.popular
                     })}>
                       Buy now
                     </ButtonPrimary>
