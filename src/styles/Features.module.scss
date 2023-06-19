@@ -62,7 +62,7 @@
 }
 
 .cartBody {
-  @apply mt-6 lg:px-[2.5rem] ;
+  @apply lg:px-[2.5rem] mt-6 ;
   li {
     @apply flex items-center flex-col gap-2 ;
 
