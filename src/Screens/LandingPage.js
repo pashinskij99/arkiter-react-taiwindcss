@@ -15,7 +15,7 @@ import PricingComparison from "../Components/Landing Page/pricing"
 const LandingPage = () => {
     return (
         <>
-            <Navbar/>
+            {/* <Navbar/> */}
             <Hero/>
             <ImageGrid/>
             <Banner/>
@@ -27,7 +27,7 @@ const LandingPage = () => {
             <ArkiterBlog />
             <FAQ/>
             <ContactForm />
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

@@ -58,7 +58,7 @@ const FAQ = () => {
     ];
 
     return (
-        <div className="pt-[4.2rem] bg-[#FCFCFC]">
+        <div className="pt-[4.2rem] pb-[8.3rem] bg-[#FCFCFC]">
             <div className="container">
                 <h2 className="text-[7.404rem] text-center font-[700] text-[#0A265F]">FAQs</h2>
                 <div className='flex flex-col justify-center items-center mt-[3.2rem]'>

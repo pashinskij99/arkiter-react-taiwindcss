@@ -18,15 +18,15 @@ const ArkiterBlog = () => {
       <div className="container relative">
         <h2 className="text-[7.40354rem] leading-[1] text-white text-center font-semibold">
           Arkiter
-          <span className="text-[#49CCF9]">Blog</span>
+          <span className="text-[#49CCF9] ml-[1.4rem]">Blog</span>
         </h2>
 
-        <p className="text-white text-center -tracking-[.0059121rem] text-[3.2rem] leading-[1.1] font-[400] mt-[4rem]">Keep up to date with the Arkiter team and our journey to help <br /> change the way developers get hired </p>
+        <p className="text-white text-center -tracking-[.0059121rem] text-[3.2rem] leading-[1.1] font-[400] mt-[4rem]">Keep up to date with the Arkiter team and our journey to help <br className='hidden md:block' /> change the way developers get hired </p>
 
         <div className='relative overflow-x-clip px-1'>
           <Swiper
             className='mt-[7.8rem] !overflow-visible'
-            spaceBetween={30}
+            spaceBetween={55.36}
             onSlideChange={() => console.log('slide change')}
             navigation
             breakpoints={{
@@ -38,11 +38,21 @@ const ArkiterBlog = () => {
               },
             }}
           >
-            <SwiperSlide><Item /></SwiperSlide>
-            <SwiperSlide><Item /></SwiperSlide>
-            <SwiperSlide><Item /></SwiperSlide>
-            <SwiperSlide><Item /></SwiperSlide>
-            <SwiperSlide><Item /></SwiperSlide>
+            <SwiperSlide>
+              <Item />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Item />
+            </SwiperSlide>
             <CustomSwiperNavigation />
           </Swiper>
         </div>
@@ -94,26 +104,26 @@ const Item = () => {
         <h4 className='text-[22.99px] md:text-[3.725rem] font-[600] leading-[4.5rem] text-white'>How Arkiter will change the game?</h4>
         <div className='flex items-center gap-[1.337rem] mt-[1.436rem]'>
           <div
-            className='bg-[#313131] leading-[1] flex items-center justify-center text-[5.97px] md:text-[1.1rem] font-[600] w-[57.78px] md:w-[9.36rem] h-[14.86px] md:h-[2.407rem]'
+            className='bg-[#313131] leading-[1] flex items-center justify-center text-[5.97px] md:text-[1.1rem] px-[5.4rem] font-[600] w-[57.78px] md:w-[9.36rem] h-[14.86px] md:h-[2.707rem] rounded-[.334301rem]'
             style={{ border: '0.067rem solid #FFFFFF4F' }}
           >
             Technology
           </div>
           <div
-            className='bg-[#49CCF940] leading-[1] flex items-center justify-center text-[5.97px] md:text-[1.1rem] font-[600] w-[9.36rem] h-[2.407rem]'
+            className='bg-[#49CCF940] leading-[1] flex rounded-[.334301rem] items-center justify-center text-[5.97px] md:text-[1.1rem] font-[600] w-[9.36rem] h-[2.407rem]'
             style={{ border: '0.067rem solid #49CCF982' }}
           >
             Interviews
           </div>
           <div
-            className='bg-[#0A3D62] leading-[1] flex items-center justify-center text-[5.97px] md:text-[1.1rem] font-[600] w-[9.36rem] h-[2.407rem]'
+            className='bg-[#0A3D62] leading-[1] flex rounded-[.334301rem] items-center justify-center text-[5.97px] md:text-[1.1rem] font-[600] w-[9.36rem] h-[2.407rem]'
             style={{ border: '0.067rem solid #0F5282' }}
           >
             May, 2023
           </div>
         </div>
 
-        <p className='font-[400] text-[11.04px] md:text-[1.788rem] mt-[1.444rem] leading-[2.3rem]'>
+        <p className='font-[400] text-[11.04px] md:text-[1.788rem] mt-[1.444rem] leading-[2.9rem] md:leading-[2.3rem]'>
           At Arkiter, we uncovered a variety of interesting challenges and oft-overlooked choices when building our product....
         </p>
         <button className='text-[11.89px] md:text-[1.926rem] font-[600] mt-[2.123rem] flex items-center gap-[.888rem]'>

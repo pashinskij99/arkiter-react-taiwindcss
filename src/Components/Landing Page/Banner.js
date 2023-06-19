@@ -12,17 +12,17 @@ const Banner = () => {
 
                 {/* Section Title */}
                 <div className="w-full md:max-w-[80.7rem] text-white mr-auto">
-                    <TypographyH2 className='mb-16 md:mb-10 text-center md:text-left'>
+                    <TypographyH2 className='mb-16 md:mb-[4.3rem] text-center md:text-left'>
                         Experience the next <br className='md:hidden' /> level of technology hiring
                     </TypographyH2>
-                    {/* <h1 className="text-5xl text-[66px] font-bold mb-10">Experience the next level of technology hiring</h1> */}
-                    <TypographyP className='mb-24 text-center md:text-left' >
+                    <TypographyP className='mb-[10.2rem] text-center md:text-left leading-[18.56px] md:leading-[3.017rem]' >
                         A brief summary of who this product is for,<br className='md:hidden' /> how they
-                        can <br className='hidden md:block' /> use it and the problem it solves for the target audience
+                        can <br className='hidden md:block' /> use it and the problem it solves for the <br className='md:hidden' /> target audience
                     </TypographyP>
-                    {/* <p className="text-lg text-[400] leading-6 mb-20">A brief summary of who this product is for, how they
-                        can <br /> use it and the problem it solves for the target audience</p> */}
-                    <ButtonPrimary classNameButton={'hidden md:flex'}>Start Here</ButtonPrimary>
+                    <ButtonPrimary
+                        classNameButton={'hidden md:flex'}
+                        // classNameIcon={'!right-[10px]'}
+                    >Start Here</ButtonPrimary>
                 </div>
 
                 {/*  Section Code  */}
@@ -52,7 +52,10 @@ const Banner = () => {
                     </div>
 
 
-                    <ButtonPrimary classNameButton={'block md:hidden mt-[56.91px]'}>
+                    <ButtonPrimary
+                        classNameButton={'block md:hidden mt-[56.91px]'}
+                        classNameIcon={'!right-[30px]'}
+                    >
                         Start Here
                     </ButtonPrimary>
                 </div>

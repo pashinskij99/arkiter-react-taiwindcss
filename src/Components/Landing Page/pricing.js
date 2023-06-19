@@ -11,7 +11,7 @@ import clsx from 'clsx'
 
 const PricingComponent = () => {
   const [isMonthly, setIsMonthly] = useState(true);
-  const [selectedCurrency, setSelectedCurrency] = useState('GBP');
+  const [selectedCurrency, setSelectedCurrency] = useState('GDP');
 
   const handleToggle = () => {
     setIsMonthly(!isMonthly);
@@ -22,7 +22,7 @@ const PricingComponent = () => {
   };
 
   const currencyOptions = [
-    { symbol: '£', value: 'GBP', border: true },
+    { symbol: '£', value: 'GDP', border: true },
     { symbol: '$', value: 'USD', border: true },
     { symbol: '€', value: 'EUR', border: false },
   ];
@@ -34,7 +34,7 @@ const PricingComponent = () => {
       plan: 'For Individuals',
       prices: [
         { currency: 'USD', monthly: 40.00, yearly: 99.99 },
-        { currency: 'GBP', monthly: 7.99, yearly: 19.99 },
+        { currency: 'GDP', monthly: 7.99, yearly: 19.99 },
         { currency: 'EUR', monthly: 8.99, yearly: 29.99 },
       ],
       features: ['2 Roles a Year', '100 Candidates a Year', 'Unlimited User Access', 'Basic Question Library', 'Architecture Interviews', 'Coding Interviews', 'Anti Cheat Engine'],
@@ -46,7 +46,7 @@ const PricingComponent = () => {
       plan: 'For Start ups',
       prices: [
         { currency: 'USD', monthly: 60.00, yearly: 149.99 },
-        { currency: 'GBP', monthly: 12.99, yearly: 29.99 },
+        { currency: 'GDP', monthly: 12.99, yearly: 29.99 },
         { currency: 'EUR', monthly: 14.99, yearly: 39.99 },
       ],
       features: [
@@ -59,7 +59,7 @@ const PricingComponent = () => {
       plan: 'For Enterprise',
       prices: [
         { currency: 'USD', monthly: 80.00, yearly: 199.99 },
-        { currency: 'GBP', monthly: 19.99, yearly: 49.99 },
+        { currency: 'GDP', monthly: 19.99, yearly: 49.99 },
         { currency: 'EUR', monthly: 24.99, yearly: 59.99 },
       ],
       features: ['10 Roles a Year', '12500 Candidates a Year', 'Unlimited User Access', 'Premium Question Library', 'Architecture Interviews', 'Coding Interviews', 'Anti Cheat Engine', 'Advanced Analytics', 'Custom Reports', 'Insight Dashboard Access', 'Custom Questions', 'Industry Benchmarking', 'ATS Integrations'],
@@ -81,10 +81,10 @@ const PricingComponent = () => {
       <div className="bg-[#0A265F] pt-[8.2rem] pb-[8.2rem] md:pb-0">
         <div className='container items-center flex flex-col'>
 
-          <h2 className="text-[30.82px] md:text-[10.9565rem] leading-[31px] md:leading-[11.7rem] text-center font-semibold mb-6 md:mb-8 text-white -tracking-[.373913rem]">
+          <h2 className="text-[30.82px] md:text-[10.9565rem] leading-[41px] md:leading-[11.7rem] text-center font-semibold mb-6 md:mb-8 text-white -tracking-[.373913rem]">
             <span>Choose the plan</span>
             <br />
-            <span className='flex items-center leading-[1] -tracking-[.273913rem]'>that works <BasketIcon className='w-[25px] md:w-auto h-[30px] mx-[1.4rem] md:mx-[3.4rem] translate-y-[.8rem]' /> for you.</span>
+            <span className='flex items-center leading-[1] -tracking-[.273913rem]'>that works <BasketIcon className='w-[25px] md:w-auto h-[30px] mx-[1.4rem] md:mx-[3.4rem] md:h-[8.21rem] translate-y-[.8rem]'/> for you.</span>
           </h2>
 
           <p className="text-[2.78261rem] mb-[6.265rem] -tracking-[-0.0178261rem] text-center text-white">You are one step away from a hassle-free hiring cycle.</p>
@@ -133,13 +133,13 @@ const PricingComponent = () => {
                   <div className={clsx('bg-[#1D9EEB] z-[1] relative pt-[3.368rem] pb-[1.985rem] px-[4.8rem] rounded-t-[2.8rem] text-center', {
                     ['!pt-[1.885rem] bg-[#FCFCFC]']: box.popular
                   })}>
-                    {box.popular && <span className='text-[#0A265F] text-[3.2rem] font-bold mb-[4.959rem] inline-block'>Most Popular</span>}
+                    {box.popular && <span className='text-[#0A265F] text-[18.89px] md:text-[3.2rem] font-bold mb-[4.959rem] inline-block'>Most Popular</span>}
 
                     <div className='flex items-center lg:items-start flex-row gap-[2.9rem]'>
-                      <div className={clsx('flex items-center justify-center bg-[#78D9FB] rounded-[1.2rem] h-[7.205rem] lg:h-[10.205rem] w-[7.9rem] lg:w-[10.9rem]', {
+                      <div className={clsx('flex items-center justify-center bg-[#78D9FB] rounded-[1.2rem] h-[49.8px] lg:h-[10.205rem] w-[53.88px] lg:w-[10.9rem]', {
                         ['!bg-[#55B6F0]']: !box.popular
                       })}>
-                        <img src={box.logo} className='scale-50 lg:scale-100' width={57} height={57} />
+                        <img src={box.logo} className='scale-[.5] lg:scale-100' width={57} height={57} />
                       </div>
                       {
                         box.popular
@@ -169,7 +169,9 @@ const PricingComponent = () => {
                         )
                     }
 
-                    <ButtonPrimary classNameButton={clsx('mt-[1.1rem] lg:mt-[4.1rem] !bg-[#0A3D62] mx-auto pl-[8rem] !pr-[3.086rem] !w-max', {
+                    <ButtonPrimary
+                      classNameIcon='!static ml-[10px]'
+                      classNameButton={clsx('mt-[1.1rem] lg:mt-[4.1rem] !bg-[#0A3D62] mx-auto pl-[8rem] !pr-[3.086rem] !w-max', {
                       ['hover:!bg-[#78D9FBBA]']: box.popular,
                       ['hover:!bg-white']: !box.popular
                     })}>
@@ -182,7 +184,7 @@ const PricingComponent = () => {
                     <div className='rounded-md bg-white'>
                       <ul className="text-[#0E0B3D]">
                         {box.features.map((feature, index) => (
-                          <li className='text-[3.3rem] mb-[2rem] flex items-center' key={index}>
+                          <li className='text-[16.84px] mb-[2rem] flex items-center' key={index}>
                             {
                               index !== 1
                                 ? <CheckIcon className='mr-[2.058rem]' width={'1.773rem'} height={'1.33rem'} />
@@ -211,7 +213,9 @@ const PricingComponent = () => {
             >
               {pricingBoxes.map((box, index) => (
                 <div className='bg-white px-[4.8rem] pb-[4.9rem] rounded-b-[2.8rem]' style={{ boxShadow: '0 1.1rem 2rem rgba(0, 0, 0, 0.25)' }}>
-                  <p className='text-[#0A265FA1] font-semibold text-[2.6rem] mb-[1.827rem] pt-[3.7rem]'>Key Features</p>
+                  <p className={clsx('text-[#0A265FA1] font-semibold text-[2.6rem] mb-[1.827rem] pt-[3.7rem]', {
+                    ['text-[#0A265F] opacity-[0.95]']: box.popular
+                  })}>Key Features</p>
                   <div className='rounded-md bg-white'>
                     <ul className="text-[#0E0B3D]">
                       {box.features.map((feature, index) => (

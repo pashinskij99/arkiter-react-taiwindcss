@@ -5,6 +5,7 @@ import Company from '../../Assets/company.png';
 import BackgroundImageMobile from '../../Assets/mobileLines.png';
 import BackgroundImageDesktop from '../../Assets/desktopLines.png';
 import {ReactComponent as SliderLogo} from '../../Assets/icons/sliderLogo.svg'
+import {ReactComponent as SliderLogoMobile} from '../../Assets/icons/sliderLogoMobile.svg'
 import clsx from 'clsx';
 
 const reviews = [
@@ -94,13 +95,13 @@ const ReviewComponent = () => {
 
   return (
     <div
-      className="flex justify-center py-[9.5rem] md:py-[11.5rem] bg-[#1D9EEB]"
+      className="flex justify-center py-[9.5rem] md:py-[11.9rem] bg-[#1D9EEB]"
       style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div className="container md:max-h-[54.1rem]">
         <div className="md:overflow-hidden h-full">
-          <div className="flex flex-col h-full md:flex-row">
-            <div className="max-w-[389.83px] mx-auto md:mx-0 h-[259.63px] md:w-1/3 mb-[12.23px] md:mb-0 md:mr-10 flex justify-center items-center">
+          <div className="flex flex-col h-full md:flex-row md:gap-[10.9rem]">
+            <div className="max-w-[389.83px] mx-auto md:mx-0 h-[259.63px] md:h-[54.1rem] mb-[12.23px] md:mb-0 md:mr-10 flex justify-center items-center">
               <img
                 src={currentReview.imageUrl}
                 alt="Review Image"
@@ -117,9 +118,9 @@ const ReviewComponent = () => {
                 </span>
               </p>
 
-              <SliderLogo className='md:hidden mx-auto mb-[16.65px]' />
+              <SliderLogoMobile className='md:hidden mx-auto h-[85px]' />
 
-              <p className="flex text-center mb-[20px] md:hidden text-white font-semibold text-[4.94383rem] h-full items-center leading-[5rem]">{currentReviewMobile.review}</p>
+              <p className="flex text-center md:hidden text-white font-semibold text-[4.94383rem] h-full items-center leading-[5rem]">{currentReviewMobile.review}</p>
 
               <p className="hidden md:flex text-white font-semibold text-[4.94383rem] h-full items-center leading-[5rem]">{currentReview.review}</p>
               <p className="hidden md:flex text-white text-[3.21783rem] mb-[4.7rem] text-center md:text-start items-center">

@@ -44,14 +44,14 @@ const stepContent = [
   {
     id: 3,
     contentH2: 'Hire the best',
-    contentP: 'Build your dream team by hiring the best candidates with our unbiased, data-driven insights.',
+    contentP: `Build your dream team by hiring the best candidates with our unbiased, data-driven insights.`,
     last: true
   },
 ]
 
 const Component = () => {
   return (
-    <div className="bg-[#0A265F] pt-[14rem] pb-[11.5rem]">
+    <div className="bg-[#0A265F] pt-[14rem] pb-[12.5rem]">
       <div className="container">
         <TypographyH2 className='text-white text-center mb-[12rem]'>
           Solve The Hiring Process In <span className='text-[#49CCF9]'>3 Steps</span>
@@ -81,7 +81,12 @@ const Component = () => {
                 <div className={classNameWrapper}>
                   <div className={classNameInner}>
                     <h2 className={classNameH2}>{contentH2}</h2>
-                    <p className={classNameP}>{contentP}</p>
+                    {
+                      last
+                        ? <p className={classNameP}>Build your dream team by hiring the best <br className='hidden xl:block' /> candidates with our unbiased, data-driven <br className='hidden xl:block' /> insights.</p>
+                        : <p className={classNameP}>{contentP}</p>
+                    }
+
                   </div>
                 </div>
 
@@ -147,7 +152,7 @@ const StepMobile = () => {
           <div className={'mt-[5px]'}>
             <div className='text-center text-white'>
               <h2 className='text-[24px] font-[600] leading-[1]'>Hire the best</h2>
-              <p className='text-[12px] font-[400] mt-[10px] leading-[14.22px]'>Build your dream team by hiring the best <br /> candidates with our unbiased, data-driven insights.</p>
+              <p className='text-[12px] font-[400] mt-[10px] leading-[14.22px]'>Build your dream team by hiring the best <br /> candidates with our unbiased, data-driven <br /> insights.</p>
             </div>
           </div>
         </div>

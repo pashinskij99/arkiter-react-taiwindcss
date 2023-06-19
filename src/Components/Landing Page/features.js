@@ -21,7 +21,7 @@ const MyComponent = () => {
         colorCircle: "#E2FBD7",
         fontColor: "#000",
         fontSize: "2rem",
-        fontWeight: 600,
+        fontWeight: 700,
         size: '7.5rem',
         stroke: 7,
         strokeBottom: 3,
@@ -46,15 +46,15 @@ const MyComponent = () => {
     ]
 
     return (
-        <div className="flex flex-col items-center pt-[10.1rem] pb-[7.0rem] text-white">
+        <div className="flex flex-col items-center pt-[12.1rem] pb-[7.5rem] text-white">
             <div className="container">
 
-                <div className={clsx('pt-[4.4rem] pb-[4rem] px-[7.1rem]', styles.sectionInner) }>
+                <div className={clsx('pt-[4.4rem] pb-[4rem] px-[3.1rem] md:px-[7.1rem]', styles.sectionInner) }>
 
                     {/* Section Title */}
                     <div className="grid md:block w-full my-auto">
                         <TypographyH2 className='text-center md:text-start mb-[13px] md:mb-[1.8rem]'>
-                            Predict real-world <br /> performance with our AI tests
+                            Predict real-world performance with our AI <br className='hidden md:block' /> tests
                         </TypographyH2>
                         <TypographyP className='text-center md:text-start mb-[24px] md:mb-[3.6rem]'>
                             Unleash the power of our comprehensive system
@@ -115,24 +115,20 @@ const MyComponent = () => {
                 <div className="flex flex-col md:grid md:grid-cols-2 gap-[2.5rem] md:gap-[3rem] lg:gap-[4.5rem] xl:gap-[6.7rem] w-full ">
 
                     {/* Unlock section */}
-                    <div className="bg-[#0A3D62] rounded-lg flex flex-col items-center pt-[4.3rem] pb-[6.1rem] px-[6.3rem]">
+                    <div className="bg-[#0A3D62] rounded-[1.5rem] flex flex-col items-center pt-[4.3rem] pb-[6.1rem] px-[3.1rem] md:px-[6.3rem]">
                         <TypographyH3 className={'mb-[5.5rem] text-center'}>
                             Unlock <br className='md:hidden' /> powerful <br className='hidden md:block' />
                             insights <br className='md:hidden' /> and analysis
                         </TypographyH3>
                         <TypographyP className='text-center mb-[6.1rem]'>
                             Arkiter allows you in-depth insights into the
-                            skills of your potential candidates, making sure you hire the right people.
+                            skills of <br /> your potential candidates, making sure you hire the right people.
                         </TypographyP>
-                        {/* <p className="text-center text-lg max-w-s mb-10"></p> */}
-                        {/*<div className='bg-'>*/}
-                        {/*    <Graphic />*/}
-                        {/*</div>*/}
                         <img src={ImageTwo} alt="Image 2" className="object-contain w-full max-h-[54.3rem] rounded-lg" />
                     </div>
 
                     {/* Discover section */}
-                    <div className="bg-[#313131] rounded-lg flex flex-col items-center pb-[36.53px] md:pb-[0] pt-[4rem] px-[6.7rem]">
+                    <div className="bg-[#313131] rounded-[1.5rem] flex flex-col items-center justify-between pb-[36.53px] md:pb-[6.1rem] pt-[4rem] px-[3.1rem] md:px-[6.7rem]">
                         <TypographyH3 className='text-center mb-[6.9rem]'>
                             Discover your <br />
                             potential savings
@@ -141,11 +137,11 @@ const MyComponent = () => {
                             See how much your business could save with the
                             calculator below or see how we’ve helped others <span className='underline'>here.</span>
                         </TypographyP>
-                        <div className='border border-[#FFFFFF]/[0.33] px-[4.2rem] py-[3rem] rounded-lg w-full'>
+                        <div className='border border-[#FFFFFF]/[0.33] px-[4.2rem] py-[3rem] flex justify-center flex-col rounded-[.9rem] w-full h-[54.3rem]'>
                             <div className='grid grid-cols-2 gap-6'>
                                 {inputsNumber.map(({ id, type, label }) => (
                                     <div key={id} className="flex flex-col">
-                                        <label className="text-[#FFFFFFBD] leading-[2rem] h-10 flex items-center font-medium text-[2rem]">{label}</label>
+                                        <label className="text-[#FFFFFFBD] leading-[2.5rem] h-10 flex items-center font-medium text-[2rem]">{label}</label>
                                         <input type={type} className="w-full border-b-2 border-[#FFFFFF75] px-2 py-2 bg-transparent focus-within:outline-none font-medium text-[3rem]" />
                                     </div>
                                 ))}
@@ -195,11 +191,11 @@ const CartBackground = () => {
     const circleArray = [
         { id: 0, className: clsx(styles.circle) },
         { id: 1, className: clsx(styles.circle, styles.border) },
-        { id: 2, className: clsx(styles.circle, styles.border) },
         { id: 3, className: clsx(styles.circle, styles.borderLight) },
+        { id: 2, className: clsx(styles.circle, styles.border) },
         { id: 4, className: clsx(styles.circle, styles.light) },
-        { id: 5, className: clsx(styles.circle, styles.borderLight) },
         { id: 6, className: clsx(styles.circle, styles.border) },
+        { id: 5, className: clsx(styles.circle, styles.borderLight) },
         { id: 7, className: clsx(styles.circle, styles.border) },
         { id: 8, className: clsx(styles.circle) },
     ]

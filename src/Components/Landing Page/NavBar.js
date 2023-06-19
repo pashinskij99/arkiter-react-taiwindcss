@@ -3,6 +3,7 @@ import logo from '../../Assets/logoname.png';
 import ButtonPrimary from "../UI/Button";
 import {ReactComponent as LogoIcon} from '../../Assets/icons/logo.svg'
 import {ReactComponent as LogoMobileIcon} from '../../Assets/icons/logo-mobile.svg'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,8 +12,8 @@ const Navbar = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
-    const navItemsDesktopHomeClassNames = 'text-white text-[2.8rem]'
-    const navItemsDesktopClassNames = 'text-white text-[2.8rem] hover:text-gray-300'
+    const navItemsDesktopHomeClassNames = 'text-white text-[2.8rem] leading-[1]'
+    const navItemsDesktopClassNames = 'text-white text-[2.8rem] hover:text-gray-300 leading-[1]'
 
     return (
         <nav className="bg-[#0A265F] text-white py-[2.1rem] border-b-[.1rem] border-[#ffffff26] z-10 relative">
@@ -87,11 +88,16 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center space-x-14 lg:space-x-14 text-arkiterWhite-100">
-                    <a href="#" className={navItemsDesktopHomeClassNames}>
+                <div className="hidden md:flex items-center space-x-14 lg:space-x-28 text-arkiterWhite-100 translate-y-[-7%]">
+                    <Link to={'/'} className={navItemsDesktopHomeClassNames}>Home</Link>
+                    <Link to={'/privacy-policy'} className={navItemsDesktopClassNames}>About</Link>
+                    <Link to={'/cookie-policy'} className={navItemsDesktopClassNames}>Why us?</Link>
+                    <Link to={'/contact'} className={navItemsDesktopClassNames}>Pricing</Link>
+                    <Link to={'/blog'} className={navItemsDesktopClassNames}>Blog</Link>
+                    {/* <a href="#" className={navItemsDesktopHomeClassNames}>
                         Home
-                    </a>
-                    <a href="#" className={navItemsDesktopClassNames}>
+                    </a> */}
+                    {/* <a href="#" className={navItemsDesktopClassNames}>
                         About
                     </a>
                     <a href="#" className={navItemsDesktopClassNames}>
@@ -102,7 +108,7 @@ const Navbar = () => {
                     </a>
                     <a href="#" className={navItemsDesktopClassNames}>
                         Blog
-                    </a>
+                    </a> */}
                 </div>
 
                 <ButtonPrimary classNameButton='hidden md:flex'>

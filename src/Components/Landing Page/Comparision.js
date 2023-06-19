@@ -64,9 +64,9 @@ const ProductComparison = () => {
                 <th className=" text-[#0A265F] text-[3.44982rem] font-[700] relative">
                   <span className='absolute mx-auto w-full left-0 bottom-[5.016rem] '>Others</span>
                 </th>
-                <th className="w-[30.7rem] lg:w-[52.7rem] rounded-tl-[2.87485rem] rounded-tr-[2.87485rem] pt-[2.7rem] lg:pt-[4.7rem] bg-[#0A265F] justify-center text-white">
+                <th className="w-[30.7rem] lg:w-[47.7rem] rounded-tl-[2.87485rem] rounded-tr-[2.87485rem] pt-[2.7rem] lg:pt-[4.7rem] bg-[#0A265F] justify-center text-white">
                   <img src={logo} alt="Competitor B Logo" width={'90.251rem'} className="mx-auto scale-75 lg:scale-100" />
-                  <hr className='border-none h-[.1rem] bg-[#FCFCFC] mt-[2.612rem] lg:mt-[4.612rem]' />
+                  <hr className='border-none h-[.02rem] bg-[#FCFCFC] mt-[2.612rem] lg:mt-[4.612rem]' />
                 </th>
               </tr>
             </thead>
@@ -96,7 +96,7 @@ const ProductComparison = () => {
               <tr className="bg-white">
                 <td className="p-2"></td>
                 <td className="p-2"></td>
-                <td className="hidden lg:flex p-2 py-8 text-center rounded-bl-[2.87485rem] rounded-br-[2.87485rem] bg-[#0A265F] justify-center items-center">
+                <td className="hidden lg:flex p-2 pb-[6.219rem] pt-[4.374rem] text-center rounded-bl-[2.87485rem] rounded-br-[2.87485rem] bg-[#0A265F] justify-center items-center">
                   <ButtonPrimary classNameButton='!bg-white !text-arkiterBlueLight-700 hover:!text-white hover:!bg-[#49CCF9]'>
                     Sign up
                   </ButtonPrimary>

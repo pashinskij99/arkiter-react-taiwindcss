@@ -1,37 +1,37 @@
 // Section - start
 .sectionInner {
-  @apply bg-[#1D9EEB] gap-[5rem] justify-items-end rounded-lg flex flex-col-reverse md:grid grid-cols-1 mb-[5.2rem] w-full;
+  @apply bg-[#1D9EEB] gap-[5rem] justify-items-end rounded-[1.5rem] flex flex-col-reverse md:grid grid-cols-1 mb-[5.8rem] w-full;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr;
   }
 }
 
 
 // cart Container - Start
 .cartContainer {
-  @apply h-[190px] md:h-auto w-full flex justify-end;
+  @apply h-[190px] px-[3.1rem] md:px-0 md:h-auto w-full flex justify-end;
 
   text {
     @apply text-[15.65px] static;
   }
 }
 .cartWrapper {
-  @apply bg-[#F5F1EC] h-full w-full xl:w-[52.2rem] rounded-[1.6rem] px-[3.7rem] relative;
+  @apply bg-[#F5F1EC] h-full w-full rounded-[1.6rem] px-[3.7rem] relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .cart {
-  @apply bg-white rounded-[1rem] p-5 w-full z-10 ;
+  @apply bg-white rounded-[1rem] pt-[2rem] pb-[2.5rem] px-[2.6rem] w-full z-10 ;
 }
 .cartHeader {
   @apply flex gap-5 items-center ;
   h4 {
-    @apply text-[#313131] font-[700] text-[2.31875rem] relative ;
+    @apply text-[#313131] font-[700] text-[2.319rem] leading-[1.2] relative ;
   }
   p {
-    @apply text-[#3131316B] font-[400] text-[1.6rem] relative ;
+    @apply text-[#3131316B] font-[400] text-[1.8rem] leading-[1.2] relative ;
   }
   .progress {
     @apply flex items-baseline gap-3 ;
@@ -62,12 +62,12 @@
 }
 
 .cartBody {
-  @apply mt-6 ;
+  @apply mt-6 lg:px-[2.5rem] ;
   li {
     @apply flex items-center flex-col gap-2 ;
 
     span {
-      @apply text-black text-[1.168724rem] font-medium ;
+      @apply text-black text-[1.268724rem] font-medium ;
     }
   }
 
@@ -90,12 +90,12 @@
   }
 
   .circle {
-    @apply bg-[#9D9D9D] border-4 border-[#9D9D9D] w-4 h-4 rounded-full ;
+    @apply bg-[#9D9D9D] border-[2px] border-[#9D9D9D] w-[1.4rem] h-[1.4rem] rounded-full ;
     &.border {
       @apply bg-[#DFD8CD] relative ;
     }
     &.borderLight {
-      @apply border-[#DCD6CB] bg-transparent ;
+      @apply bg-[#DCD6CB] bg-transparent ;
     }
     &.light {
       @apply bg-[#DCD6CB] border-[#DCD6CB] relative ;

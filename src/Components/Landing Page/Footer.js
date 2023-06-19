@@ -10,18 +10,18 @@ const Footer = () => {
         <div className="container">
           <LogoIcon className="h-16 md:h-[3.533rem] w-[26.8rem]" />
           <div
-            className='grid grid-cols-[0.5fr_0.7fr_0.3fr] md:grid-cols-[1fr_1.3fr_1fr] max-w-[100%] md:max-w-[80rem] gap-y-20 ml-auto mt-20 md:mt-auto'
+            className='grid grid-cols-[0.5fr_0.7fr_0.3fr] md:grid-cols-[1fr_1.3fr_1fr] max-w-[100%] md:max-w-[80rem] gap-y-20 ml-auto mt-20 md:mt-0'
           >
             <ul className='flex flex-col'>
-              <li className='text-[3.541rem] font-bold'>Demo</li>
+              <li className='text-[3.541rem] leading-[1] font-bold'>Demo</li>
               <li className='text-[2.724rem] mt-[1.5rem]'>Demo</li>
             </ul>
             <ul className='flex flex-col'>
-              <li className='text-[3.541rem] font-bold whitespace-nowrap'>How it Works</li>
+              <li className='text-[3.541rem] leading-[1] font-bold whitespace-nowrap'>How it Works</li>
               <li className='text-[2.724rem] mt-[1.5rem]'>How it Works</li>
             </ul>
             <ul className='flex flex-col'>
-              <li className='text-[3.541rem] font-bold'>FAQs</li>
+              <li className='text-[3.541rem] leading-[1] font-bold'>FAQs</li>
               <li className='text-[2.724rem] mt-[1.5rem]'>FAQs</li>
             </ul>
             <ul className='flex flex-col'>
@@ -57,8 +57,8 @@ const Footer = () => {
 
         <div className='flex items-center gap-[10rem]'>
           <Inst width={'4.032rem'} height={'4.032rem'} />
-          <Twitter width={'3.037rem'} height={'2.672rem'} />
-          <Linkedin width={'3.405rem'} height={'3.405rem'} />
+          <Twitter width={'3.0237rem'} height={'2.672rem'} />
+          <Linkedin width={'4.405rem'} height={'4.405rem'} />
         </div>
 
       </div>
