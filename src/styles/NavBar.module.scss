@@ -1,0 +1,20 @@
+.arrowIcon {
+  path {
+    fill: white
+  }
+}
+
+.mobileMenu {
+  transform: translateX(103%);
+  transition: transform .4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobileBack {
+  @apply md:hidden fixed w-full h-full top-0 left-0 opacity-0;
+  background: rgba(#0A265F, .3);
+  backdrop-filter: blur(6px);
+  will-change: opacity;
+  transition: opacity .34s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  touch-action: none;
+}
