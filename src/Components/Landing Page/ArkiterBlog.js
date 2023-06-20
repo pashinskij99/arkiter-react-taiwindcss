@@ -9,6 +9,7 @@ import { ReactComponent as ArrowRightIcon } from '../../Assets/icons/arrow-right
 import clsx from 'clsx';
 
 import 'swiper/css';
+import { Link } from 'react-router-dom';
 
 const ArkiterBlog = () => {
   const currentIndex = 0
@@ -96,41 +97,44 @@ const CustomSwiperNavigation = () => {
 
 const Item = () => {
   return (
-    <div className="text-white rounded-[2.04592rem] overflow-hidden" style={{ border: '.240697rem solid rgba(255, 255, 255, 0.43)' }}>
-      <div className="md:max-h-[29.846rem] overflow-hidden" style={{borderBottom: '.240697rem solid rgba(255, 255, 255, 0.43)'}}>
-        <img src={image1} className='w-full h-full object-contain' alt="slide image" />
-      </div>
-      <div className='pt-[2.768rem] pb-[4.058rem] px-[4.698rem]'>
-        <h4 className='text-[22.99px] md:text-[3.725rem] font-[600] leading-[4.5rem] text-white'>How Arkiter will change the game?</h4>
-        <div className='flex items-center gap-[1.337rem] mt-[1.436rem]'>
-          <div
-            className='bg-[#313131] leading-[1] flex items-center justify-center text-[5.97px] md:text-[1.1rem] px-[5.4rem] font-[600] w-[57.78px] md:w-[9.36rem] h-[14.86px] md:h-[2.707rem] rounded-[.334301rem]'
-            style={{ border: '0.067rem solid #FFFFFF4F' }}
-          >
-            Technology
-          </div>
-          <div
-            className='bg-[#49CCF940] leading-[1] flex rounded-[.334301rem] items-center justify-center text-[5.97px] md:text-[1.1rem] font-[600] w-[9.36rem] h-[2.407rem]'
-            style={{ border: '0.067rem solid #49CCF982' }}
-          >
-            Interviews
-          </div>
-          <div
-            className='bg-[#0A3D62] leading-[1] flex rounded-[.334301rem] items-center justify-center text-[5.97px] md:text-[1.1rem] font-[600] w-[9.36rem] h-[2.407rem]'
-            style={{ border: '0.067rem solid #0F5282' }}
-          >
-            May, 2023
-          </div>
+    <Link to='/blog'>
+      <div className="text-white rounded-[2.04592rem] overflow-hidden" style={{ border: '.240697rem solid rgba(255, 255, 255, 0.43)' }}>
+        <div className="md:max-h-[29.846rem] overflow-hidden" style={{ borderBottom: '.240697rem solid rgba(255, 255, 255, 0.43)' }}>
+          <img src={image1} className='w-full h-full object-contain' alt="slide image" />
         </div>
+        <div className='pt-[2.768rem] pb-[4.058rem] px-[4.698rem]'>
+          <h4 className='text-[22.99px] md:text-[3.725rem] font-[600] leading-[4.5rem] text-white'>How Arkiter will change the game?</h4>
+          <div className='flex items-center gap-[1.337rem] mt-[1.436rem]'>
+            <div
+              className='bg-[#313131] leading-[1] flex items-center justify-center text-[5.97px] md:text-[1.1rem] px-[5.4rem] font-[600] w-[57.78px] md:w-[9.36rem] h-[14.86px] md:h-[2.707rem] rounded-[.334301rem]'
+              style={{ border: '0.067rem solid #FFFFFF4F' }}
+            >
+              Technology
+            </div>
+            <div
+              className='bg-[#49CCF940] leading-[1] flex rounded-[.334301rem] items-center justify-center text-[5.97px] md:text-[1.1rem] font-[600] w-[9.36rem] h-[2.407rem]'
+              style={{ border: '0.067rem solid #49CCF982' }}
+            >
+              Interviews
+            </div>
+            <div
+              className='bg-[#0A3D62] leading-[1] flex rounded-[.334301rem] items-center justify-center text-[5.97px] md:text-[1.1rem] font-[600] w-[9.36rem] h-[2.407rem]'
+              style={{ border: '0.067rem solid #0F5282' }}
+            >
+              May, 2023
+            </div>
+          </div>
 
-        <p className='font-[400] text-[11.04px] md:text-[1.788rem] mt-[1.444rem] leading-[2.9rem] md:leading-[2.3rem]'>
-          At Arkiter, we uncovered a variety of interesting challenges and oft-overlooked choices when building our product....
-        </p>
-        <button className='text-[11.89px] md:text-[1.926rem] font-[600] mt-[2.123rem] flex items-center gap-[.888rem]'>
-          Read More <ArrowRightIcon width={'1.605rem'} className='relative top-[.2rem]' />
-        </button>
+          <p className='font-[400] text-[11.04px] md:text-[1.788rem] mt-[1.444rem] leading-[2.9rem] md:leading-[2.3rem]'>
+            At Arkiter, we uncovered a variety of interesting challenges and oft-overlooked choices when building our product....
+          </p>
+          <button className='text-[11.89px] md:text-[1.926rem] font-[600] mt-[2.123rem] flex items-center gap-[.888rem]'>
+            Read More <ArrowRightIcon width={'1.605rem'} className='relative top-[.2rem]' />
+          </button>
+        </div>
       </div>
-    </div>
+    </Link>
+
   )
 }
 

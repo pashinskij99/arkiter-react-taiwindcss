@@ -2,13 +2,16 @@ import { ReactComponent as LogoIcon } from '../../Assets/icons/logo.svg'
 import { ReactComponent as Inst } from '../../Assets/icons/inst.svg'
 import { ReactComponent as Twitter } from '../../Assets/icons/twitter.svg'
 import { ReactComponent as Linkedin } from '../../Assets/icons/linkedin.svg'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
     <div className='bg-[#0A3D62] pt-[7.5rem] pb-[3.256rem] text-white'>
       <footer className="">
         <div className="container">
-          <LogoIcon className="h-16 md:h-[3.533rem] w-[26.8rem]" />
+          <Link to='/'>
+            <LogoIcon className="h-16 md:h-[3.533rem] w-[26.8rem]" />
+          </Link>
           <div
             className='grid grid-cols-[0.5fr_0.7fr_0.3fr] md:grid-cols-[1fr_1.3fr_1fr] max-w-[100%] md:max-w-[80rem] gap-y-20 ml-auto mt-20 md:mt-0'
           >
@@ -51,7 +54,7 @@ const Footer = () => {
       <div className='container gap-[15px] md:gap-0 flex flex-col-reverse mt-16 md:flex-row justify-between items-center'>
         <div className='flex items-center text-[#FFFFFFA6] text-[2rem] md:text-[3rem]'>
           <p className='mr-[4.7rem]'>2023 Arkiter LTD. All Rights Reserved </p>
-          <p className='mr-[6.4rem]'>Privacy Policy</p>
+          <Link to='/privacy-policy' className='mr-[6.4rem]'>Privacy Policy</Link>
           <p>Cookies</p>
         </div>
 

@@ -18,10 +18,11 @@ const Navbar = () => {
     return (
         <nav className="bg-[#0A265F] text-white py-[2.1rem] border-b-[.1rem] border-[#ffffff26] z-10 relative">
             <div className="container flex items-center justify-between">
-                <div className="flex items-center">
+
+                <Link to='/' className="flex items-center">
                     <LogoIcon className="hidden md:block md:h-[3.533rem] w-[26.8rem]" />
                     <LogoMobileIcon className="md:hidden" />
-                </div>
+                </Link>
 
                 {/* Mobile Menu */}
                 <div className="md:hidden">
@@ -89,11 +90,11 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-14 lg:space-x-28 text-arkiterWhite-100 translate-y-[-7%]">
-                    <Link to={'/'} className={navItemsDesktopHomeClassNames}>Home</Link>
-                    <Link to={'/privacy-policy'} className={navItemsDesktopClassNames}>About</Link>
-                    <Link to={'/cookie-policy'} className={navItemsDesktopClassNames}>Why us?</Link>
-                    <Link to={'/contact'} className={navItemsDesktopClassNames}>Pricing</Link>
-                    <Link to={'/blog'} className={navItemsDesktopClassNames}>Blog</Link>
+                    <Link to={'#'} className={navItemsDesktopHomeClassNames}>Home</Link>
+                    <Link to={'#'} className={navItemsDesktopClassNames}>About</Link>
+                    <Link to={'#'} className={navItemsDesktopClassNames}>Why us?</Link>
+                    <Link to={'#'} className={navItemsDesktopClassNames}>Pricing</Link>
+                    <Link to={'#'} className={navItemsDesktopClassNames}>Blog</Link>
                     {/* <a href="#" className={navItemsDesktopHomeClassNames}>
                         Home
                     </a> */}
