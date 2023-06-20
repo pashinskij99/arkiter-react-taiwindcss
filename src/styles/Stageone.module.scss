@@ -1,5 +1,5 @@
 .stepContainer {
-  @apply px-24  md:grid grid-cols-1 items-center mb-[13.2rem] hidden;
+  @apply px-24 md:grid grid-cols-1 items-center mb-[13.2rem] hidden;
   column-gap: 2rem;
 
   row-gap: 2.8rem;
@@ -12,7 +12,7 @@
 }
 
 .stepWrapper {
-  @apply relative flex items-center justify-center ;
+  @apply relative flex items-center justify-center z-10 ;
 }
 
 .stepLine {
@@ -21,10 +21,30 @@
 }
 
 .stepCircleWrapper {
-  @apply flex flex-col items-center ;
+  @apply flex flex-col items-center relative ;
+
+
 }
 .stepCircle {
-  @apply flex items-center justify-center w-[10rem] h-[10rem] bg-none border-2 border-[#26C6DA] rounded-full shadow-[0_0_.5rem_0_#49CCF9] relative ;
+  @apply flex items-center justify-center w-[10rem] h-[10rem] bg-none border-2 border-[#26C6DA] rounded-full shadow-[0_0_.5rem_0_#49CCF9] relative z-10 ;
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+    @apply bg-[#26C6DA] z-10 relative;
+    .stepNumber {
+      @apply text-[#0A265F] z-10 relative;
+    }
+  }
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: linear-gradient(90deg, #0A265F 143.16%, rgba(10, 38, 95, 0) 93.19%);
+  //   transform: scale(1.5);
+  //   z-index: 0;
+  // }
 
   &::before {
     content: '';
@@ -34,5 +54,117 @@
   }
 }
 .stepNumber {
-  @apply text-[#26C6DA]  translate-y-[-5%] text-[5.04418rem] font-bold;
+  @apply text-[#26C6DA] translate-y-[-5%] text-[5.04418rem] font-bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffbe0b;
+  height: 100vh;
+  width: 100wv;
+}
+
+.Button {
+  display: block;
+  border: none;
+  cursor: pointer;
+  background: #ffbe0b;
+  box-shadow: 20px 20px 60px #d9a209, -20px -20px 60px #ffdb0d;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  height: 50px;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.StepContainer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 10px;
+  background: #ffbe0b;
+  box-shadow: 20px 20px 60px #d9a209, -20px -20px 60px #ffdb0d;
+  width: 100%;
+  overflow: auto;
+  padding: 16px;
+}
+
+.ProgressWrapper {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 16px;
+  margin: 0 8px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.ProgressLine {
+  height: 100%;
+  background-image: linear-gradient(to bottom left, #ff006e 0%, #8338ec 100%);
+  border-radius: 8px;
+  transition: width 500ms;
+}
+
+.Step {
+  min-width: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &:not(:nth-last-of-type(1)):after {
+    content: "";
+    width: 68px;
+    height: 2px;
+    margin: 0 16px;
+    position: absolute;
+    left: 50%;
+    background-color: white;
+  }
+}
+
+.CircleWrapper {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+
+  // & span,
+  // & svg {
+  //   transition-delay: ${(props) => props.delay * 0.5}s;
+  // }
+}
+
+.Circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: white;
+  transition: background-color 500ms;
+}
+
+.Dot {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background-color: white;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  transition: left 500ms cubic-bezier(0.26, 0.01, 0.28, 1.14);
 }

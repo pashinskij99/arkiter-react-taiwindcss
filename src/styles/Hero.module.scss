@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   height: 10vh;
-  z-index: 1;
+  z-index: 2;
   -webkit-box-shadow: 0 0 10rem 5rem rgba(10,38,95,1);
   -moz-box-shadow: 0 0 10rem 5rem rgba(10,38,95,1);
   box-shadow: 0 0 10rem 5rem rgba(10,38,95,1);
@@ -18,9 +18,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 10vw;
+  width: 12vw;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   -webkit-box-shadow: 0 0 10rem 5rem rgba(10,38,95,1);
   -moz-box-shadow: 0 0 10rem 5rem rgba(10,38,95,1);
   box-shadow: 0 0 10rem 5rem rgba(10,38,95,1);
@@ -32,9 +32,9 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 10vw;
+  width: 12vw;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   -webkit-box-shadow: 0 0 10rem 5rem rgba(10,38,95,1);
   -moz-box-shadow: 0 0 10rem 5rem rgba(10,38,95,1);
   box-shadow: 0 0 10rem 5rem rgba(10,38,95,1);
@@ -48,7 +48,7 @@
   left: 0;
   width: 100%;
   height: 10vh;
-  z-index: 1;
+  z-index: 2;
   -webkit-box-shadow: 0 0 10rem 5rem rgba(10,38,95,1);
   -moz-box-shadow: 0 0 10rem 5rem rgba(10,38,95,1);
   box-shadow: 0 0 10rem 5rem rgba(10,38,95,1);
@@ -65,4 +65,23 @@
   background-size: 940px;
   background-repeat: repeat-y;
   background-image: url('../Assets/HEXUP-mobile.png');
+}
+
+.backLineAnimate {
+  @apply top-[46rem] md:top-[18.1rem];
+  position: relative;
+  z-index: 1;
+  animation: lineAnimate 2.7s ease-in-out infinite;
+}
+
+@keyframes lineAnimate {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }

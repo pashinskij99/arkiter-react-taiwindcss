@@ -1,0 +1,34 @@
+.heroLineAnimationWrapper {
+}
+
+.animateLine {
+  animation: lineAnimate 3.5s ease-in-out infinite;
+}
+
+.animateVertical {
+  animation: animeteVerticalLine 3s ease-in-out infinite;
+}
+
+@keyframes animeteVerticalLine {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes lineAnimate {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
