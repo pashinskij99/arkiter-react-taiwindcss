@@ -8,6 +8,14 @@ import { Link } from 'react-router-dom';
 import styles from '../../styles/NavBar.module.scss'
 import clsx from 'clsx';
 
+const anchorLinks = [
+    {id: 0, text: 'Home', href: '#'},
+    {id: 1, text: 'About', href: '#about'},
+    {id: 2, text: 'Why Us?', href: '#why-us'},
+    {id: 3, text: 'Pricing', href: '#pricing'},
+    {id: 4, text: 'Blog', href: '#blog'},
+]
+
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -16,7 +24,7 @@ const Navbar = () => {
     };
 
     const navItemsDesktopHomeClassNames = 'text-white text-[2.8rem] leading-[1]'
-    const navItemsDesktopClassNames = 'text-white text-[2.8rem] hover:text-gray-300 leading-[1]'
+    const navItemsDesktopClassNames = 'text-white text-[2.8rem] hover:text-gray-300 leading-[1] cursor-pointer'
 
     return (
         <nav className="bg-[#0A265F] text-white py-[2.1rem] border-b-[.1rem] border-[#ffffff26] z-50 relative">
@@ -55,7 +63,6 @@ const Navbar = () => {
                         </svg>
                     </button>
 
-                    {/* {isMobileMenuOpen && ( */}
                     <div className={clsx("bg-[#0A265F] py-4 text-center flex flex-col justify-between fixed top-0 right-0 z-50 h-full max-w-[300px]", styles.mobileMenu, {
                         ['!translate-x-0']: isMobileMenuOpen
                     })}>
@@ -99,13 +106,11 @@ const Navbar = () => {
                             </div>
                         </div>
 
-
                         <div className='p-[32px]'>
                             <LogoIcon className='w-full' />
                         </div>
 
                     </div>
-                    {/* )} */}
                 </div>
 
                 {/* Mobile back */}
@@ -115,26 +120,11 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-14 lg:space-x-28 text-arkiterWhite-100 translate-y-[-7%]">
-                    <Link to={'#'} className={navItemsDesktopHomeClassNames}>Home</Link>
-                    <Link to={'#'} className={navItemsDesktopClassNames}>About</Link>
-                    <Link to={'#'} className={navItemsDesktopClassNames}>Why us?</Link>
-                    <Link to={'#'} className={navItemsDesktopClassNames}>Pricing</Link>
-                    <Link to={'#'} className={navItemsDesktopClassNames}>Blog</Link>
-                    {/* <a href="#" className={navItemsDesktopHomeClassNames}>
-                        Home
-                    </a> */}
-                    {/* <a href="#" className={navItemsDesktopClassNames}>
-                        About
-                    </a>
-                    <a href="#" className={navItemsDesktopClassNames}>
-                        Why us?
-                    </a>
-                    <a href="#" className={navItemsDesktopClassNames}>
-                        Pricing
-                    </a>
-                    <a href="#" className={navItemsDesktopClassNames}>
-                        Blog
-                    </a> */}
+                    {
+                        anchorLinks.map(({href, id, text}) => (
+                            <a key={id} href={href} className={navItemsDesktopClassNames}>{text}</a>
+                        ))
+                    }
                 </div>
 
                 <ButtonPrimary classNameButton='hidden md:flex'>
