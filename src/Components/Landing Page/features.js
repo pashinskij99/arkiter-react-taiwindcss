@@ -21,7 +21,7 @@ const MyComponent = () => {
             name: "annual_tech_roles",
             label: "Annual Tech Roles:",
             handleChange: (event) =>
-                dispatch({ type: set_Annual_Tech_Roles, payload: +event.target.value }),
+                dispatch({ type: set_Annual_Tech_Roles, payload: event.target.value }),
             value: state.annual_tech_roles
         },
         {
@@ -32,7 +32,7 @@ const MyComponent = () => {
             handleChange: (event) =>
                 dispatch({
                     type: set_Pre_Screened_Candidates,
-                    payload: +event.target.value,
+                    payload: event.target.value,
                 }),
             value: state.pre_screened_candidates
 
@@ -45,7 +45,7 @@ const MyComponent = () => {
             handleChange: (event) =>
                 dispatch({
                     type: set_Onsite_Invites_Per_Role,
-                    payload: +event.target.value,
+                    payload: event.target.value,
                 }),
             value: state.onsite_invites_per_role
 
@@ -58,7 +58,7 @@ const MyComponent = () => {
             handleChange: (event) =>
                 dispatch({
                     type: set_Onsite_Interview_Count,
-                    payload: +event.target.value,
+                    payload: event.target.value,
                 }),
             value: state.onsite_interview_count
 
@@ -71,14 +71,14 @@ const MyComponent = () => {
         const pre_screening_interview_time_in_min = 90;
         const interviewer_per_onsite_interview = 1.5;
         const onsite_interview_time_in_min = 90;
-        const onsite_interview_count_adjusted = state.onsite_interview_count;
+        const onsite_interview_count_adjusted = +state.onsite_interview_count;
 
         // const developer_hour = (state.annual_tech_roles * (state.applicants_per_role * application_review_time_in_min + state.pre_screened_candidates * pre_screening_interview_time_in_min + state.onsite_invites_per_role * interviewer_per_onsite_interview * onsite_interview_time_in_min * onsite_interview_count_adjusted)) / 60;
 
-        const developer_hour = state.annual_tech_roles *
-            (state.applicants_per_role * application_review_time_in_min
-            + state.pre_screened_candidates * pre_screening_interview_time_in_min
-            + state.onsite_invites_per_role * interviewer_per_onsite_interview * onsite_interview_time_in_min * onsite_interview_count_adjusted) / 60;
+        const developer_hour = +state.annual_tech_roles *
+            (+state.applicants_per_role * application_review_time_in_min
+            + +state.pre_screened_candidates * pre_screening_interview_time_in_min
+            + +state.onsite_invites_per_role * interviewer_per_onsite_interview * onsite_interview_time_in_min * onsite_interview_count_adjusted) / 60;
 
 
         dispatch({ type: set_hours, payload: developer_hour.toLocaleString("en-US") });
@@ -253,6 +253,7 @@ const MyComponent = () => {
                                         <input
                                             type={type}
                                             name={name}
+                                            pattern="[0-9]*"
                                             value={value}
                                             onChange={handleChange}
                                             className={clsx(
@@ -280,7 +281,7 @@ const MyComponent = () => {
                                         onChange={(event) =>
                                             dispatch({
                                                 type: set_Applicants_Per_Role,
-                                                payload: +event.target.value,
+                                                payload: event.target.value,
                                             })
                                         }
                                         className={styles.rangeInput}
@@ -341,13 +342,13 @@ const set_price = "set_price";
 const set_hours = "set_hours";
 
 const initialState = {
-    annual_tech_roles: 0,
-    pre_screened_candidates: 0,
-    onsite_invites_per_role: 0,
-    onsite_interview_count: 0,
-    applicants_per_role: 0,
-    price: 0,
-    hours: 0,
+    annual_tech_roles: '',
+    pre_screened_candidates: '',
+    onsite_invites_per_role: '',
+    onsite_interview_count: '',
+    applicants_per_role: '',
+    price: '',
+    hours: '',
 };
 
 const reducer = (state = initialState, action) => {
