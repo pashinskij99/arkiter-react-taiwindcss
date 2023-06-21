@@ -14,16 +14,6 @@ const MyComponent = () => {
         dispatch,
     ] = useReducer(reducer, initialState);
 
-    //   console.log({
-    //     state.annual_tech_roles,
-    //     state.pre_screened_candidates,
-    //     state.onsite_invites_per_role,
-    //     onsite_interview_count,
-    //     applicants_per_role,
-    //     price,
-    //     hours,
-    //   });
-
     const inputsNumber = [
         {
             id: 0,
