@@ -15,11 +15,6 @@ const ProductComparison = () => {
       Arkiter: true,
     },
     {
-      feature: 'Own analytics dashboard',
-      Others: false,
-      Arkiter: true,
-    },
-    {
       feature: 'AI Coding Interviews',
       Others: false,
       Arkiter: true,
@@ -30,22 +25,37 @@ const ProductComparison = () => {
       Arkiter: true,
     },
     {
-      feature: 'Smart Comparison Metrics',
+      feature: 'Standardized Comparison Metrics',
       Others: false,
       Arkiter: true,
     },
     {
-      feature: 'Smart Comparison Metrics',
+      feature: 'Customizable Insight Dashboard',
       Others: false,
       Arkiter: true,
     },
     {
-      feature: 'Smart Comparison Metrics',
-      Others: false,
+      feature: 'Coding Interviews (Algo/DS)',
+      Others: true,
       Arkiter: true,
     },
     {
-      feature: 'Smart Comparison Metrics',
+      feature: 'Front-end Interviews',
+      Others: true,
+      Arkiter: true,
+    },
+    {
+      feature: 'Knowledge Interviews',
+      Others: true,
+      Arkiter: true,
+    },
+    {
+      feature: 'Unlimited User Access',
+      Others: true,
+      Arkiter: true,
+    },
+    {
+      feature: 'All standard interview features: anti-cheat, replay, etc.',
       Others: true,
       Arkiter: true,
     },

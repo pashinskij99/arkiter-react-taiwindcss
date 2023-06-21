@@ -33,9 +33,9 @@ const PricingComponent = () => {
       logo: User,
       plan: 'For Individuals',
       prices: [
-        { currency: 'USD', monthly: 40.00, yearly: 99.99 },
-        { currency: 'GDP', monthly: 7.99, yearly: 19.99 },
-        { currency: 'EUR', monthly: 8.99, yearly: 29.99 },
+        { currency: 'USD', monthly: 48, yearly: 40 },
+        { currency: 'GDP', monthly: 38, yearly: 32 },
+        { currency: 'EUR', monthly: 43, yearly: 36 },
       ],
       features: ['2 Roles a Year', '100 Candidates a Year', 'Unlimited User Access', 'Basic Question Library', 'Architecture Interviews', 'Coding Interviews', 'Anti Cheat Engine'],
       popular: false,
@@ -45,9 +45,9 @@ const PricingComponent = () => {
       logo: Rocket,
       plan: 'For Start ups',
       prices: [
-        { currency: 'USD', monthly: 60.00, yearly: 149.99 },
-        { currency: 'GDP', monthly: 12.99, yearly: 29.99 },
-        { currency: 'EUR', monthly: 14.99, yearly: 39.99 },
+        { currency: 'USD', monthly: 336, yearly: 280 },
+        { currency: 'GDP', monthly: 264, yearly: 220 },
+        { currency: 'EUR', monthly: 300, yearly: 250 },
       ],
       features: [
         '10 Roles a Year', '1500 Candidates a Year', 'Unlimited User Access', 'Standard Question Library', 'Architecture Interviews', 'Coding Interviews', 'Anti Cheat Engine', 'Advanced Analytics', 'Custom Reports', 'Insight Dashboard Access'],
@@ -58,9 +58,9 @@ const PricingComponent = () => {
       logo: Organisation,
       plan: 'For Enterprise',
       prices: [
-        { currency: 'USD', monthly: 80.00, yearly: 199.99 },
-        { currency: 'GDP', monthly: 19.99, yearly: 49.99 },
-        { currency: 'EUR', monthly: 24.99, yearly: 59.99 },
+        { currency: 'USD', monthly: 3000, yearly: 2500 },
+        { currency: 'GDP', monthly: 2400, yearly: 2000 },
+        { currency: 'EUR', monthly: 2760, yearly: 2300 },
       ],
       features: ['10 Roles a Year', '12500 Candidates a Year', 'Unlimited User Access', 'Premium Question Library', 'Architecture Interviews', 'Coding Interviews', 'Anti Cheat Engine', 'Advanced Analytics', 'Custom Reports', 'Insight Dashboard Access', 'Custom Questions', 'Industry Benchmarking', 'ATS Integrations'],
       popular: false,

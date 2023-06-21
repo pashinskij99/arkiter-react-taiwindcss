@@ -39,10 +39,10 @@ const MyComponent = () => {
     };
 
     const circleArray = [
-        { id: 0, props: { ...defaultProps}, name: 'Performance' },
-        { id: 1, props: { ...defaultProps, colorCircle: '#DAD7FE', fill: "#DAD7FE", colorSlice: '#4339F2' }, name: 'Accuracy' },
-        { id: 2, props: { ...defaultProps, colorCircle: '#FFE5D3', fill: "#FFE5D3", colorSlice: '#FF3A29' }, name: 'Speed' },
-        { id: 3, props: { ...defaultProps, colorCircle: '#CCF8FE', fill: "#CCF8FE", colorSlice: '#02A0FC' }, name: 'Overall' },
+        { id: 0, props: { ...defaultProps, colorCircle: '#CCF8FE', fill: "#CCF8FE", colorSlice: '#02A0FC' }, name: 'Overall' },
+        { id: 1, props: { ...defaultProps, colorCircle: '#FFE5D3', fill: "#FFE5D3", colorSlice: '#FF3A29' }, name: 'Correctness' },
+        { id: 2, props: { ...defaultProps}, name: 'Performance' },
+        { id: 3, props: { ...defaultProps, colorCircle: '#DAD7FE', fill: "#DAD7FE", colorSlice: '#4339F2' }, name: 'Accuracy' },
     ]
 
     return (
@@ -182,7 +182,7 @@ const MyComponent = () => {
 
 const inputsNumber = [
     { id: 0, type: 'text', label: 'Annual Tech Roles:' },
-    { id: 1, type: 'text', label: 'Pre-Screened Candidates Per Role:' },
+    { id: 1, type: 'text', label: 'Pre-Screened Candidates:' },
     { id: 2, type: 'text', label: 'Onsite Invites Per Role:' },
     { id: 3, type: 'text', label: 'Onsite Interview Count:' },
 ]

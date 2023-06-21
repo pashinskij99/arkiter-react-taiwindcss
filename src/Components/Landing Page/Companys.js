@@ -30,7 +30,7 @@ const ImageGrid = () => {
                     {/* <img className='w-full relative h-full object-contain' src={imageSrc} alt=""/> */}
                 </div>
 
-                <h1 className="text-[3.3rem] mt-[30px] mb-[48px] md:text-[2.3rem] text-arkiterTextDark uppercase font-normal md:mb-[4.462rem] relative">BUILT by global leaders From</h1>
+                <h1 className="text-[3.3rem] mt-[30px] mb-[48px] md:text-[2.3rem] text-arkiterTextDark uppercase font-normal md:mb-[4.462rem] relative">Our team comes from top companies</h1>
                 <ul className={styles.companyList}>
                     {company.map((props) => (
                         <li key={props.key} className='flex items-center justify-center'>

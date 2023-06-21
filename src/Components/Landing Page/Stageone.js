@@ -9,16 +9,39 @@ import clsx from 'clsx';
 import useIntersection from '../../hooks/useIntersection';
 import { useInView } from 'react-intersection-observer';
 
+const data = [
+  {
+    number: 1,
+    title: 'Build your test',
+    description: 'Unleash the power of our comprehensive architecture and ai coding assessments.',
+  },
+  {
+    number: 2,
+    title: 'Candidate interviews',
+    description: 'Here your candidates undertake your tailored interview on our fully automated and engaging platform.',
+  },
+  {
+    number: 3,
+    title: 'Hire the best',
+    description: 'Build your dream team by hiring the best candidates with our unbiased, data-driven insights.',
+  },
+];
+
+const classNameWrapper = 'relative flex items-center justify-center p-4 h-[20rem]'
+const classNameInner = 'flex flex-col items-center absolute w-full xl:w-[46.9rem] top-0'
+const classNameH2 = 'text-[4rem] whitespace-nowrap text-white font-semibold mb-[2.3rem] text-center'
+const classNameP = 'text-white text-center text-[2rem] leading-[2.5rem]'
+
 const stepContent = [
   {
     id: 1,
     contentH2: 'Build your test',
-    contentP: 'Unleash the power of our comprehensive system design and architecture assessment.',
-    last: false,
+    contentP: 'Unleash the power of our comprehensive architecture and ai coding assessments.',
+    last: false
   },
   {
     id: 2,
-    contentH2: 'Invite your candidate',
+    contentH2: 'Candidate interviews',
     contentP: 'Here your candidates undertake your tailored interview on our fully automated and engaging platform',
     last: false,
   },
@@ -29,11 +52,6 @@ const stepContent = [
     last: true,
   },
 ]
-
-const classNameWrapper = 'relative flex items-center justify-center p-4 h-[20rem]'
-const classNameInner = 'flex flex-col items-center absolute w-full xl:w-[46.9rem] top-0'
-const classNameH2 = 'text-[4rem] whitespace-nowrap text-white font-semibold mb-[2.3rem] text-center'
-const classNameP = 'text-white text-center text-[2rem] leading-[2.5rem]'
 
 const Component = () => {
   const [active, setActive] = useState(0)

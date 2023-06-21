@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
-import Review from '../../Assets/Review.png';
-import Company from '../../Assets/company.png';
+import Alex from '../../Assets/Alex.jpeg';
+import Peter from '../../Assets/Peter2.jpeg';
+import AWS from '../../Assets/aws.svg';
+import Mateusz from '../../Assets/mateusz.webp';
+import Aurora from '../../Assets/auroralogo.png';
+import Palantir from '../../Assets/company.png';
 import BackgroundImageMobile from '../../Assets/mobileLines.png';
 import BackgroundImageDesktop from '../../Assets/desktopLines.png';
 import {ReactComponent as SliderLogo} from '../../Assets/icons/sliderLogo.svg'
@@ -11,38 +15,53 @@ import clsx from 'clsx';
 const reviews = [
   {
     id: 1,
-    imageUrl: Review,
+    imageUrl: Alex,
     review: '“The biggest and the most awaited change in the boring interview process!”',
     companyName: 'Alakbar Ayyubov, Data Specialist',
-    companyLogo: Company,
+    companyLogo: Palantir,
   },
   {
     id: 2,
-    imageUrl: Review,
-    review: '“Hello”',
-    companyName: 'Artik Devlopment',
-    companyLogo: Company,
+    imageUrl: Peter,
+    review: '“Arkiter transformed my software engineering interview experience with its comprehensive evaluation, system design focus, and real-world scenarios. The user-friendly platform allowed me to showcase my skills beyond traditional interviews, and the high-quality questions and detailed feedback reports have been invaluable for growth.”',
+    companyName: 'Peter Si , Software Engineer',
+    companyLogo: AWS,
   },
+  {
+    id: 3,
+    imageUrl: Mateusz,
+    review: '“I have found Arkiter to be the most comprehensive and easy to use tech hiring solution out there. It really streamlines the recruitment process”',
+    companyName: 'Mateusz Wronski, Software Solutions Director',
+    companyLogo: Aurora,
+  }
   // Add more reviews as needed
 ];
 
 const reviewsMobile = [
   {
     id: 1,
-    imageUrl: Review,
+    imageUrl: Alex,
     review: '“The biggest and the most awaited change in the boring interview process!”',
     companyName: 'Alakbar Ayyubov',
     companyProfession: 'Data Specialist',
-    companyLogo: Company,
+    companyLogo: Palantir,
   },
   {
     id: 2,
-    imageUrl: Review,
-    review: '“Hello”',
-    companyName: 'Artik',
-    companyProfession: 'Devlopment',
-    companyLogo: Company,
+    imageUrl: Peter,
+    review: '“Peter test”',
+    companyName: 'Amazon Web Services',
+    companyProfession: 'Software Engineer',
+    companyLogo: AWS,
   },
+  {
+    id: 3,
+    imageUrl: Mateusz,
+    review: '“I have found Arkiter to be the most comprehensive and easy to use tech hiring solution out there. It really streamlines the recruitment process”',
+    companyName: 'Aurora',
+    companyProfession: 'Software Solutions Director',
+    companyLogo: Aurora,
+  }
   // Add more reviews as needed
 ];
 

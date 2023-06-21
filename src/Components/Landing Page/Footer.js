@@ -43,10 +43,7 @@ const Footer = () => {
 
           <div className='mt-[11.8rem] flex flex-col md:flex-row justify-between items-start md:items-end gap-5 md:gap-0'>
             <p className='text-[2.4rem] leading-[1.2]'>Foundry Building 2 Smiths Square, 77 Fulham <br /> Palace Road, London, England, W6 8AF</p>
-            <p className='md:mr-[17rem] text-[2.2rem] text-[#FFFFFFA6]'>
-              Built By:
-              <a href="#" className='ml-1 underline'>Arktik</a>
-            </p>
+
           </div>
         </div>
       </footer>
