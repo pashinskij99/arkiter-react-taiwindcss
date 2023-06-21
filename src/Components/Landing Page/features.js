@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useReducer, useState } from 'react';
 import ImageTwo from '../../Assets/Insight.png';
 import ButtonPrimary from "../UI/Button";
 import styles from '../../styles/Features.module.scss'
@@ -9,6 +9,7 @@ import { ReactComponent as Graphic } from "../../Assets/graphic_unlock_powerful.
 import { TypographyH2, TypographyH3, TypographyP } from '../UI/Typography';
 
 const MyComponent = () => {
+    const [state, dispatch] = useReducer(reducer, initialState)
     const [sliderValue, setSliderValue] = useState(50);
 
     const handleSliderChange = (event) => {
@@ -139,10 +140,10 @@ const MyComponent = () => {
                         </TypographyP>
                         <div className='border border-[#FFFFFF]/[0.33] px-[4.2rem] py-[3rem] flex justify-center flex-col rounded-[.9rem] w-full h-[54.3rem]'>
                             <div className='grid grid-cols-2 gap-6'>
-                                {inputsNumber.map(({ id, type, label }) => (
+                                {inputsNumber.map(({ id, type, label, name }) => (
                                     <div key={id} className="flex flex-col">
                                         <label className="text-[#FFFFFFBD] leading-[2.5rem] h-10 flex items-center font-medium text-[2rem]">{label}</label>
-                                        <input type={type} className="w-full border-b-2 border-[#FFFFFF75] px-2 py-2 bg-transparent focus-within:outline-none font-medium text-[3rem]" />
+                                        <input type={type} name={name} className="w-full border-b-2 border-[#FFFFFF75] px-2 py-2 bg-transparent focus-within:outline-none font-medium text-[3rem]" />
                                     </div>
                                 ))}
                             </div>
@@ -155,6 +156,7 @@ const MyComponent = () => {
                                         type="range"
                                         min={0}
                                         max={100}
+                                        name='applicants_per_role'
                                         value={sliderValue}
                                         onChange={handleSliderChange}
                                         className={styles.rangeInput}
@@ -181,10 +183,10 @@ const MyComponent = () => {
 };
 
 const inputsNumber = [
-    { id: 0, type: 'text', label: 'Annual Tech Roles:' },
-    { id: 1, type: 'text', label: 'Pre-Screened Candidates:' },
-    { id: 2, type: 'text', label: 'Onsite Invites Per Role:' },
-    { id: 3, type: 'text', label: 'Onsite Interview Count:' },
+    { id: 0, type: 'text', name: 'annual_tech_roles', label: 'Annual Tech Roles:' },
+    { id: 1, type: 'text', name: 'pre-screened_candidates', label: 'Pre-Screened Candidates:' },
+    { id: 2, type: 'text', name: 'onsite_invites_per_role', label: 'Onsite Invites Per Role:' },
+    { id: 3, type: 'text', name: 'onsite_interview_count', label: 'Onsite Interview Count:' },
 ]
 
 const CartBackground = () => {
@@ -210,6 +212,65 @@ const CartBackground = () => {
             </div>
         </div>
     )
+}
+
+const set_Annual_Tech_Roles = 'set_Annual_Tech_Roles'
+const set_Pre_Screened_Candidates = 'set_Pre_Screened_Candidates'
+const set_Onsite_Invites_Per_Role = 'set_Onsite_Invites_Per_Role'
+const set_Onsite_Interview_Count = 'set_Onsite_Interview_Count'
+const set_Applicants_Per_Role = 'set_Applicants_Per_Role'
+const set_price = 'set_price'
+const set_hours = 'set_hours'
+
+const developer_hour_cost = 200
+const application_review_time_in_min = 4;
+const pre_screening_interview_time_in_min = 90;
+const interviewer_per_onsite_interview = 1.5;
+const onsite_interview_time_in_min = 90;
+// const onsite_interview_count_adjusted = onsite_interview_count;
+
+// const developer_hour = yearly_tech_roles * (application * application_review_time_in_min + invited_to_prescreen * pre_screening_interview_time_in_min + invited_to_onsite * interviewer_per_onsite_interview * onsite_interview_time_in_min * onsite_interview_count_adjusted) / 60;
+
+// developer_hours_tag.textContent = numberWithCommas(Math.ceil(developer_hour));
+// money_saving_tag.textContent =  numberWithCommas(Math.ceil(developer_hour * developer_hour_cost));
+
+
+const initialState = {
+    annual_tech_roles: 0,
+    pre_screened_candidates: 0,
+    onsite_invites_per_role: 0,
+    onsite_interview_count: 0,
+    applicants_per_role: 0,
+    price: 0,
+    hours: 0,
+}
+
+const reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case set_Annual_Tech_Roles:
+            return {...state}
+            break;
+        case set_Pre_Screened_Candidates:
+
+            break;
+        case set_Onsite_Invites_Per_Role:
+
+            break;
+        case set_Onsite_Interview_Count:
+
+            break;
+        case set_Applicants_Per_Role:
+
+            break;
+        case set_hours:
+
+            break;
+        case set_price:
+
+            break;
+        default:
+            break;
+    }
 }
 
 export default MyComponent;

@@ -36,12 +36,12 @@ const Hero = () => {
                 <div className={styles.backWrapper4} />
                 <div className={styles.backWrapperMobile} />
 
-                {/* <div className={styles.lineHorizontal} >
+                <div className={styles.lineHorizontal} >
                     <div className={styles.lineHorizontal1} />
                     <div className={styles.lineHorizontal2} />
                     <div className={styles.lineHorizontal3} />
                     <div className={styles.lineHorizontal4} />
-                </div> */}
+                </div>
                 <div className={styles.lineVertical} />
 
                 <HeroLineAnimation className={'hidden md:block absolute top-0 bottom-0 left-0 right-0 m-auto w-[180rem] translate-y-[-3.5rem]'} />
