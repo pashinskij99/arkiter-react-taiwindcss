@@ -117,7 +117,7 @@ const ReviewComponent = () => {
       className="flex justify-center py-[9.5rem] md:py-[11.9rem] bg-[#1D9EEB]"
       style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
-      <div className="container md:max-h-[54.1rem]">
+      <div className="container md:min-h-[54.1rem]">
         <div className="md:overflow-hidden h-full">
           <div className="flex flex-col h-full md:flex-row md:gap-[10.9rem]">
             <div className="max-w-[389.83px] mx-auto md:mx-0 h-[259.63px] md:h-[54.1rem] mb-[12.23px] md:mb-0 md:mr-10 flex justify-center items-center">
@@ -127,7 +127,7 @@ const ReviewComponent = () => {
                 className="object-contain h-full rounded-[4rem]"
               />
             </div>
-            <div className="w-full md:w-2/3 flex flex-col justify-end">
+            <div className="w-full md:w-2/3 h-full flex flex-col justify-end">
 
               <p className="flex md:hidden text-white flex-col mb-[12px] justify-center text-[3.21783rem] text-center md:text-start items-center">
                 {currentReviewMobile.companyName}

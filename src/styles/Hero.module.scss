@@ -74,6 +74,41 @@
   animation: lineAnimate 2.7s ease-in-out infinite;
 }
 
+.lineHorizontal {
+
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  left: 0;
+  // height: 5px;
+  z-index: 111;
+
+  .lineHorizontal1 {
+    position: absolute;
+    background: linear-gradient(270deg, rgba(73, 204, 249, 0) 3.75%, #49CCF9 45.9%, rgba(73, 204, 249, 0) 98.58%);
+    height: 2px;
+    width: 100%;
+  }
+  .lineHorizontal2 {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(270deg, rgba(73, 204, 249, 0) 27.44%, #49CCF9 45.9%, rgba(73, 204, 249, 0) 69.64%);
+    height: 2px;
+  }
+  .lineHorizontal3 {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(270deg, rgba(73, 204, 249, 0) 3.75%, #49CCF9 45.9%, rgba(73, 204, 249, 0) 98.58%);
+    height: 2px;
+  }
+  .lineHorizontal4 {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(270deg, rgba(73, 204, 249, 0) 24.77%, #49CCF9 45.9%, rgba(73, 204, 249, 0) 71.55%);
+    height: 2px;
+  }
+}
+
 @keyframes lineAnimate {
   0% {
     transform: translateX(-100%);

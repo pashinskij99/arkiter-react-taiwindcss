@@ -2,11 +2,13 @@
 }
 
 .animateLine {
-  animation: lineAnimate 3.5s ease-in-out infinite;
+  transform: translateX(-100%);
+  animation: lineAnimate 4.5s ease-in-out infinite;
 }
 
 .animateVertical {
-  animation: animeteVerticalLine 3s ease-in-out infinite;
+  transform: translateY(-100%);
+  animation: animeteVerticalLine 4.5s ease-in-out infinite;
 }
 
 @keyframes animeteVerticalLine {
@@ -14,7 +16,7 @@
     transform: translateY(-100%);
   }
   50% {
-
+    transform: translateY(-100%);
   }
   100% {
     transform: translateY(100%);
@@ -26,7 +28,7 @@
     transform: translateX(-100%);
   }
   50% {
-
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(100%);
