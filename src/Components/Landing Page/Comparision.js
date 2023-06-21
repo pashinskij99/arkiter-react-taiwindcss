@@ -129,7 +129,7 @@ const ProductComparison = () => {
                   <td
                     className={clsx(`p-2 w-[47.7rem] text-center text-2xl bg-[#0A265F]`, {
                       ['rounded-br-[2.87485rem] lg:rounded-br-[0] rounded-bl-[2.87485rem] lg:rounded-bl-[0]']:
-                        item.Others,
+                        index === comparisonData.length - 1,
                     })}>
                     {item.Arkiter ? (
                       <CheckIcon width={'4.082rem'} className='mx-auto' height={'3.175rem'} />

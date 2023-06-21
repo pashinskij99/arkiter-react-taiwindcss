@@ -47,7 +47,7 @@ const FaqItem = ({ question, answer }) => {
             ? { height: contentEl.current && contentEl.current.scrollHeight }
             : { height: '0px' }
         }
-        className='duration-200 transition-all overflow-hidden'>
+        className='duration-300 transition-all overflow-hidden'>
         <p className='text-[#0A265F] text-[11.3px] md:text-[3.31rem] leading-[4rem]'>{answer}</p>
       </div>
     </div>
