@@ -121,7 +121,7 @@ const ReviewComponent = () => {
           className='md:overflow-hidden h-full'>
           {reviews.map((currentReview, index) => (
             <SwiperSlide>
-              <div className='flex flex-col h-full md:flex-row md:gap-[10.9rem]'>
+              <div className='flex flex-col md:flex-row md:gap-[10.9rem]'>
                 <div className='max-w-[389.83px] mx-auto md:mx-0 h-[259.63px] md:h-[54.1rem] mb-[12.23px] md:mb-0 md:mr-10 flex justify-center items-center'>
                   <img
                     src={currentReview.imageUrl}
@@ -129,7 +129,7 @@ const ReviewComponent = () => {
                     className='object-contain h-full rounded-[4rem]'
                   />
                 </div>
-                <div className='w-full md:w-2/3 h-full flex flex-col justify-end gap-[2.4rem] md:gap-0'>
+                <div className='w-full md:w-2/3 flex flex-col justify-end gap-[2.4rem] md:gap-0'>
                   <p className='flex md:hidden text-white flex-col mb-[12px] justify-center text-[3.21783rem] text-center md:text-start items-center'>
                     {reviewsMobile[index].companyName}
 
@@ -144,7 +144,7 @@ const ReviewComponent = () => {
                     className='md:hidden mx-auto h-[40px]'
                   />
 
-                  <p className='flex text-center md:hidden text-white font-semibold text-[4.94383rem] h-full items-center leading-[5rem]'>
+                  <p className='flex text-center md:hidden text-white font-semibold text-[4.94383rem] items-center leading-[5rem]'>
                     {currentReview.review}
                   </p>
 
