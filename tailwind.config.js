@@ -1,11 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors')
 
-
 module.exports = {
-  content: [
-        "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {},
     colors: {
@@ -17,21 +14,22 @@ module.exports = {
       emerald: colors.emerald,
       indigo: colors.indigo,
       yellow: colors.yellow,
-      "arkiterBlueLight": {
+      arkiterBlueLight: {
         200: '#1D9EEB',
         300: '#78D9FB',
         400: '#246FFF',
         600: '#0A3D62',
         700: '#0A265F',
       },
-      "arkiterWhite": {
+      arkiterWhite: {
         100: '#FFFFFF',
-        200: '#FCFCFC'
+        200: '#FCFCFC',
       },
-      "arkiterTextDark": '#606060',
-      "arkiterRed": {
-        400: '#D40D00'
+      arkiterTextDark: '#606060',
+      arkiterRed: {
+        400: '#D40D00',
       },
+      blue: '#49CCF9',
     },
     container: {
       center: true,
@@ -46,9 +44,8 @@ module.exports = {
         xl: '1200px',
         '2xl': '1200px',
         // '3xl': '1510px',
-      }
-    }
+      },
+    },
   },
   plugins: [],
 }
-
