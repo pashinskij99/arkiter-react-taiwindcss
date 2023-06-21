@@ -145,7 +145,7 @@ const ReviewComponent = () => {
                   />
 
                   <p className='flex text-center md:hidden text-white font-semibold text-[4.94383rem] h-full items-center leading-[5rem]'>
-                    {reviewsMobile[index].review}
+                    {currentReview.review}
                   </p>
 
                   <p className='hidden md:flex text-white font-semibold text-[4.94383rem] h-full items-center leading-[5rem]'>
