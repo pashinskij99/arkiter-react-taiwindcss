@@ -222,7 +222,7 @@ const MyComponent = () => {
                             insights <br className="md:hidden" /> and analysis
                         </TypographyH3>
                         <TypographyP className="text-center mb-[6.1rem]">
-                            Arkiter allows you in-depth insights into the skills of <br />{" "}
+                            Arkiter allows you in-depth insights into the skills of <br className="hidden md:block" />{" "}
                             your potential candidates, making sure you hire the right people.
                         </TypographyP>
                         <img

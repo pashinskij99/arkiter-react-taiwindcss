@@ -102,7 +102,7 @@ const ReviewComponent = () => {
 
   return (
     <div
-      className='flex justify-center py-[9.5rem] md:py-[11.9rem] bg-[#1D9EEB]'
+      className='flex justify-center pb-[15rem] py-[9.5rem] md:py-[11.9rem] bg-[#1D9EEB]'
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -118,7 +118,7 @@ const ReviewComponent = () => {
           onSlideChange={({ isBeginning, isEnd }) => onChangeSlide(isBeginning, isEnd)}
           spaceBetween={55.36}
           loop
-          className='md:overflow-hidden h-full'>
+          className='!overflow-x-clip !overflow-visible relative h-full'>
           {reviews.map((currentReview, index) => (
             <SwiperSlide>
               <div className='flex flex-col md:flex-row md:gap-[10.9rem]'>
@@ -148,26 +148,27 @@ const ReviewComponent = () => {
                     {currentReview.review}
                   </p>
 
-                  <p className='hidden md:flex text-white font-semibold text-[4.94383rem] h-full items-center leading-[5rem]'>
+                  <p className='hidden md:flex text-white font-semibold pb-[5rem] text-[4.94383rem] h-full items-center leading-[5rem]'>
                     {currentReview.review}
                   </p>
                   <p className='hidden md:flex text-white text-[3.21783rem] mb-[4.7rem] text-center md:text-start items-center'>
                     <hr className='border-none w-[2.697rem] h-[.2rem] bg-white mr-[1.135rem]' />
                     {currentReview.companyName}
                   </p>
-                  <div className='flex flex-col md:flex-row lg:flex-row items-center justify-between'>
+                  <div className='flex flex-col md:flex-row h-[5.8rem] lg:flex-row items-center justify-between'>
                     <img
                       src={currentReview.companyLogo}
                       alt='Company Logo'
-                      className='hidden md:block w-1/4 mr-2'
+                      className='hidden md:block object-contain h-full mr-2'
                     />
 
-                    <CustomSwiperNavigation isStart={isStart} isEnd={isEnd} />
                   </div>
                 </div>
               </div>
             </SwiperSlide>
           ))}
+          <CustomSwiperNavigation isStart={isStart} isEnd={isEnd} />
+
         </Swiper>
       </div>
     </div>
@@ -181,7 +182,7 @@ const CustomSwiperNavigation = ({ isStart, isEnd }) => {
 
   return (
     <>
-      <div className='flex md:hidden mt-6 items-center translate-x-[0%] md:translate-x-[-50%]'>
+      <div className='flex absolute bottom-0 z-10 w-full justify-center mx-auto md:hidden mt-6 items-center translate-x-[0%] translate-y-[100%] md:translate-x-[-50%]'>
         <button
           onClick={() => swiper.slidePrev()}
           className={clsx(
@@ -217,7 +218,7 @@ const CustomSwiperNavigation = ({ isStart, isEnd }) => {
         </button>
       </div>
 
-      <div className='hidden md:flex items-center translate-x-[0%] md:translate-x-[-50%]'>
+      <div className='hidden md:flex absolute bottom-0 right-0 z-10 items-center translate-x-[0%] md:translate-x-[-50%]'>
         <button
           onClick={() => swiper.slidePrev()}
           className={clsx(

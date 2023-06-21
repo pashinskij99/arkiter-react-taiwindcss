@@ -1,8 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Image1 from '../../Assets/slideImageCarAnimateSection1.jpg';
-import Image2 from '../../Assets/slideImageCarAnimateSection2.jpg';
-import Image3 from '../../Assets/slideImageCarAnimateSection3.jpg';
+import Image1 from '../../Assets/slideImageCarAnimateSection1.png';
+import Image2 from '../../Assets/slideImageCarAnimateSection2.png';
+import Image3 from '../../Assets/slideImageCarAnimateSection3.png';
+import HeaderImage from '../../Assets/browser-header.png';
 import { TypographyH2 } from '../UI/Typography';
+import {ReactComponent as BrowserHeader} from "../../Assets/browser-header.svg";
+
 
 const classNameH2 = 'text-[4rem] whitespace-nowrap text-white font-semibold mb-[2.3rem]'
 const classNameP = 'text-white text-[2rem] leading-[2.5rem]'
@@ -45,11 +48,11 @@ const StageoneNew = () => {
   const getImage = () => {
     switch (active) {
       case 0:
-        return <img src={Image1} alt="Additional Image" className="object-contain shadow-md" />
+        return <img src={Image1} alt="Additional Image" className="object-contain rounded-[1.5rem]" />
       case 1:
-        return <img src={Image2} alt="Additional Image" className="object-contain shadow-md" />
+        return <img src={Image2} alt="Additional Image" className="object-contain rounded-[1.5rem]" />
       case 2:
-        return <img src={Image3} alt="Additional Image" className="object-contain shadow-md" />
+        return <img src={Image3} alt="Additional Image" className=" object-contain rounded-[1.5rem]" />
       default:
         break;
     }
@@ -92,13 +95,15 @@ const stepContent = [
   }
 
   return (
-    <div className="bg-[#0A265F] pt-[14rem] relative pb-[12.5rem]">
+    <div className="bg-[#0A265F] pt-[8rem] relative pb-[8rem]">
         <div className="container">
           <TypographyH2 className='text-white text-center mb-[7rem]'>
             Solve The Hiring Process In <span className='text-[#49CCF9]'>3 Steps</span>
           </TypographyH2>
 
-          <div className="flex justify-center m-auto w-fit h-[64.3rem] bg-white p-[4rem] rounded-[1.5rem]">
+          <div className="flex justify-center m-auto w-fit md:shadow-md md:shadow-white h-[64.3rem] rounded-[1.5rem]">
+            {/* <BrowserHeader /> */}
+            {/* <img src={HeaderImage} alt="" /> */}
             {getImage()}
           </div>
 

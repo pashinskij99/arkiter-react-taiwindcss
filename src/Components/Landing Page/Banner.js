@@ -1,11 +1,24 @@
 import React from 'react';
 import ButtonPrimary from "../UI/Button";
 import styles from '../../styles/Banner.module.scss'
-import { Typewriter, Cursor } from "react-simple-typewriter";
+import { Typewriter, Cursor, useTypewriter } from "react-simple-typewriter";
 import { ReactComponent as CodeImage } from "../../Assets/icons/code.svg";
 import { TypographyH2, TypographyP } from '../UI/Typography';
+import clsx from 'clsx';
 
 const Banner = () => {
+    // const [text, helper] = useTypewriter({
+
+    // })
+
+    const [text, helper] = useTypewriter({
+        words: ['Design a system to allow users to communicate via a text system.'],
+        loop: 1,
+        deleteSpeed: 0
+    })
+
+    console.log(helper.isDone);
+
     return (
         <div className={styles.sectionWrapper}>
             <div className={styles.sectionContainer}>
@@ -17,7 +30,7 @@ const Banner = () => {
                     </TypographyH2>
                     <TypographyP className='mb-[10.2rem] text-center md:text-left leading-[18.56px] md:leading-[3.017rem]' >
                         A brief summary of who this product is for,<br className='md:hidden' /> how they
-                        can <br className='hidden md:block' /> use it and the problem it solves for the <br className='md:hidden' /> target audience
+                        can <br className='hidden md:block' /> use it and the problem it solves for the target audience
                     </TypographyP>
                     <ButtonPrimary
                         classNameButton={'hidden md:flex'}
@@ -27,7 +40,7 @@ const Banner = () => {
 
                 {/*  Section Code  */}
                 <div className={styles.codeSectionWrapper}>
-                    <div className='relative'>
+                    <div className={clsx('relative')}>
                         <div className={styles.codeWrapper}>
                             <div className={styles.codeHeader}>
                                 <div className={styles.tab1}>Question #1</div>
@@ -37,19 +50,28 @@ const Banner = () => {
                             <div className={styles.codeBody}>
                                 <p className={styles.codeDescription}>
                                     <span className={styles.codeTitle}>Task #1<span>:</span></span>
-                                    <Typewriter
-                                        words={['Design a system to allow users to communicate via a text system.']}
-                                        typeSpeed={50}
-                                        loop={true}
-                                        deleteSpeed={0}
-                                    />
+                                    {text}
                                     <Cursor />
                                 </p>
                             </div>
 
                         </div>
-                        <CodeImage className={styles.codeImageWrapper} />
+                        {/* <CodeImage className={clsx(styles.codeImageWrapper, {
+                                [styles.hideAnimate]:helper.isDone
+                            })}
+                        /> */}
+
+                        <img
+                            src="/ArrowAnimation1.gif"
+                            className={clsx('opacity-0 absolute top-0 left-0 h-full md:static w-full', {
+                                [styles.animateGif]: helper.isDone
+                            })}
+                            alt="animate"
+                            loading="lazy"
+                        />
                     </div>
+
+
 
 
                     <ButtonPrimary
