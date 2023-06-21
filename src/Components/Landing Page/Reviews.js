@@ -72,9 +72,14 @@ const reviewsMobile = [
 ]
 
 const ReviewComponent = () => {
-  // const [currentReview, setCurrentReview] = useState(reviews[0])
-  const [currentReviewMobile, setCurrentReviewMobile] = useState(reviewsMobile[0])
   const [backgroundImage, setBackgroundImage] = useState('')
+  const [isEnd, setIsEnd] = useState(false)
+  const [isStart, setIsStart] = useState(true)
+
+  const onChangeSlide = (start, end) => {
+    setIsEnd(end)
+    setIsStart(start)
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -95,28 +100,6 @@ const ReviewComponent = () => {
     }
   }, [])
 
-  // const switchReview = (review) => {
-  //   setCurrentReview(review)
-  // }
-
-  // const currentIndex = reviews.findIndex((review) => review.id === currentReview.id)
-
-  // const goToPreviousReview = () => {
-  //   const previousIndex = currentIndex - 1
-  //   if (previousIndex >= 0) {
-  //     setCurrentReview(reviews[previousIndex])
-  //     setCurrentReviewMobile(reviewsMobile[previousIndex])
-  //   }
-  // }
-
-  // const goToNextReview = () => {
-  //   const nextIndex = currentIndex + 1
-  //   if (nextIndex < reviews.length) {
-  //     setCurrentReview(reviews[nextIndex])
-  //     setCurrentReviewMobile(reviewsMobile[nextIndex])
-  //   }
-  // }
-
   return (
     <div
       className='flex justify-center py-[9.5rem] md:py-[11.9rem] bg-[#1D9EEB]'
@@ -132,9 +115,9 @@ const ReviewComponent = () => {
               slidesPerView: 1,
             },
           }}
+          onSlideChange={({ isBeginning, isEnd }) => onChangeSlide(isBeginning, isEnd)}
           spaceBetween={55.36}
           loop
-          onSlideChange={() => console.log('slide change')}
           className='md:overflow-hidden h-full'>
           {reviews.map((currentReview, index) => (
             <SwiperSlide>
@@ -146,7 +129,7 @@ const ReviewComponent = () => {
                     className='object-contain h-full rounded-[4rem]'
                   />
                 </div>
-                <div className='w-full md:w-2/3 h-full flex flex-col justify-end'>
+                <div className='w-full md:w-2/3 h-full flex flex-col justify-end gap-[2.4rem] md:gap-0'>
                   <p className='flex md:hidden text-white flex-col mb-[12px] justify-center text-[3.21783rem] text-center md:text-start items-center'>
                     {reviewsMobile[index].companyName}
 
@@ -155,10 +138,14 @@ const ReviewComponent = () => {
                     </span>
                   </p>
 
-                  <SliderLogoMobile className='md:hidden mx-auto h-[85px]' />
+                  <img
+                    src={currentReview.companyLogo}
+                    alt='Company Logo'
+                    className='md:hidden mx-auto h-[40px]'
+                  />
 
                   <p className='flex text-center md:hidden text-white font-semibold text-[4.94383rem] h-full items-center leading-[5rem]'>
-                    {currentReviewMobile.review}
+                    {reviewsMobile[index].review}
                   </p>
 
                   <p className='hidden md:flex text-white font-semibold text-[4.94383rem] h-full items-center leading-[5rem]'>
@@ -175,7 +162,7 @@ const ReviewComponent = () => {
                       className='hidden md:block w-1/4 mr-2'
                     />
 
-                    <CustomSwiperNavigation />
+                    <CustomSwiperNavigation isStart={isStart} isEnd={isEnd} />
                   </div>
                 </div>
               </div>
@@ -189,25 +176,44 @@ const ReviewComponent = () => {
 
 export default ReviewComponent
 
-const CustomSwiperNavigation = () => {
+const CustomSwiperNavigation = ({ isStart, isEnd }) => {
   const swiper = useSwiper()
 
   return (
     <>
-      <div className='flex md:hidden items-center translate-x-[0%] md:translate-x-[-50%]'>
+      <div className='flex md:hidden mt-6 items-center translate-x-[0%] md:translate-x-[-50%]'>
         <button
           onClick={() => swiper.slidePrev()}
           className={clsx(
             'w-[7.656rem] h-[7.656rem] flex items-center justify-center rounded-full bg-white text-gray-700',
-          )}>
-          <FiArrowLeft size={15} className={clsx('text-[#1D9EEB]', {})} />
+            {
+              ['!bg-[#1D9EEB] !border-white border-[.347991rem] ']: isStart,
+            },
+          )}
+          disabled={isStart}>
+          <FiArrowLeft
+            size={15}
+            className={clsx('text-[#1D9EEB]', {
+              ['!text-white/[0.33]']: isStart,
+            })}
+          />
         </button>
         <button
           onClick={() => swiper.slideNext()}
           className={clsx(
             'ml-[2.262rem] w-[7.656rem] h-[7.656rem] flex items-center justify-center rounded-full bg-white text-gray-700',
-          )}>
-          <FiArrowRight size={15} color='#1D9EEB' className={clsx('text-[#1D9EEB]')} />
+            {
+              ['!bg-[#1D9EEB] !border-white border-[.347991rem] ']: isEnd,
+            },
+          )}
+          disabled={isEnd}>
+          <FiArrowRight
+            size={15}
+            color='#1D9EEB'
+            className={clsx('text-[#1D9EEB]', {
+              ['!text-white/[0.33]']: isEnd,
+            })}
+          />
         </button>
       </div>
 
@@ -216,15 +222,34 @@ const CustomSwiperNavigation = () => {
           onClick={() => swiper.slidePrev()}
           className={clsx(
             'w-[7.656rem] h-[7.656rem] flex items-center justify-center rounded-full bg-white text-gray-700',
-          )}>
-          <FiArrowLeft size={30} className={clsx('text-[#1D9EEB]')} />
+            {
+              ['!bg-[#1D9EEB] !border-white border-[.347991rem] ']: isStart,
+            },
+          )}
+          disabled={isStart}>
+          <FiArrowLeft
+            size={30}
+            className={clsx('text-[#1D9EEB]', {
+              ['!text-white/[0.33]']: isStart,
+            })}
+          />
         </button>
         <button
           onClick={() => swiper.slideNext()}
           className={clsx(
             'ml-[2.262rem] w-[7.656rem] h-[7.656rem] flex items-center justify-center rounded-full bg-white text-gray-700',
-          )}>
-          <FiArrowRight size={30} color='#1D9EEB' className={clsx('text-[#1D9EEB]')} />
+            {
+              ['!bg-[#1D9EEB] !border-white border-[.347991rem] ']: isEnd,
+            },
+          )}
+          disabled={isEnd}>
+          <FiArrowRight
+            size={30}
+            color='#1D9EEB'
+            className={clsx('text-[#1D9EEB]', {
+              ['!text-white/[0.33]']: isEnd,
+            })}
+          />
         </button>
       </div>
     </>
