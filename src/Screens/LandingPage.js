@@ -7,6 +7,7 @@ import Hero from "../Components/Landing Page/Hero"
 import Navbar from "../Components/Landing Page/NavBar"
 import ReviewComponent from "../Components/Landing Page/Reviews"
 import StageOne from "../Components/Landing Page/Stageone"
+import StageoneNew from "../Components/Landing Page/StageoneNew"
 import ContactForm from "../Components/Landing Page/contact_form"
 import Features from "../Components/Landing Page/features"
 import PricingComparison from "../Components/Landing Page/pricing"
@@ -19,7 +20,8 @@ const LandingPage = () => {
             <ImageGrid/>
             <Banner/>
             <Features/>
-            <StageOne/>
+            {/* <StageOne/> */}
+            <StageoneNew />
             <ReviewComponent/>
             <PricingComparison/>
             <ProductComparison />
