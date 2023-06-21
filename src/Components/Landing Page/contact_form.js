@@ -161,7 +161,12 @@ const ContactForm = () => {
                 For information about how Arkiter handles personal data, see our
                 <br />
                 <span>
-                  <a className='text-[#13E5C0] underline underline-offset-2 cursor-pointer'>
+                  <a
+                    href='https://arkiter-react-taiwindcss.vercel.app/privacy-policy'
+                    target='_blank'
+                    without
+                    rel='noreferrer'
+                    className='text-[#13E5C0] underline underline-offset-2 cursor-pointer'>
                     Privacy Policy
                   </a>
                 </span>
