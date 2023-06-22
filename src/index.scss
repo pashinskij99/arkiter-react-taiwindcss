@@ -13,6 +13,9 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased; // or subpixel-antialiased
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 
   // @include respond(big-screen) {
   //   font-size: 100%

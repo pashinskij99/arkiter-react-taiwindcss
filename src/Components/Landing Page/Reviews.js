@@ -120,7 +120,7 @@ const ReviewComponent = () => {
           loop
           className='!overflow-x-clip !overflow-visible relative h-full'>
           {reviews.map((currentReview, index) => (
-            <SwiperSlide>
+            <SwiperSlide key={currentReview.id}>
               <div className='flex flex-col md:flex-row md:gap-[10.9rem]'>
                 <div className='max-w-[389.83px] mx-auto md:mx-0 h-[259.63px] md:h-[54.1rem] mb-[12.23px] md:mb-0 md:mr-10 flex justify-center items-center'>
                   <img

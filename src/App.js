@@ -7,7 +7,7 @@ import { Routes, Route, Outlet, Link, useLocation } from "react-router-dom";
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
 import { BlogPage } from './pages/BlogPage/BlogPage';
 import { ContactPage } from './pages/ContactPage/ContactPage';
-import { useEffect, useLayoutEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 
 function App() {
   function ScrollToTop() {
@@ -24,6 +24,8 @@ function App() {
     <>
       {/* <Navbar /> */}
       <ScrollToTop />
+        <script type="text/javascript"
+        src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
 
       <Routes>
         <Route path="/" element={<LandingPage />} />

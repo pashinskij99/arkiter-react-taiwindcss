@@ -63,7 +63,7 @@ const ProductComparison = () => {
   ]
 
   return (
-    <div className='w-full pt-[16.8rem] pb-[10.149rem]'>
+    <div id='why-us' className='w-full pt-[16.8rem] pb-[10.149rem]'>
       <div className='container'>
         <h2 className='text-[6.6rem] leading-[1] text-[#0A265F] text-center font-bold pb-12'>
           Why Choose Arkiter?

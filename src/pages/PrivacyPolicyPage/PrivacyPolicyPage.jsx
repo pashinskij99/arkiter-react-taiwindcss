@@ -8,7 +8,7 @@ const PrivacyPolicyPage = () => {
 
       <main className={styles.privacyPolicyWrapper}>
         <div className="container">
-          <section className="text-[3rem]">
+          <section id='privacy-policy' className="text-[3rem]">
             <h1>Privacy policy</h1>
             <p>
               We may update this privacy notice from time to time. This version
@@ -36,11 +36,11 @@ const PrivacyPolicyPage = () => {
             </p>
             <ol className="list-decimal">
               <li>
-                by emailing us at <a href="#">privacy@arkiter.com</a>; or
+                by emailing us at <a href="mailto:privacy@arkiter.com">privacy@arkiter.com</a>; or
               </li>
               <li>
                 by writing through our contact page at{" "}
-                <a href="#">https://arkiter.com</a>
+                <a href="/#contact">https://arkiter.com</a>
               </li>
             </ol>
             <p>
@@ -52,7 +52,7 @@ const PrivacyPolicyPage = () => {
               use the personal information we collect and hold about you. <br />{" "}
               We do not have a data protection officer, but if you have any
               questions about this privacy notice or issues arising from it, you
-              should contact <a href="#">privacy@arkiter.com</a>, who is
+              should contact <a href="mailto:privacy@arkiter.com">privacy@arkiter.com</a>, who is
               responsible for matters relating to data protection at our
               organisation, including any matters in this privacy notice. You can
               contact them using the details set out above. <br /> We may issue
@@ -470,7 +470,7 @@ const PrivacyPolicyPage = () => {
               We may also receive Website, Device and Technical Information
               automatically from technologies such as cookies that are installed
               on our website. To find out more about these please see our cookie
-              policy, which is available <a href="#">here</a>.
+              policy, which is available <a href="https://www.arkiter.com/cookie-policy">here</a>.
             </p>
           </section>
           <section>

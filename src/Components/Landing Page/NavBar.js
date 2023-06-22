@@ -23,11 +23,15 @@ const Navbar = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
+    const handleAnchorClick = () => {
+      setIsMobileMenuOpen(false)
+    }
+
     const navItemsDesktopHomeClassNames = 'text-white text-[2.8rem] leading-[1]'
     const navItemsDesktopClassNames = 'text-white text-[2.8rem] hover:text-gray-300 leading-[1] cursor-pointer'
 
     return (
-        <nav className="bg-[#0A265F] text-white py-[2.1rem] border-b-[.1rem] border-[#ffffff26] z-50 relative">
+        <nav className="bg-[#0A265F] text-white py-[2.1rem] border-b-[.1rem] border-[#ffffff26] z-50 top-0 sticky md:relative">
             <div className="container flex items-center justify-between">
 
                 <Link to='/' className="flex items-center">
@@ -73,36 +77,17 @@ const Navbar = () => {
                             </div>
 
                             <div className='flex flex-col items-start px-[32px] pb-[24px]'>
-                                <a
-                                    href="#"
-                                    className="block py-4 text-[5.8rem] text-white hover:text-gray-300"
-                                >
-                                    Home
-                                </a>
-                                <a
-                                    href="#"
-                                    className="block py-4 text-[5.8rem] text-white hover:text-gray-300"
-                                >
-                                    About
-                                </a>
-                                <a
-                                    href="#"
-                                    className="block py-4 text-[5.8rem] text-white hover:text-gray-300"
-                                >
-                                    Why us?
-                                </a>
-                                <a
-                                    href="#"
-                                    className="block py-4 text-[5.8rem] text-white hover:text-gray-300"
-                                >
-                                    Pricing
-                                </a>
-                                <a
-                                    href="#"
-                                    className="block py-4 text-[5.8rem] text-white hover:text-gray-300"
-                                >
-                                    Blog
-                                </a>
+                                {anchorLinks.map(({href, id, text}) => (
+                                    <a
+                                        key={id}
+                                        href={href}
+                                        className="block py-4 text-[5.8rem] text-white hover:text-gray-300"
+                                        onClick={handleAnchorClick}
+                                    >
+                                        {text}
+                                    </a>
+                                ))}
+
                             </div>
                         </div>
 
@@ -127,8 +112,8 @@ const Navbar = () => {
                     }
                 </div>
 
-                <ButtonPrimary classNameButton='hidden md:flex'>
-                    Start Here
+                <ButtonPrimary classNameButton='hidden md:flex !h-[6rem] !px-[4rem] !w-fit !text-[2.8rem]'>
+                    Book Call
                 </ButtonPrimary>
             </div>
 

@@ -77,7 +77,7 @@ const PricingComponent = () => {
   };
 
   return (
-    <section>
+    <section id='pricing'>
       <div className="bg-[#0A265F] pt-[8.2rem] pb-[8.2rem] md:pb-0">
         <div className='container items-center flex flex-col'>
 
@@ -212,7 +212,7 @@ const PricingComponent = () => {
               className="grid md:grid-cols-3 gap-[2.1rem] "
             >
               {pricingBoxes.map((box, index) => (
-                <div className='bg-white px-[4.8rem] pb-[4.9rem] rounded-b-[2.8rem]' style={{ boxShadow: '0 1.1rem 2rem rgba(0, 0, 0, 0.25)' }}>
+                <div key={box.title} className='bg-white px-[4.8rem] pb-[4.9rem] rounded-b-[2.8rem]' style={{ boxShadow: '0 1.1rem 2rem rgba(0, 0, 0, 0.25)' }}>
                   <p className={clsx('text-[#0A265FA1] font-semibold text-[2.6rem] mb-[1.827rem] pt-[3.7rem]', {
                     ['text-[#0A265F] opacity-[0.95]']: box.popular
                   })}>Key Features</p>

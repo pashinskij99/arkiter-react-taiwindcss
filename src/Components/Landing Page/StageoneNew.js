@@ -2,9 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image1 from '../../Assets/slideImageCarAnimateSection1.png';
 import Image2 from '../../Assets/slideImageCarAnimateSection2.png';
 import Image3 from '../../Assets/slideImageCarAnimateSection3.png';
-import HeaderImage from '../../Assets/browser-header.png';
 import { TypographyH2 } from '../UI/Typography';
-import {ReactComponent as BrowserHeader} from "../../Assets/browser-header.svg";
 
 
 const classNameH2 = 'text-[4rem] whitespace-nowrap text-white font-semibold mb-[2.3rem]'
@@ -110,7 +108,7 @@ const stepContent = [
           <div className='grid grid-cols-1 md:grid-cols-3 mt-[10rem] gap-[7.3rem] md:gap-[17.3rem] items-start'>
           {
               stepContent.map(({ id, contentH2, contentP, last, width }, index) => (
-                <div className='flex flex-col h-full' onClick={() => handleClick(index)}>
+                <div key={id} className='flex flex-col h-full' onClick={() => handleClick(index)}>
                   <div className='w-full h-[4px] relative'>
 
                     <div className='w-full h-full absolute top-0 left-0' style={{

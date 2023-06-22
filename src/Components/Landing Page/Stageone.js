@@ -62,15 +62,15 @@ const Component = () => {
   const myRef2 = useRef();
   const myRef3 = useRef();
 
-  const { ref: containerRef1, inView: inView1, entry:entry1 } = useInView({
+  const { ref: containerRef1, inView: inView1, } = useInView({
     threshold: 1,
     triggerOnce: true
   });
-  const { ref: containerRef2, inView: inView2, entry:entry2 } = useInView({
+  const { ref: containerRef2, inView: inView2,  } = useInView({
     threshold: 1,
     triggerOnce: true
   });
-  const { ref: containerRef3, inView: inView3, entry:entry3 } = useInView({
+  const { ref: containerRef3, inView: inView3,} = useInView({
     threshold: 1,
     triggerOnce: true
   });

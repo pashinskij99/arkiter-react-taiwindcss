@@ -1,20 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
-// import backgroundImage from '../../Assets/hex.png';
-import backgroundCleanImage from '../../Assets/HEXUP-clean2x.png';
-import imageSrc from '../../Assets/home.png';
+import React, { useEffect, useState } from 'react';
 import ButtonPrimary from "../UI/Button";
 import styles from '../../styles/Hero.module.scss'
 import { TypographyH1 } from '../UI/Typography';
 import cartSrc from '../../Assets/section2cart.png';
-import { HeroLineAnimation, HeroLineAnimationMobile } from '../Animations/HeroLineAnimation/HeroLineAnimation';
-// import {ReactComponent as MobileGrid} from '../../Assets/HEXUP-mobile.png'
+import { HeroLineAnimation } from '../Animations/HeroLineAnimation/HeroLineAnimation';
 
 const Hero = () => {
     const [wrapperShadowWidth, setWrapperShadowWidth] = useState(0)
 
     const handleResize = () => {
         if(window.innerWidth > 1200) {
-            setWrapperShadowWidth((window.innerWidth - 1200) / 2)
+            setWrapperShadowWidth(((window.innerWidth - 1200) / 2) - 30)
         }
     }
 
@@ -28,7 +24,7 @@ const Hero = () => {
     }, [])
 
     return (
-        <div className="relative overflow-hidden h-[446px] md:h-auto">
+        <div id='home' className="relative overflow-hidden h-[446px] md:h-auto">
             <div className="w-full h-full md:h-auto pt-[10.4rem] pb-[17rem] bg-[#0A265F] relative">
                 <div className={styles.backWrapper1} />
                 <div className={styles.backWrapper2} style={{width: wrapperShadowWidth + 'px'}} />
@@ -56,7 +52,7 @@ const Hero = () => {
                             it <br /> and the problem it solves for the target audience
                         </p>
                         <ButtonPrimary classNameButton={'w-full md:!w-[32.2rem]'}>
-                            Start Here
+                            Book Call
                         </ButtonPrimary>
                     </div>
                 </div>

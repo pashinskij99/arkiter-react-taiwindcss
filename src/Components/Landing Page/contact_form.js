@@ -8,6 +8,7 @@ import img2 from '../../Assets/contact/Rocket.png'
 import img3 from '../../Assets/contact/StackOfCoins.png'
 import { ReactComponent as CheckIcon } from '../../Assets/icons/checkmark.svg'
 import Input from '../UI/Input'
+import {Link} from "react-router-dom";
 
 const emailRegex =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -83,8 +84,7 @@ const ContactForm = () => {
   }
 
   return (
-    <>
-      <div className='bg-[#0A265F] flex items-center h-auto pt-[9.9rem] pb-[8.1rem] '>
+    <div id='contact' className='bg-[#0A265F] flex items-center h-auto pt-[9.9rem] pb-[8.1rem] '>
         <div className='container grid grid-cols-1 md:grid-cols-2 items-center justify-items-center md:justify-items-start'>
           <div className='items-center flex-col hidden md:flex'>
             <TypographyH2 className='text-[#FFF] '>
@@ -161,14 +161,12 @@ const ContactForm = () => {
                 For information about how Arkiter handles personal data, see our
                 <br />
                 <span>
-                  <a
-                    href='https://arkiter-react-taiwindcss.vercel.app/privacy-policy'
+                  <Link
+                    to='/privacy-policy'
                     target='_blank'
-                    without
-                    rel='noreferrer'
                     className='text-[#13E5C0] underline underline-offset-2 cursor-pointer'>
                     Privacy Policy
-                  </a>
+                  </Link>
                 </span>
               </p>
 
@@ -193,7 +191,6 @@ const ContactForm = () => {
           )}
         </div>
       </div>
-    </>
   )
 }
 

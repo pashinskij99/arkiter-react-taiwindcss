@@ -1,12 +1,13 @@
-import React, { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer } from "react";
 import ImageTwo from "../../Assets/Insight.png";
 import ButtonPrimary from "../UI/Button";
 import styles from "../../styles/Features.module.scss";
 import CartLogo from "../../Assets/cartLogo.png";
 import { CircularProgressBar } from "@tomickigrzegorz/react-circular-progress-bar";
 import clsx from "clsx";
-import { ReactComponent as Graphic } from "../../Assets/graphic_unlock_powerful.svg";
 import { TypographyH2, TypographyH3, TypographyP } from "../UI/Typography";
+import AnimatedNumber from 'react-animated-number'
+import {useInView} from "react-intersection-observer";
 
 const MyComponent = () => {
     const [
@@ -65,6 +66,11 @@ const MyComponent = () => {
         },
     ];
 
+    const [progressRef, progressInView ] = useInView({
+        triggerOnce: true,
+        threshold: 0
+    })
+
     useEffect(() => {
         const developer_hour_cost = 200;
         const application_review_time_in_min = 4;
@@ -73,19 +79,13 @@ const MyComponent = () => {
         const onsite_interview_time_in_min = 90;
         const onsite_interview_count_adjusted = +state.onsite_interview_count;
 
-        // const developer_hour = (state.annual_tech_roles * (state.applicants_per_role * application_review_time_in_min + state.pre_screened_candidates * pre_screening_interview_time_in_min + state.onsite_invites_per_role * interviewer_per_onsite_interview * onsite_interview_time_in_min * onsite_interview_count_adjusted)) / 60;
-
         const developer_hour = +state.annual_tech_roles *
             (+state.applicants_per_role * application_review_time_in_min
             + +state.pre_screened_candidates * pre_screening_interview_time_in_min
             + +state.onsite_invites_per_role * interviewer_per_onsite_interview * onsite_interview_time_in_min * onsite_interview_count_adjusted) / 60;
 
-
-        dispatch({ type: set_hours, payload: developer_hour.toLocaleString("en-US") });
-        dispatch({
-            type: set_price,
-            payload: (developer_hour * developer_hour_cost).toLocaleString("en-US"),
-        });
+        dispatch({ type: set_hours, payload: developer_hour });
+        dispatch({ type: set_price, payload: (developer_hour * developer_hour_cost)});
 
     }, [state.annual_tech_roles, state.applicants_per_role, state.onsite_interview_count, state.onsite_invites_per_role, state.pre_screened_candidates])
 
@@ -113,27 +113,12 @@ const MyComponent = () => {
     };
 
     const circleArray = [
-        {
-            id: 0,
-            props: {
-                ...defaultProps,
-                colorCircle: "#CCF8FE",
-                fill: "#CCF8FE",
-                colorSlice: "#02A0FC",
+        { id: 2, props: {
+            ...defaultProps,
+            percent: 67,
             },
-            name: "Overall",
-        },
-        {
-            id: 1,
-            props: {
-                ...defaultProps,
-                colorCircle: "#FFE5D3",
-                fill: "#FFE5D3",
-                colorSlice: "#FF3A29",
-            },
-            name: "Correctness",
-        },
-        { id: 2, props: { ...defaultProps }, name: "Performance" },
+            name: "Performance" },
+
         {
             id: 3,
             props: {
@@ -141,13 +126,38 @@ const MyComponent = () => {
                 colorCircle: "#DAD7FE",
                 fill: "#DAD7FE",
                 colorSlice: "#4339F2",
+                percent: 75,
             },
             name: "Accuracy",
+        },
+
+        {
+            id: 1,
+            props: {
+                ...defaultProps,
+                colorCircle: "#FFE5D3",
+                fill: "#FFE5D3",
+                colorSlice: "#FF3A29",
+                percent: 94
+            },
+            name: "Correctness",
+        },
+
+        {
+            id: 0,
+            props: {
+                ...defaultProps,
+                colorCircle: "#CCF8FE",
+                fill: "#CCF8FE",
+                colorSlice: "#02A0FC",
+                percent: 81
+            },
+            name: "Overall",
         },
     ];
 
     return (
-        <div className="flex flex-col items-center pt-[12.1rem] pb-[7.5rem] text-white">
+        <div id='about' className="flex flex-col items-center pt-[12.1rem] pb-[7.5rem] text-white">
             <div className="container">
                 <div
                     className={clsx(
@@ -166,7 +176,7 @@ const MyComponent = () => {
                             architecture assessment. Our cutting-edge.
                         </TypographyP>
                         <ButtonPrimary classNameButton="!bg-[#ffffff] hover:!bg-arkiterBlueLight-600 hover:!text-white !text-arkiterBlueLight-600">
-                            Start Here
+                            Book Call
                         </ButtonPrimary>
                     </div>
 
@@ -191,7 +201,7 @@ const MyComponent = () => {
                                         <h4>Katherine Donalds</h4>
                                         <p>Full-Stack Developer</p>
                                         <div className={styles.progress}>
-                                            <progress id="file" max="100" value="70" />
+                                            <progress ref={progressRef} id="file" max="100" value={progressInView ? "64" : "0"} />
                                             <span>64%</span>
                                         </div>
                                     </div>
@@ -291,12 +301,23 @@ const MyComponent = () => {
                             <div className="grid grid-cols-2 gap-2 items-center justify-between mt-[27.33px] md:mt-16">
                                 <div className=" border-[#FCFCFC6B] border-2 bg-[#FFFFFF4A] rounded-lg py-[2.4rem]">
                                     <p className="text-white font-bold text-center text-[3.73081rem]">
-                                        ${state.price}
+                                        $
+                                        <AnimatedNumber
+                                            value={+state.price}
+                                            formatValue={n => Math.round(n).toLocaleString("en-US")}
+                                            duration={1000}
+                                        />
                                     </p>
                                 </div>
                                 <div className=" border-[#FCFCFC6B] border-2 bg-[#FFFFFF4A] rounded-lg py-[2.4rem]">
                                     <p className="text-white font-bold text-center text-[3.73081rem]">
-                                        {state.hours} Hours
+                                        <AnimatedNumber
+                                            value={+state.hours}
+                                            formatValue={n => Math.round(n).toLocaleString("en-US")}
+                                            duration={1000}
+                                        />
+                                        {' '}
+                                        Hours
                                     </p>
                                 </div>
                             </div>

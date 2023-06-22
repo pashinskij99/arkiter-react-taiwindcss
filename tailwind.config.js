@@ -34,7 +34,7 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
+        DEFAULT: '1.5rem',
         sm: '1rem',
       },
       screens: {
@@ -47,5 +47,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+      require('tailwind-scrollbar-hide')
+  ],
 }

@@ -29,13 +29,15 @@ const ImageGrid = () => {
     }, [])
 
     return (
-        <div className="z-10 pb-[36px] md:pb-[4.2rem] relative">
+        <div id='demo' className="z-10 pb-[36px] md:pb-[3.2rem] relative">
             <div className='container bg-white flex flex-col items-center justify-end'>
                 <div className='relative z-[1]'>
                     {/* <img className='z-[1] relative translate-y-[0%] md:translate-y-[-5%]' src={dashboardSrc} height={'855.18rem'} width={'1299rem'} alt="dashboard" /> */}
                     <div className='translate-y-[0%] md:translate-y-[-5%]'>
                         <BrowserHeader className='w-full h-fit' />
-                        <video ref={videoRef} autoplay muted className='w-full rounded-b-[1.8rem] translate-y-[-2px] relative z-10' id="myVideo">
+                        <video ref={videoRef} autoPlay muted className='w-full rounded-b-[1.8rem] translate-y-[-2px] relative z-10' id="myVideo" style={{
+                            boxShadow: '0px 4px 43px 8px rgba(0, 0, 0, 0.15)'
+                        }}>
                             <source src="/video.mp4" type="video/mp4" />
                             <source src="/video.mov" type="video/mov" />
                         </video>
@@ -44,7 +46,7 @@ const ImageGrid = () => {
                     {/* <img className='hidden md:block absolute top-0 right-0 z-[0] translate-y-[-50%] md:translate-y-[-50%] md:translate-x-[-0%] xl:translate-x-[-15%] xl:translate-y-[-48%] px-[30px] md:px-[0px] md:scale-[0.6] lg:scale-[0.8] xl:scale-100' src={cartSrc} width={'397.7rem'} height={'496rem'} alt="cart" /> */}
                 </div>
 
-                <h1 className="text-[3.3rem] mt-[30px] mb-[48px] md:text-[2.3rem] text-arkiterTextDark uppercase font-normal md:mb-[4.462rem] relative">Our team comes from top companies</h1>
+                <h1 className="text-[3.3rem] mt-[30px] mb-[48px] md:text-[2.3rem] text-arkiterTextDark uppercase font-normal md:mb-[4.462rem] relative md:translate-y-[-20px]">Our team comes from top companies</h1>
                 <ul className={styles.companyList}>
                     {company.map((props) => (
                         <li key={props.key} className='flex items-center justify-center'>

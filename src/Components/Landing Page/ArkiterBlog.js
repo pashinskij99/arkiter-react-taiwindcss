@@ -10,12 +10,22 @@ import clsx from 'clsx';
 
 import 'swiper/css';
 import { Link } from 'react-router-dom';
+import {useState} from "react";
 
 const ArkiterBlog = () => {
+
   const currentIndex = 0
 
+  const [isEnd, setIsEnd] = useState(false)
+  const [isStart, setIsStart] = useState(true)
+
+  const onChangeSlide = (start, end) => {
+    setIsEnd(end)
+    setIsStart(start)
+  }
+
   return (
-    <section className="bg-[#0A3D62] pt-[7.6rem] pb-[6rem] overflow-hidden">
+    <section id='blog' className="bg-[#0A3D62] pt-[7.6rem] pb-[6rem] overflow-hidden">
       <div className="container relative">
         <h2 className="text-[7.40354rem] leading-[1] text-white text-center font-semibold">
           Arkiter
@@ -28,7 +38,7 @@ const ArkiterBlog = () => {
           <Swiper
             className='mt-[7.8rem] !overflow-visible'
             spaceBetween={55.36}
-            onSlideChange={() => console.log('slide change')}
+            onSlideChange={({ isBeginning, isEnd }) => onChangeSlide(isBeginning, isEnd)}
             navigation
             breakpoints={{
               0: {
@@ -54,7 +64,7 @@ const ArkiterBlog = () => {
             <SwiperSlide>
               <Item />
             </SwiperSlide>
-            <CustomSwiperNavigation />
+            <CustomSwiperNavigation isEnd={isEnd} isStart={isStart} />
           </Swiper>
         </div>
 
@@ -66,29 +76,31 @@ const ArkiterBlog = () => {
   )
 }
 
-const CustomSwiperNavigation = () => {
+const CustomSwiperNavigation = ({isEnd, isStart}) => {
   const swiper = useSwiper()
 
   return (
     <div className='absolute translate-y-[50%] justify-center w-full md:w-auto md:justify-normal md:top-0 md:right-0 flex translate-x-[0%] md:translate-y-[-150%] lg:translate-y-[-230%] lg:translate-x-[-70%]'>
       <button
         onClick={() => swiper.slidePrev()}
-        className={clsx("w-[43.56px] md:w-[5.358rem] h-[43.56px] md:h-[5.358rem] flex items-center justify-center rounded-full bg-transparent text-[#FFFFFF54]", {
-          // ['!bg-transparent !border-white border-[.347991rem] ']: currentIndex === 0
+        disabled={isStart}
+        className={clsx("w-[43.56px] md:w-[5.358rem] h-[43.56px] md:h-[5.358rem] flex items-center justify-center rounded-full bg-white text-[#0A3D62]", {
+          ['!bg-transparent !border-white border-[.347991rem]']: isStart
         })}
       >
-        <FiArrowLeft size={'2rem'} className={clsx('text-[#FFFFFF54] scale-[2] md:scale-100', {
-          // ['!text-[#FFFFFF54]']: currentIndex === 0
+        <FiArrowLeft size={'2rem'} className={clsx('text-[#0A3D62] scale-[2] md:scale-100', {
+          ['!text-[#FFFFFF54]']: isStart
         })} />
       </button>
       <button
         onClick={() => swiper.slideNext()}
+        disabled={isEnd}
         className={clsx("ml-[1.583rem] w-[43.56px] md:w-[5.358rem] h-[43.56px] md:h-[5.358rem] flex items-center justify-center rounded-full bg-white text-[#0A3D62]", {
-          // ['!bg-[#1D9EEB] !border-white border-[.347991rem] ']: currentIndex
+          ['!bg-transparent !border-white border-[.347991rem]']: isEnd
         })}
       >
         <FiArrowRight size={'2rem'} color="#0A3D62" className={clsx('text-[#0A3D62] scale-[2] md:scale-100', {
-          // ['!text-[#0A3D62]']: currentIndex
+          ['!text-[#FFFFFF54]']: isEnd
         })} />
       </button>
     </div>
