@@ -285,7 +285,7 @@ const MyComponent = () => {
                                     <input
                                         type="range"
                                         min={0}
-                                        max={100}
+                                        max={1000}
                                         name="applicants_per_role"
                                         value={state.applicants_per_role}
                                         onChange={(event) =>
@@ -363,11 +363,11 @@ const set_price = "set_price";
 const set_hours = "set_hours";
 
 const initialState = {
-    annual_tech_roles: '',
-    pre_screened_candidates: '',
-    onsite_invites_per_role: '',
-    onsite_interview_count: '',
-    applicants_per_role: '',
+    annual_tech_roles: '10',
+    pre_screened_candidates: '10',
+    onsite_invites_per_role: '5',
+    onsite_interview_count: '4',
+    applicants_per_role: '100',
     price: '',
     hours: '',
 };

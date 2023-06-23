@@ -40,8 +40,7 @@ const Hero = () => {
                 </div>
                 <div className={styles.lineVertical} />
 
-                <HeroLineAnimation className={'hidden md:block absolute top-0 bottom-0 left-0 right-0 m-auto w-[180rem] translate-y-[-3.5rem]'} />
-
+                <HeroLineAnimation className={'hidden !overflow-visible md:block absolute top-0 bottom-0 left-0 right-0 m-auto w-[160rem] translate-y-[-4.0rem]'} />
 
                 <div className='container'>
                     <div className="flex flex-col w-full md:max-w-[100rem] justify-center h-full z-[11] relative">

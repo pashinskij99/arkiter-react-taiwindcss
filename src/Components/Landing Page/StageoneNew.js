@@ -10,13 +10,13 @@ const classNameP = 'text-white text-[2rem] leading-[2.5rem]'
 
 const StageoneNew = () => {
   const [active, setActive] = useState(0)
-  const [procent, setProcent] = useState(0)
+  const [percent, setPercent] = useState(0)
   const [isInterval, setIsInterval] = useState(true)
   const interval = useRef(null);
 
   useEffect(() => {
     interval.current = setInterval(() => {
-      setProcent(prevState => {
+      setPercent(prevState => {
         if(prevState === 100) return 0
         return prevState += 1
       })
@@ -28,7 +28,7 @@ const StageoneNew = () => {
   }, [])
 
   useEffect(() => {
-    if(procent === 100) {
+    if(percent === 100) {
       setActive(prevState => {
         const nextState = prevState + 1
 
@@ -38,19 +38,19 @@ const StageoneNew = () => {
 
         return nextState
       })
-      setProcent(0)
+      setPercent(0)
     }
 
-  }, [procent])
+  }, [percent])
 
   const getImage = () => {
     switch (active) {
       case 0:
-        return <img src={Image1} alt="Additional Image" className="object-contain rounded-[1.5rem]" />
+        return Image1
       case 1:
-        return <img src={Image2} alt="Additional Image" className="object-contain rounded-[1.5rem]" />
+        return Image2
       case 2:
-        return <img src={Image3} alt="Additional Image" className=" object-contain rounded-[1.5rem]" />
+        return Image3
       default:
         break;
     }
@@ -63,7 +63,7 @@ const stepContent = [
     contentP: 'Unleash the power of our comprehensive architecture and ai coding assessments.',
     last: false,
     width: isInterval
-      ? (active === 0 ? procent + '%' : '100%')
+      ? (active === 0 ? percent + '%' : '100%')
       : active === 0 ? '100%' : '0%'
   },
   {
@@ -72,7 +72,7 @@ const stepContent = [
     contentP: 'Here your candidates undertake your tailored interview on our fully automated and engaging platform',
     last: false,
     width: isInterval
-      ? (active === 1 ? procent + '%' : active < 1 ? '0%' : '100%')
+      ? (active === 1 ? percent + '%' : active < 1 ? '0%' : '100%')
       : active === 1 ? '100%' : '0%'
   },
   {
@@ -81,7 +81,7 @@ const stepContent = [
     contentP: `Build your dream team by hiring the best candidates with our unbiased, data-driven insights.`,
     last: true,
     width: isInterval
-      ? (active === 2 ? procent + '%' : '0%')
+      ? (active === 2 ? percent + '%' : '0%')
       : active === 2 ? '100%' : '0%'
   },
 ]
@@ -93,40 +93,35 @@ const stepContent = [
   }
 
   return (
-    <div className="bg-[#0A265F] pt-[8rem] relative pb-[8rem]">
-        <div className="container">
+    <div className="bg-[#0A265F] pt-[8rem] relative pb-[8rem] h-[100vh]">
+        <div className="container h-full flex flex-col">
           <TypographyH2 className='text-white text-center mb-[7rem]'>
             Solve The Hiring Process In <span className='text-[#49CCF9]'>3 Steps</span>
           </TypographyH2>
 
-          <div className="flex justify-center m-auto w-fit md:shadow-md md:shadow-white h-[64.3rem] rounded-[1.5rem]">
-            {/* <BrowserHeader /> */}
-            {/* <img src={HeaderImage} alt="" /> */}
-            {getImage()}
+          {/*<div className="flex justify-center m-auto w-fit md:shadow-md md:shadow-white h-[64.3rem] rounded-[1.5rem]">*/}
+          <div className="relative flex-1 rounded-[1.5rem]">
+            <img src={getImage()} className='absolute mx-auto top-0 left-0 right-0 rounded-[1.5rem] shadow-md md:shadow-white w-auto h-full object-contain' alt=""/>
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 mt-[10rem] gap-[7.3rem] md:gap-[17.3rem] items-start'>
           {
               stepContent.map(({ id, contentH2, contentP, last, width }, index) => (
-                <div key={id} className='flex flex-col h-full' onClick={() => handleClick(index)}>
+                <div key={id} className='flex flex-col h-full cursor-pointer' onClick={() => handleClick(index)}>
                   <div className='w-full h-[4px] relative'>
 
                     <div className='w-full h-full absolute top-0 left-0' style={{
                       background: '#6C6C6C9E'
                     }} />
                     <div className='h-full absolute top-0 left-0 z-10' style={{
-                      background: isInterval
-                        ? 'linear-gradient(90deg, #49CCF9 100.99%, #475167 99.15%)'
-                        : 'linear-gradient(90deg, #13E5C0 100.99%, #13E5C0 99.15%)' ,
+                      background: 'linear-gradient(90deg, #49CCF9 100.99%, #475167 99.15%)',
                       width,
                       transition: 'all 0.3s'
                     }} />
                     <div className='h-full absolute top-0 left-0' style={{
                       filter: 'blur(4px)',
                       width,
-                      background: isInterval
-                        ? 'linear-gradient(90deg, #49CCF9 100.99%, #475167 99.15%)'
-                        : 'linear-gradient(90deg, #13E5C0 100.99%, #13E5C0 99.15%)',
+                      background: 'linear-gradient(90deg, #49CCF9 100.99%, #475167 99.15%)',
                       transition: 'all 0.3s'
                     }} />
                   </div>
