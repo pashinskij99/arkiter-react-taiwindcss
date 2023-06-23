@@ -93,7 +93,7 @@ const stepContent = [
   }
 
   return (
-    <div className="bg-[#0A265F] pt-[8rem] relative pb-[8rem] h-[100vh]">
+    <div id='steps' className="bg-[#0A265F] pt-[8rem] relative pb-[8rem] h-[100vh]">
         <div className="container h-full flex flex-col">
           <TypographyH2 className='text-white text-center mb-[7rem]'>
             Solve The Hiring Process In <span className='text-[#49CCF9]'>3 Steps</span>

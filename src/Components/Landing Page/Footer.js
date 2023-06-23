@@ -23,7 +23,7 @@ const Footer = () => {
             </ul>
             <ul className='flex flex-col'>
               <li className='text-[3.541rem] leading-[1] font-bold whitespace-nowrap'>How it Works</li>
-              <li className='text-[2.724rem] mt-[1.5rem]'>How it Works</li>
+              <li className='text-[2.724rem] mt-[1.5rem]'><a href="#steps">How it Works</a></li>
             </ul>
             <ul className='flex flex-col'>
               <li className='text-[3.541rem] leading-[1] font-bold'>FAQs</li>
@@ -38,7 +38,7 @@ const Footer = () => {
             </ul>
             <ul className='flex flex-col'>
               <li className='text-[3.541rem] font-bold'>Reviews</li>
-              <li className='text-[2.724rem] mt-[1.5rem]'>Reviews</li>
+              <li className='text-[2.724rem] mt-[1.5rem]'><a href="#reviews">Reviews</a></li>
             </ul>
             <ul className='flex flex-col'>
               <li className='text-[3.541rem] font-bold'>Blogs</li>

@@ -6,6 +6,14 @@ import { TypographyH2, TypographyP } from '../UI/Typography';
 import {ReactComponent as GraphSvg} from "../../Assets/14.svg";
 import clsx from 'clsx';
 import {useInView} from "react-intersection-observer";
+import {ReactComponent as CheckIcon} from "../../Assets/icons/check-white.svg";
+
+const featuresList = [
+    {id: 0, text: 'Comprehensive assessment of system design'},
+    {id: 1, text: 'AI coding to evaluate future-ready candidates'},
+    {id: 2, text: 'Coding assessments covering the fundamentals'},
+    {id: 3, text: 'Knowledge-based questions to assess experience and expertise'}
+]
 
 const Banner = () => {
     const [isDone, setIsDone] = useState(false)
@@ -25,8 +33,14 @@ const Banner = () => {
                         Experience the next <br className='md:hidden' /> level of technology hiring
                     </TypographyH2>
                     <TypographyP className='mb-[10.2rem] text-center md:text-left leading-[18.56px] md:leading-[3.017rem]' >
-                        A brief summary of who this product is for,<br className='md:hidden' /> how they
-                        can <br className='hidden md:block' /> use it and the problem it solves for the target audience
+                        <ul className='flex flex-col gap-[1rem]'>
+                            {featuresList.map(({id, text}) => (
+                                <li key={id} className='flex items-center'>
+                                    <CheckIcon className='mr-[2.058rem]' width={'1.773rem'} height={'1.33rem'} />
+                                    {text}
+                                </li>
+                            ))}
+                        </ul>
                     </TypographyP>
                     <ButtonPrimary
                         classNameButton={'hidden md:flex'}

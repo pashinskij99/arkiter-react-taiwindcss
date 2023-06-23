@@ -24,8 +24,7 @@ function App() {
     <>
       {/* <Navbar /> */}
       <ScrollToTop />
-        <script type="text/javascript"
-        src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
