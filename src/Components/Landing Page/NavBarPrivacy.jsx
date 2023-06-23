@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import logo from '../../Assets/logoname.png';
-import ButtonPrimary from "../UI/Button";
 import { ReactComponent as LogoIcon } from '../../Assets/icons/logo.svg'
 import { ReactComponent as LogoMobileIcon } from '../../Assets/icons/logo-mobile.svg'
 import { ReactComponent as ArrowLeftIcon } from '../../Assets/icons/arrow-left.svg'
@@ -9,10 +7,10 @@ import styles from '../../styles/NavBar.module.scss'
 import clsx from 'clsx';
 
 const anchorLinks = [
-  { id: 0, text: 'Privacy policy', href: '#' },
-  { id: 1, text: 'Cookie policy', href: '#about' },
-  { id: 2, text: 'Terms of use', href: '#why-us' },
-  { id: 3, text: 'Candidate T&C', href: '#pricing' },
+  { id: 0, text: 'Privacy policy', href: '/privacy-policy' },
+  { id: 1, text: 'Cookie policy', href: '/cookie-policy' },
+  { id: 2, text: 'Terms of use', href: '/terms-of-use' },
+  { id: 3, text: 'Candidate T&C', href: '/candidate-terms-of-use' },
 ]
 
 const NavbarPrivacy = () => {

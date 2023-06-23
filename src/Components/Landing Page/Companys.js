@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import IBM from '../../Assets/IBM.png';
 import Goldman from '../../Assets/Goldman.png';
-import JP from '../../Assets/JP.png';
+import MS from '../../Assets/MS.png';
 import Imperial from '../../Assets/Imperial.png';
 import SlidingToggle from '../toggle';
 import imageSrc from '../../Assets/home.png';
@@ -10,14 +10,14 @@ import cartSrc from '../../Assets/section2cart.png';
 import styles from '../../styles/Companys.module.scss'
 import {ReactComponent as GoldmanIcon} from "../../Assets/icons/goldmansachs.svg";
 import {ReactComponent as IBMIcon} from "../../Assets/icons/ibm.svg";
-import {ReactComponent as JPIcon} from "../../Assets/icons/jp-morgan.svg";
+import {ReactComponent as JPIcon} from "../../Assets/icons/ms.svg";
 import {ReactComponent as ImperialIcon} from "../../Assets/icons/imperialcollege.svg";
 import {ReactComponent as BrowserHeader} from "../../Assets/browser-header.svg";
 
 const company = [
     {key: 0, src: Goldman, alt: 'Image 1', component: GoldmanIcon},
     {key: 1, src: IBM, alt: 'Image 2', component: IBMIcon },
-    {key: 2, src: JP, alt: 'Image 3', component: JPIcon},
+    {key: 2, src: MS, alt: 'Image 3', component: JPIcon},
     {key: 3, src: Imperial, alt: 'Image 4', component: ImperialIcon},
 ]
 
@@ -46,7 +46,7 @@ const ImageGrid = () => {
                     {/* <img className='hidden md:block absolute top-0 right-0 z-[0] translate-y-[-50%] md:translate-y-[-50%] md:translate-x-[-0%] xl:translate-x-[-15%] xl:translate-y-[-48%] px-[30px] md:px-[0px] md:scale-[0.6] lg:scale-[0.8] xl:scale-100' src={cartSrc} width={'397.7rem'} height={'496rem'} alt="cart" /> */}
                 </div>
 
-                <h1 className="text-[3.3rem] mt-[30px] mb-[48px] md:text-[2.3rem] text-arkiterTextDark uppercase font-normal md:mb-[4.462rem] relative md:translate-y-[-20px]">Our team comes from top companies</h1>
+                <h1 className="text-[3.3rem] mt-[30px] mb-[48px] md:text-[2.3rem] text-arkiterTextDark uppercase font-normal md:mb-[4.462rem] relative md:translate-y-[-20px]">Our team comes from top organisations</h1>
                 <ul className={styles.companyList}>
                     {company.map((props) => (
                         <li key={props.key} className='flex items-center justify-center'>

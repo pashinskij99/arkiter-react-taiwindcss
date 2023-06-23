@@ -249,9 +249,7 @@ const MyComponent = () => {
                             potential savings
                         </TypographyH3>
                         <TypographyP className="text-center mb-[6.5rem] inline-block">
-                            See how much your business could save with the calculator below or
-                            see how we’ve helped others{" "}
-                            <span className="underline">here.</span>
+                            See how much your business could save with the calculator below
                         </TypographyP>
                         <div className="border border-[#FFFFFF]/[0.33] px-[4.2rem] py-[3rem] flex justify-center flex-col rounded-[.9rem] w-full h-[54.3rem]">
                             <div className="grid grid-cols-2 gap-6">

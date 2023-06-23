@@ -164,7 +164,7 @@ const ContactForm = () => {
                   <Link
                     to='/privacy-policy'
                     target='_blank'
-                    className='text-[#13E5C0] underline underline-offset-2 cursor-pointer'>
+                    className='text-[#49CCF9] underline underline-offset-2 cursor-pointer'>
                     Privacy Policy
                   </Link>
                 </span>

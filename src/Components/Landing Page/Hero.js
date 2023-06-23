@@ -44,11 +44,11 @@ const Hero = () => {
 
                 <div className='container'>
                     <div className="flex flex-col w-full md:max-w-[100rem] justify-center h-full z-[11] relative">
-                        <TypographyH1 className='text-white mb-16 md:mb-8'>Hire Top Developer <br className='md:hidden' /> Talent <br /> With Arkiter</TypographyH1>
+                        <TypographyH1 className='text-white mb-16 md:mb-8'>Interview Top Tech <br />Talents With Arkiter</TypographyH1>
                         {/* <h1 className="text-white text-5xl font-[500] leading-[60px] mb-4"></h1> */}
                         <p className="hidden md:block text-white text-[2.8rem] mb-[4.3rem]">
-                            A brief summary of who this product is for, how they can use
-                            it <br /> and the problem it solves for the target audience
+                            Evaluate candidates across various technical skills (incl. system design
+                            <br /> and AI coding), going beyond just coding and knowledge questions.
                         </p>
                         <ButtonPrimary classNameButton={'w-full md:!w-[32.2rem]'}>
                             Book Call

@@ -48,9 +48,9 @@ const StageoneNew = () => {
       case 0:
         return Image1
       case 1:
-        return Image2
-      case 2:
         return Image3
+      case 2:
+        return Image2
       default:
         break;
     }
@@ -101,7 +101,7 @@ const stepContent = [
 
           {/*<div className="flex justify-center m-auto w-fit md:shadow-md md:shadow-white h-[64.3rem] rounded-[1.5rem]">*/}
           <div className="relative flex-1 rounded-[1.5rem]">
-            <img src={getImage()} className='absolute mx-auto top-0 left-0 right-0 rounded-[1.5rem] shadow-md md:shadow-white w-auto h-full object-contain' alt=""/>
+            <img src={getImage()} className='absolute mx-auto top-0 left-0 right-0 rounded-[1.5rem] shadow-md md:shadow-[#49CCF9] w-auto h-full object-contain' alt=""/>
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 mt-[10rem] gap-[7.3rem] md:gap-[17.3rem] items-start'>
