@@ -2,7 +2,6 @@ import { TypographyH2 } from "../../Components/UI/Typography"
 import RocketIcon from '../../Assets/contact/Rocket.png'
 import BrainsIcon from '../../Assets/contact/Brains.png'
 import StackOfCoinsIcon from '../../Assets/contact/StackOfCoins.png'
-import BackImage from '../../Assets/contact/contactBack.png'
 
 export const ContactPage = () => {
   return (

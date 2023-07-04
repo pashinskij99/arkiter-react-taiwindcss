@@ -61,7 +61,7 @@ const NavbarPrivacy = () => {
           </button>
 
           <div className={clsx("bg-[#0A265F] py-4 text-center flex flex-col justify-between fixed top-0 right-0 z-50 h-full max-w-[300px]", styles.mobileMenu, {
-            ['!translate-x-0']: isMobileMenuOpen
+            '!translate-x-0': isMobileMenuOpen
           })}>
             <div>
               <div onClick={handleMobileMenuToggle} className='flex items-center p-[32px] cursor-pointer'>
@@ -123,7 +123,7 @@ const NavbarPrivacy = () => {
 
         {/* Mobile back */}
         <div onClick={handleMobileMenuToggle} className={clsx(styles.mobileBack, {
-          ['!opacity-100 !pointer-events-auto !touch-auto']: isMobileMenuOpen
+          '!opacity-100 !pointer-events-auto !touch-auto': isMobileMenuOpen
         })} />
 
         {/* Desktop Menu */}

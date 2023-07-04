@@ -117,7 +117,7 @@ const MyComponent = () => {
             ...defaultProps,
             percent: 67,
             },
-            name: "Performance" },
+            name: "Correctness" },
 
         {
             id: 3,
@@ -128,7 +128,7 @@ const MyComponent = () => {
                 colorSlice: "#4339F2",
                 percent: 75,
             },
-            name: "Accuracy",
+            name: "Performance",
         },
 
         {
@@ -140,7 +140,7 @@ const MyComponent = () => {
                 colorSlice: "#FF3A29",
                 percent: 94
             },
-            name: "Correctness",
+            name: "Accuracy",
         },
 
         {
@@ -152,7 +152,7 @@ const MyComponent = () => {
                 colorSlice: "#02A0FC",
                 percent: 81
             },
-            name: "Overall",
+            name: "Speed",
         },
     ];
 
@@ -168,12 +168,10 @@ const MyComponent = () => {
                     {/* Section Title */}
                     <div className="grid md:block w-full my-auto">
                         <TypographyH2 className="text-center md:text-start mb-[13px] md:mb-[1.8rem]">
-                            Predict real-world performance with our AI{" "}
-                            <br className="hidden md:block" /> tests
+                            Data-driven decisions with precision performance metrics
                         </TypographyH2>
                         <TypographyP className="text-center md:text-start mb-[24px] md:mb-[3.6rem]">
-                            Unleash the power of our comprehensive system design and
-                            architecture assessment. Our cutting-edge.
+                            Predict real-world performance more accurately and efficiently to find your perfect candidate
                         </TypographyP>
                         <ButtonPrimary classNameButton="!bg-[#ffffff] hover:!bg-arkiterBlueLight-600 hover:!text-white !text-arkiterBlueLight-600">
                             Book Call
@@ -227,13 +225,11 @@ const MyComponent = () => {
                     {/* Unlock section */}
                     <div className="bg-[#0A3D62] rounded-[1.5rem] flex flex-col items-center pt-[4.3rem] pb-[6.1rem] px-[3.1rem] md:px-[6.3rem]">
                         <TypographyH3 className={"mb-[5.5rem] text-center"}>
-                            Unlock <br className="md:hidden" /> powerful{" "}
-                            <br className="hidden md:block" />
-                            insights <br className="md:hidden" /> and analysis
+                            Unlock powerful candidate insights & analysis
                         </TypographyH3>
                         <TypographyP className="text-center mb-[6.1rem]">
-                            Arkiter allows you in-depth insights into the skills of <br className="hidden md:block" />{" "}
-                            your potential candidates, making sure you hire the right people.
+                            Toggle between high-level summary or detailed technical analysis - plus intuitive candidate benchmarking for all levels of hirers
+                            {/*Effortlessly analyse candidates with data-driven metrics, <br className="hidden md:block" />comprehensive benchmarking, and on-demand interview replays.*/}
                         </TypographyP>
                         <img
                             src={ImageTwo}
@@ -245,11 +241,10 @@ const MyComponent = () => {
                     {/* Discover section */}
                     <div className="bg-[#313131] rounded-[1.5rem] flex flex-col items-center justify-between pb-[36.53px] md:pb-[6.1rem] pt-[4rem] px-[3.1rem] md:px-[6.7rem]">
                         <TypographyH3 className="text-center mb-[6.9rem]">
-                            Discover your <br />
-                            potential savings
+                            How much could you save by assessing candidates with Arkiter?
                         </TypographyH3>
                         <TypographyP className="text-center mb-[6.5rem] inline-block">
-                            See how much your business could save with the calculator below
+                            Discover your potential savings in seconds with our handy calculator
                         </TypographyP>
                         <div className="border border-[#FFFFFF]/[0.33] px-[4.2rem] py-[3rem] flex justify-center flex-col rounded-[.9rem] w-full h-[54.3rem]">
                             <div className="grid grid-cols-2 gap-6">
@@ -303,7 +298,7 @@ const MyComponent = () => {
                                         <AnimatedNumber
                                             value={+state.price}
                                             formatValue={n => Math.round(n).toLocaleString("en-US")}
-                                            duration={1000}
+                                            duration={100}
                                         />
                                     </p>
                                 </div>
@@ -312,7 +307,7 @@ const MyComponent = () => {
                                         <AnimatedNumber
                                             value={+state.hours}
                                             formatValue={n => Math.round(n).toLocaleString("en-US")}
-                                            duration={1000}
+                                            duration={100}
                                         />
                                         {' '}
                                         Hours

@@ -20,7 +20,7 @@ const ButtonPrimary = ({classNameButton, classNameIcon, children, onClick}) => {
             </button>
 
             <Modal handleClose={handleClose} isOpen={open}>
-                <iframe src="https://meetings-eu1.hubspot.com/nihad-yolchuyev?embed=true" className='w-full h-full' frameBorder="0"></iframe>
+                <iframe src="https://meetings-eu1.hubspot.com/emily-atkinson?embed=true" className='w-full h-full' frameBorder="0"></iframe>
             </Modal>
         </>
 

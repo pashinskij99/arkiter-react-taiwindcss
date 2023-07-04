@@ -18,34 +18,34 @@ const Footer = () => {
             <ul className='flex flex-col'>
               <li className='text-[3.541rem] leading-[1] font-bold'>Demo</li>
               <li className='text-[2.724rem] mt-[1.5rem]'>
-                <a href="#demo">Demo</a>
+                <a href="/#demo">Demo</a>
               </li>
             </ul>
             <ul className='flex flex-col'>
               <li className='text-[3.541rem] leading-[1] font-bold whitespace-nowrap'>How it Works</li>
-              <li className='text-[2.724rem] mt-[1.5rem]'><a href="#steps">How it Works</a></li>
+              <li className='text-[2.724rem] mt-[1.5rem]'><a href="/#steps">How it Works</a></li>
             </ul>
             <ul className='flex flex-col'>
               <li className='text-[3.541rem] leading-[1] font-bold'>FAQs</li>
               <li className='text-[2.724rem] mt-[1.5rem]'>
-                <a href='#faq'>FAQs</a>
+                <a href='/#faq'>FAQs</a>
               </li>
             </ul>
             <ul className='flex flex-col'>
               <li className='text-[3.541rem] font-bold'>Pricing</li>
               <li className='text-[2.724rem] mt-[1.5rem]'>
-                <a href="#pricing">Pricing</a> </li>
+                <a href="/#pricing">Pricing</a> </li>
             </ul>
             <ul className='flex flex-col'>
               <li className='text-[3.541rem] font-bold'>Reviews</li>
-              <li className='text-[2.724rem] mt-[1.5rem]'><a href="#reviews">Reviews</a></li>
+              <li className='text-[2.724rem] mt-[1.5rem]'><a href="/#reviews">Reviews</a></li>
             </ul>
-            <ul className='flex flex-col'>
-              <li className='text-[3.541rem] font-bold'>Blogs</li>
-              <li className='text-[2.724rem] mt-[1.5rem]'>
-                <a href="#blog">Blogs</a>
-              </li>
-            </ul>
+            {/*<ul className='flex flex-col'>*/}
+            {/*  <li className='text-[3.541rem] font-bold'>Blogs</li>*/}
+            {/*  <li className='text-[2.724rem] mt-[1.5rem]'>*/}
+            {/*    <a href="#blog">Blogs</a>*/}
+            {/*  </li>*/}
+            {/*</ul>*/}
           </div>
 
           <div className='mt-[11.8rem] flex flex-col md:flex-row justify-between items-start md:items-end gap-5 md:gap-0'>
@@ -56,16 +56,26 @@ const Footer = () => {
       </footer>
       <hr className='mt-[4.8rem] h-[.1rem] border-none mb-[3rem] bg-[#FFFFFF14]' />
       <div className='container gap-[15px] md:gap-0 flex flex-col-reverse mt-16 md:flex-row justify-between items-center'>
-        <div className='flex items-center text-[#FFFFFFA6] text-[2rem] md:text-[3rem]'>
-          <p className='mr-[4.7rem]'>2023 Arkiter LTD. All Rights Reserved </p>
-          <Link to='/privacy-policy' className='mr-[6.4rem]'>Privacy Policy</Link>
-          <p>Cookies</p>
+        <div className='flex items-center text-[#FFFFFFA6] text-[2.4rem] md:text-[2.4rem]'>
+          <p className='mr-[2.4rem]'>2023 Arkiter LTD. All Rights Reserved </p>
+          <Link to='/privacy-policy' className='mr-[2.4rem]'>Privacy policy</Link>
+          <Link to='/cookie-policy' className='mr-[2.4rem]'>Cookies</Link>
         </div>
 
-        <div className='flex items-center gap-[10rem]'>
-          <Inst width={'4.032rem'} height={'4.032rem'} />
-          <Twitter width={'3.0237rem'} height={'2.672rem'} />
-          <Linkedin width={'4.405rem'} height={'4.405rem'} />
+        <div className='flex items-center gap-[1rem]'>
+
+          <Link to='https://www.linkedin.com/company/arkiter' target='_blank' className='mr-[6.4rem]'>
+            <Linkedin width={'4.405rem'} height={'4.405rem'} />
+          </Link>
+
+          <Link to='https://www.instagram.com/arkiter_com/' target='_blank' className='mr-[6.4rem]'>
+            <Inst width={'4.032rem'} height={'4.032rem'} />
+          </Link>
+
+          <Link to='https://twitter.com/arkiter_com' target='_blank' className='mr-[6.4rem]'>
+            <Twitter width={'3.0237rem'} height={'2.672rem'} />
+          </Link>
+
         </div>
 
       </div>

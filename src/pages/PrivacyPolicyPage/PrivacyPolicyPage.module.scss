@@ -111,11 +111,14 @@
 
 table td {
   padding: 7px 10px;
-  border: 1px solid white;
   color: white;
 }
 
-.word-break {
+.scroll td {
+  border: 1px solid white;
+}
+
+word-break {
   word-break: break-all;
 }
 

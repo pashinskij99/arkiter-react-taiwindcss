@@ -36,19 +36,19 @@ const stepContent = [
   {
     id: 1,
     contentH2: 'Build your test',
-    contentP: 'Unleash the power of our comprehensive architecture and ai coding assessments.',
+    contentP: 'Unleash the power of our advanced System Architecture, AI Coding, and Knowledge Assessments in a few easy clicks',
     last: false
   },
   {
     id: 2,
-    contentH2: 'Candidate interviews',
-    contentP: 'Here your candidates undertake your tailored interview on our fully automated and engaging platform',
+    contentH2: 'Interview your candidates',
+    contentP: 'Here your candidates undertake your tailored interview on our user-centric platform with proctored assessments and anti-cheat technology',
     last: false,
   },
   {
     id: 3,
     contentH2: 'Hire the best',
-    contentP: `Build your dream team by hiring the best candidates with our unbiased, data-driven insights.`,
+    contentP: `Build your dream team by hiring the perfect candidate for your role with our comprehensive reports, unbiased benchmarking and data-driven insights`,
     last: true,
   },
 ]
@@ -124,7 +124,7 @@ const Component = () => {
 
       <div className='container !static'>
         <TypographyH2 className='text-white text-center mb-[12rem]'>
-          Solve The Hiring Process In <span className='text-[#49CCF9]'>3 Steps</span>
+          Streamline your hiring process in <span className='text-[#49CCF9]'>3 simple steps</span>
         </TypographyH2>
       </div>
 

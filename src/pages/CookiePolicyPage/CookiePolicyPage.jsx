@@ -144,9 +144,9 @@ const CookiePolicyPage = () => {
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>Google Analytics</td>
-                                    <td>We use Google Analytics to analyse the use of this website. Google Analytics generates statistical and other information about website use by means of cookies, which are stored on users' computers. The information generated relating to our website is used to create reports about the use of the website. Google will store this information.</td>
-                                    <td>Google's privacy policy is available at: <a href="http://www.google.com/privacypolicy.html">http://www.google.com/privacypolicy.html</a></td>
+                                    <td className="tdBorder">Google Analytics</td>
+                                    <td className="tdBorder">We use Google Analytics to analyse the use of this website. Google Analytics generates statistical and other information about website use by means of cookies, which are stored on users' computers. The information generated relating to our website is used to create reports about the use of the website. Google will store this information.</td>
+                                    <td className="tdBorder">Google's privacy policy is available at: <a href="http://www.google.com/privacypolicy.html">http://www.google.com/privacypolicy.html</a></td>
                                 </tr>
                                 </tbody>
                             </table>

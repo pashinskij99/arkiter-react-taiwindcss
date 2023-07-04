@@ -131,13 +131,13 @@ const PricingComponent = () => {
               {pricingBoxes.map((box, index) => (
                 <div key={index} className="rounded-2xl">
                   <div className={clsx('bg-[#1D9EEB] z-[1] relative pt-[3.368rem] pb-[1.985rem] px-[4.8rem] rounded-t-[2.8rem] text-center', {
-                    ['!pt-[1.885rem] bg-[#FCFCFC]']: box.popular
+                    '!pt-[1.885rem] bg-[#FCFCFC]': box.popular
                   })}>
                     {box.popular && <span className='text-[#0A265F] text-[18.89px] md:text-[3.2rem] font-bold mb-[4.959rem] inline-block'>Most Popular</span>}
 
                     <div className='flex items-center lg:items-start flex-row gap-[2.9rem]'>
                       <div className={clsx('flex items-center justify-center bg-[#78D9FB] rounded-[1.2rem] h-[49.8px] lg:h-[10.205rem] w-[53.88px] lg:w-[10.9rem]', {
-                        ['!bg-[#55B6F0]']: !box.popular
+                        '!bg-[#55B6F0]': !box.popular
                       })}>
                         <img src={box.logo} className='scale-[.5] lg:scale-100' width={57} height={57} />
                       </div>
@@ -172,8 +172,8 @@ const PricingComponent = () => {
                     <ButtonPrimary
                       classNameIcon='!static ml-[10px]'
                       classNameButton={clsx('mt-[1.1rem] lg:mt-[4.1rem] !bg-[#0A3D62] mx-auto pl-[8rem] !pr-[3.086rem] !w-max', {
-                      ['hover:!bg-[#78D9FBBA]']: box.popular,
-                      ['hover:!bg-white']: !box.popular
+                      'hover:!bg-[#78D9FBBA]': box.popular,
+                      'hover:!bg-white': !box.popular
                     })}>
                       Buy now
                     </ButtonPrimary>
@@ -214,7 +214,7 @@ const PricingComponent = () => {
               {pricingBoxes.map((box, index) => (
                 <div key={box.title} className='bg-white px-[4.8rem] pb-[4.9rem] rounded-b-[2.8rem]' style={{ boxShadow: '0 1.1rem 2rem rgba(0, 0, 0, 0.25)' }}>
                   <p className={clsx('text-[#0A265FA1] font-semibold text-[2.6rem] mb-[1.827rem] pt-[3.7rem]', {
-                    ['text-[#0A265F] opacity-[0.95]']: box.popular
+                    'text-[#0A265F] opacity-[0.95]': box.popular
                   })}>Key Features</p>
                   <div className='rounded-md bg-white'>
                     <ul className="text-[#0E0B3D]">

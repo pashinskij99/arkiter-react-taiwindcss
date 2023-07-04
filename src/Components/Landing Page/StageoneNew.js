@@ -60,7 +60,7 @@ const stepContent = [
   {
     id: 0,
     contentH2: 'Build your test',
-    contentP: 'Unleash the power of our comprehensive architecture and ai coding assessments.',
+    contentP: 'Unleash the power of our advanced System Architecture, AI Coding, and Knowledge Assessments in a few easy clicks',
     last: false,
     width: isInterval
       ? (active === 0 ? percent + '%' : '100%')
@@ -68,8 +68,8 @@ const stepContent = [
   },
   {
     id: 1,
-    contentH2: 'Candidate interviews',
-    contentP: 'Here your candidates undertake your tailored interview on our fully automated and engaging platform',
+    contentH2: 'Interview your candidates',
+    contentP: 'Here your candidates undertake your tailored interview on our user-centric platform with proctored assessments and anti-cheat technology',
     last: false,
     width: isInterval
       ? (active === 1 ? percent + '%' : active < 1 ? '0%' : '100%')
@@ -78,7 +78,7 @@ const stepContent = [
   {
     id: 2,
     contentH2: 'Hire the best',
-    contentP: `Build your dream team by hiring the best candidates with our unbiased, data-driven insights.`,
+    contentP: `Build your dream team by hiring the perfect candidate for your role with our comprehensive reports, unbiased benchmarking and data-driven insights`,
     last: true,
     width: isInterval
       ? (active === 2 ? percent + '%' : '0%')
@@ -96,12 +96,12 @@ const stepContent = [
     <div id='steps' className="bg-[#0A265F] pt-[8rem] relative pb-[8rem] h-[100vh]">
         <div className="container h-full flex flex-col">
           <TypographyH2 className='text-white text-center mb-[7rem]'>
-            Solve The Hiring Process In <span className='text-[#49CCF9]'>3 Steps</span>
+            Streamline your hiring process in <span className='text-[#49CCF9]'>3 simple steps</span>
           </TypographyH2>
 
           {/*<div className="flex justify-center m-auto w-fit md:shadow-md md:shadow-white h-[64.3rem] rounded-[1.5rem]">*/}
           <div className="relative flex-1 rounded-[1.5rem]">
-            <img src={getImage()} className='absolute mx-auto top-0 left-0 right-0 rounded-[1.5rem] shadow-md md:shadow-[#49CCF9] w-auto h-full object-contain' alt=""/>
+            <img src={getImage()} className='absolute mx-auto top-0 left-0 right-0 rounded-[1.5rem] w-auto h-full object-contain' alt=""/>
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 mt-[10rem] gap-[7.3rem] md:gap-[17.3rem] items-start'>
