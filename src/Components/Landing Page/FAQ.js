@@ -41,9 +41,9 @@ const FaqItem = ({ question, answer, activeFaq, setActiveFaq, index }) => {
           )}
         >
           {isOpen ? (
-            <MinusIcon width={"1.789rem"} height={"1.789rem"} />
+            <MinusIcon className="w-[1.789rem] h-[1.789rem]" />
           ) : (
-            <PlusIcon width={"1.789rem"} height={"1.789rem"} />
+            <PlusIcon className="w-[1.789rem] h-[1.789rem]" />
           )}
         </span>
       </button>
