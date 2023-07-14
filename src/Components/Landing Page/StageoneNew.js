@@ -118,6 +118,15 @@ const stepContent = [
                       width,
                       transition: 'all 0.3s'
                     }} />
+                    <div className='h-full absolute top-0 left-0' style={{
+                      // filter: 'blur(4px)',
+                      width,
+                      '-webkit-box-shadow': '0px 0px 7px 0px #49CCF9',
+                      '-moz-box-shadow': '0px 0px 7px 0px #49CCF9',
+                      'box-shadow': '0px 0px 7px 0px #49CCF9',
+                      background: 'linear-gradient(90deg, #49CCF9 100.99%, #475167 99.15%)',
+                      transition: 'all 0.3s'
+                    }} />
                     {/*<div className='h-full absolute top-0 left-0' style={{*/}
                     {/*  filter: 'blur(4px)',*/}
                     {/*  width,*/}
