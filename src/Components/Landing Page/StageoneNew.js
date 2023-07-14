@@ -118,12 +118,12 @@ const stepContent = [
                       width,
                       transition: 'all 0.3s'
                     }} />
-                    <div className='h-full absolute top-0 left-0' style={{
-                      filter: 'blur(4px)',
-                      width,
-                      background: 'linear-gradient(90deg, #49CCF9 100.99%, #475167 99.15%)',
-                      transition: 'all 0.3s'
-                    }} />
+                    {/*<div className='h-full absolute top-0 left-0' style={{*/}
+                    {/*  filter: 'blur(4px)',*/}
+                    {/*  width,*/}
+                    {/*  background: 'linear-gradient(90deg, #49CCF9 100.99%, #475167 99.15%)',*/}
+                    {/*  transition: 'all 0.3s'*/}
+                    {/*}} />*/}
                   </div>
                   <div className={'mt-[1rem]'}>
                     <h2 className={classNameH2}>{contentH2}</h2>
