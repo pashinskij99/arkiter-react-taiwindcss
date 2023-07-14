@@ -9,7 +9,7 @@ const Hero = () => {
 
     const handleResize = () => {
         if(window.innerWidth > 1200) {
-            setWrapperShadowWidth(((window.innerWidth - 1200) / 2) - 30)
+            setWrapperShadowWidth(((window.innerWidth - 1200) / 2) - 60)
         }
     }
 
@@ -48,7 +48,7 @@ const Hero = () => {
                         <p className="md:block text-white text-[2.8rem] mb-[4.3rem]">
                             Go beyond basic coding assessments and evaluate candidates across a full suite of technical skills, including AI Coding and System Design
                         </p>
-                        <ButtonPrimary classNameButton={'w-full md:!w-[32.2rem]'}>
+                        <ButtonPrimary classNameButton={'w-full md:!w-[32.2rem] pl-[6.5rem] pr-[3.614rem]'}>
                             Book Call
                         </ButtonPrimary>
                     </div>

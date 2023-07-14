@@ -180,7 +180,8 @@ export const HeroLineAnimation = ({ className }) => {
       <line x1="1467" y1="-63" x2="1467" y2="11685.822" stroke="#2F4777" strokeWidth="2" />
       <line className={styles.animateVertical} x1="1467" y1="-63" x2="1467" y2="685.822" stroke="url(#paint7_linear_143_16875)" strokeWidth="2" />
 
-        <line x1="-10" y1="127.001" x2="-10" y2="1841.001" stroke="#2F4777" strokeWidth="2" />
+      <line x1="-10" y1="127.001" x2="-10" y2="1841.001" stroke="#2F4777" strokeWidth="2" />
+      <line x1="-120" y1="127.001" x2="-120" y2="1841.001" stroke="#2F4777" strokeWidth="2" />
         <line x1="100" y1="127.001" x2="99" y2="1841.001" stroke="#2F4777" strokeWidth="2" />
       <line x1="214" y1="127.001" x2="213" y2="1841.001" stroke="#2F4777" strokeWidth="2" />
       <line x1="328" y1="127.001" x2="327" y2="1841.001" stroke="#2F4777" strokeWidth="2" />
@@ -196,8 +197,9 @@ export const HeroLineAnimation = ({ className }) => {
       {/* <line x1="468" y1="127.001" x2="467" y2="841.001" stroke="#2F4777" strokeWidth="2" /> */}
       <line x1="1582" y1="127.001" x2="1581" y2="1841.001" stroke="#2F4777" strokeWidth="2" />
       <line x1="1696" y1="127.001" x2="1695" y2="1841.001" stroke="#2F4777" strokeWidth="2" />
-        <line x1="1810" y1="127.001" x2="1809" y2="1841.001" stroke="#2F4777" strokeWidth="2" />
-        <line x1="1930" y1="127.001" x2="1930" y2="1841.001" stroke="#2F4777" strokeWidth="2" />
+      <line x1="1810" y1="127.001" x2="1809" y2="1841.001" stroke="#2F4777" strokeWidth="2" />
+      <line x1="2050" y1="127.001" x2="2050" y2="1841.001" stroke="#2F4777" strokeWidth="2" />
+      <line x1="1930" y1="127.001" x2="1930" y2="1841.001" stroke="#2F4777" strokeWidth="2" />
       <defs>
         <filter id="filter0_f_143_16875" x="-38" y="434" width="1983" height="20" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
           <feFlood floodOpacity="0" result="BackgroundImageFix" />

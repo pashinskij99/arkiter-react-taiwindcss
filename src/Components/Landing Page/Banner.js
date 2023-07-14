@@ -34,7 +34,7 @@ const Banner = () => {
       <div className={styles.sectionContainer}>
         {/* Section Title */}
         <div className="w-full  text-white mr-auto">
-          <TypographyH2 className="mb-16 md:mb-[4.3rem] text-center md:text-left">
+          <TypographyH2 className="mb-16 md:mb-[4.3rem] text-center md:text-left z-[1] relative">
             Experience the next <br className="md:hidden" /> level of technology
             hiring
           </TypographyH2>

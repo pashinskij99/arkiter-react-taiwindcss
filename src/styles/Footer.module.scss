@@ -1,0 +1,11 @@
+.socialIcon {
+  path:first-of-type {
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover {
+    path:first-of-type {
+      @apply fill-gray-300 ;
+    }
+  }
+}
