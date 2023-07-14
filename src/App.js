@@ -28,6 +28,7 @@ function App() {
       {/* <Navbar /> */}
       <ScrollToTop />
 
+
       <Routes>
         <Route path="/" element={<LandingPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

@@ -65,15 +65,15 @@ const Footer = () => {
         <div className='flex items-center gap-[1rem]'>
 
           <Link to='https://www.linkedin.com/company/arkiter' target='_blank' className='mr-[6.4rem]'>
-            <Linkedin className='w-[4.405rem] h-[4.405rem]' />
+            <Linkedin width={'4.405rem'} height={'4.405rem'} />
           </Link>
 
           <Link to='https://www.instagram.com/arkiter_com/' target='_blank' className='mr-[6.4rem]'>
-            <Inst className='w-[4.032rem] h-[4.032rem]' />
+            <Inst width={'4.032rem'} height={'4.032rem'} />
           </Link>
 
           <Link to='https://twitter.com/arkiter_com' target='_blank' className='mr-[6.4rem]'>
-            <Twitter className='w-[3.0237rem] h-[2.672rem]' />
+            <Twitter width={'3.0237rem'} height={'2.672rem'} />
           </Link>
 
         </div>
