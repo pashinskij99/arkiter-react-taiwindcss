@@ -99,7 +99,6 @@ const stepContent = [
             Streamline your hiring process in <span className='text-[#49CCF9]'>3 simple steps</span>
           </TypographyH2>
 
-          {/*<div className="flex justify-center m-auto w-fit md:shadow-md md:shadow-white h-[64.3rem] rounded-[1.5rem]">*/}
           <div className="relative flex-1 rounded-[1.5rem]">
             <img src={getImage()} className='absolute mx-auto top-0 left-0 right-0 rounded-[1.5rem] w-auto h-full object-contain' alt=""/>
           </div>
@@ -119,7 +118,6 @@ const stepContent = [
                       transition: 'all 0.3s'
                     }} />
                     <div className='h-full absolute top-0 left-0' style={{
-                      // filter: 'blur(4px)',
                       width,
                       '-webkit-box-shadow': '0px 0px 7px 0px #49CCF9',
                       '-moz-box-shadow': '0px 0px 7px 0px #49CCF9',
@@ -127,12 +125,6 @@ const stepContent = [
                       background: 'linear-gradient(90deg, #49CCF9 100.99%, #475167 99.15%)',
                       transition: 'all 0.3s'
                     }} />
-                    {/*<div className='h-full absolute top-0 left-0' style={{*/}
-                    {/*  filter: 'blur(4px)',*/}
-                    {/*  width,*/}
-                    {/*  background: 'linear-gradient(90deg, #49CCF9 100.99%, #475167 99.15%)',*/}
-                    {/*  transition: 'all 0.3s'*/}
-                    {/*}} />*/}
                   </div>
                   <div className={'mt-[1rem]'}>
                     <h2 className={classNameH2}>{contentH2}</h2>

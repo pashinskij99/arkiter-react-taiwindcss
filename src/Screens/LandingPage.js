@@ -19,15 +19,12 @@ const LandingPage = () => {
             <ImageGrid/>
             <Banner/>
             <Features/>
-            {/* <StageOne/> */}
             <StageoneNew />
             <ReviewComponent/>
             <PricingComparison/>
             <ProductComparison />
             <ContactForm />
             <FAQ/>
-            {/*<ArkiterBlog />*/}
-            {/* <Footer /> */}
         </>
     )
 }
