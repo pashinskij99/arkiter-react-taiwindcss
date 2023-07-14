@@ -106,7 +106,7 @@ const ReviewComponent = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}>
-      <div className='container md:min-h-[54.1rem]'>
+      <div className='container overflow-x-clip md:min-h-[54.1rem]'>
         <Swiper
           breakpoints={{
             0: {
@@ -116,7 +116,7 @@ const ReviewComponent = () => {
           onSlideChange={({ isBeginning, isEnd }) => onChangeSlide(isBeginning, isEnd)}
           spaceBetween={55.36}
           loop
-          className='!overflow-y-visible !overflow-x-hidden relative h-full'>
+          className='!overflow-visible relative h-full'>
           {reviews.map((currentReview, index) => (
             <SwiperSlide key={currentReview.id}>
               <div className='flex flex-col md:flex-row md:gap-[10.9rem]'>
