@@ -100,7 +100,7 @@ const ReviewComponent = () => {
   return (
     <div
         id='reviews'
-      className='flex justify-center overflow-hidden pb-[15rem] py-[9.5rem] md:py-[11.9rem] bg-[#1D9EEB]'
+      className='flex justify-center overflow-x-hidden pb-[15rem] py-[9.5rem] md:py-[11.9rem] bg-[#1D9EEB]'
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
