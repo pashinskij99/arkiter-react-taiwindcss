@@ -100,7 +100,7 @@ const ReviewComponent = () => {
   return (
     <div
         id='reviews'
-      className='flex justify-center pb-[15rem] py-[9.5rem] md:py-[11.9rem] bg-[#1D9EEB]'
+      className='flex justify-center overflow-hidden pb-[15rem] py-[9.5rem] md:py-[11.9rem] bg-[#1D9EEB]'
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -116,7 +116,7 @@ const ReviewComponent = () => {
           onSlideChange={({ isBeginning, isEnd }) => onChangeSlide(isBeginning, isEnd)}
           spaceBetween={55.36}
           loop
-          className='!overflow-visible !overflow-x-clip relative h-full'>
+          className='!overflow-y-visible !overflow-x-hidden relative h-full'>
           {reviews.map((currentReview, index) => (
             <SwiperSlide key={currentReview.id}>
               <div className='flex flex-col md:flex-row md:gap-[10.9rem]'>
