@@ -106,7 +106,7 @@ const Banner = () => {
           </div>
 
           <ButtonPrimary
-            classNameButton={"block md:hidden mt-[56.91px]"}
+            classNameButton={"block !justify-center md:justify-between md:hidden mt-[56.91px]"}
             classNameIcon={"!right-[30px]"}
           >
             Book Call

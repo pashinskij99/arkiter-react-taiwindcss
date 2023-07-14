@@ -168,7 +168,7 @@ const ProductComparison = () => {
 
           <ButtonPrimary
             classNameButton={
-              "md:hidden !bg-[#0A3D62] w-[192.33px] hover:!bg-[#1D9EEB] hover:!text-white mx-auto mt-[23.33px]"
+              "md:hidden !bg-[#0A3D62] !justify-center md:justify-between w-[192.33px] hover:!bg-[#1D9EEB] hover:!text-white mx-auto mt-[23.33px]"
             }
           >
             Buy Now

@@ -173,7 +173,7 @@ const MyComponent = () => {
                         <TypographyP className="text-center md:text-start mb-[24px] md:mb-[3.6rem]">
                             Predict real-world performance more accurately and efficiently to find your perfect candidate
                         </TypographyP>
-                        <ButtonPrimary classNameButton="!bg-[#ffffff] hover:!bg-arkiterBlueLight-600 hover:!text-white !text-arkiterBlueLight-600">
+                        <ButtonPrimary classNameButton="!bg-[#ffffff] !justify-center md:justify-between hover:!bg-arkiterBlueLight-600 hover:!text-white !text-arkiterBlueLight-600">
                             Book Call
                         </ButtonPrimary>
                     </div>
